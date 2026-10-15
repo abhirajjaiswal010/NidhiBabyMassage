@@ -162,24 +162,25 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 3 Long Arched Cards - Pure Images, No Color, No Border, Little Tilted */}
-      <div className="mt-auto w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-12 lg:-space-x-14 px-4 pt-4 overflow-hidden relative">
+      {/* 7. Signature 3 Long Arched Cards - Classic Fan Placement */}
+      <div className="mt-auto w-full flex items-end justify-center -space-x-8 sm:-space-x-14 md:-space-x-18 lg:-space-x-22 px-4 pt-4 overflow-hidden relative">
         
-        {/* Card 1: Left Card (Pure Image, Tilted Left) */}
+        {/* Card 1: Left Card (Fanned Out Left) */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
+          initial={{ opacity: 0, y: 50, rotate: 0 }}
+          animate={{ opacity: 1, y: 0, rotate: -9 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
           className="
             group relative
             rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-40 sm:w-56 md:w-64 lg:w-72
+            w-38 sm:w-54 md:w-64 lg:w-72
             h-60 sm:h-72 md:h-80 lg:h-[370px]
-            origin-bottom
-            transform -rotate-3 sm:-rotate-4 hover:-rotate-1 hover:-translate-y-2
-            transition-all duration-300
+            origin-bottom-center
+            translate-y-3 sm:translate-y-5 -translate-x-2 sm:-translate-x-4
+            hover:!rotate-0 hover:!-translate-y-3 hover:!translate-x-0 hover:z-30 hover:scale-105 hover:shadow-2xl
+            transition-all duration-300 cursor-pointer
           "
         >
           <img
@@ -189,20 +190,22 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 2: Center Card (Pure Image, Taller, In Front, Straight) */}
+        {/* Card 2: Center Card (Fanned Center, Tall, Elevated in Front) */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
           className="
             group relative
             rounded-t-[3.25rem] sm:rounded-t-[4.5rem] lg:rounded-t-[5.5rem] rounded-b-none
             overflow-hidden
             shadow-2xl z-20
-            w-46 sm:w-64 md:w-72 lg:w-80
-            h-68 sm:h-84 md:h-92 lg:h-[430px]
-            hover:-translate-y-3
-            transition-all duration-300
+            w-44 sm:w-62 md:w-72 lg:w-80
+            h-68 sm:h-82 md:h-90 lg:h-[420px]
+            origin-bottom-center
+            -translate-y-1 sm:-translate-y-2
+            hover:!-translate-y-6 hover:z-30 hover:scale-105 hover:shadow-2xl
+            transition-all duration-300 cursor-pointer
           "
         >
           <img
@@ -212,21 +215,22 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 3: Right Card (Pure Image, Tilted Right) */}
+        {/* Card 3: Right Card (Fanned Out Right) */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          initial={{ opacity: 0, y: 50, rotate: 0 }}
+          animate={{ opacity: 1, y: 0, rotate: 9 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           className="
             group relative
             rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-40 sm:w-56 md:w-64 lg:w-72
+            w-38 sm:w-54 md:w-64 lg:w-72
             h-60 sm:h-72 md:h-80 lg:h-[370px]
-            origin-bottom
-            transform rotate-3 sm:rotate-4 hover:rotate-1 hover:-translate-y-2
-            transition-all duration-300
+            origin-bottom-center
+            translate-y-3 sm:translate-y-5 translate-x-2 sm:translate-x-4
+            hover:!rotate-0 hover:!-translate-y-3 hover:!translate-x-0 hover:z-30 hover:scale-105 hover:shadow-2xl
+            transition-all duration-300 cursor-pointer
           "
         >
           <img
