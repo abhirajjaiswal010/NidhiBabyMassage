@@ -87,7 +87,7 @@ export default function Navbar() {
               to="/book"
               className="
                 inline-flex items-center justify-center
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                bg-[#FFDDDD] hover:bg-white
                 text-[#4A352F] font-poppins font-semibold text-xs
                 px-5 py-2.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
@@ -111,7 +111,7 @@ export default function Navbar() {
               to="/book"
               className="
                 inline-flex items-center justify-center
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                bg-[#FFDDDD] hover:bg-white
                 text-[#4A352F] font-poppins font-semibold text-xs
                 px-3.5 py-1.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
@@ -156,7 +156,7 @@ export default function Navbar() {
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
-                  text-center bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                  text-center bg-[#FFDDDD] hover:bg-white
                   text-[#4A352F] font-poppins font-semibold py-2.5 rounded-full text-xs shadow-xs hover:shadow-md
                   transition-all duration-200 active:scale-95
                 "
