@@ -58,7 +58,7 @@ export default function Navbar() {
                   text-sm font-medium text-warm-charcoal/80
                   px-3.5 py-1.5 rounded-full
                   transition-all duration-300 ease-out
-                  hover:text-[#4A352F] hover:bg-[#FFCED8]/75 hover:scale-105 hover:shadow-xs
+                  hover:text-[#4A352F] hover:bg-white hover:scale-105 hover:shadow-xs
                   active:scale-95
                 "
               >
@@ -87,7 +87,7 @@ export default function Navbar() {
               to="/book"
               className="
                 inline-flex items-center justify-center
-                bg-[#FFDDDD] hover:bg-white
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                 text-[#4A352F] font-poppins font-semibold text-xs
                 px-5 py-2.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
@@ -111,7 +111,7 @@ export default function Navbar() {
               to="/book"
               className="
                 inline-flex items-center justify-center
-                bg-[#FFDDDD] hover:bg-white
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                 text-[#4A352F] font-poppins font-semibold text-xs
                 px-3.5 py-1.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
@@ -144,7 +144,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
                   text-sm font-medium text-warm-charcoal px-3 py-2 rounded-xl
-                  hover:bg-[#FFCED8]/75 hover:text-[#4A352F] hover:translate-x-1 hover:scale-[1.02]
+                  hover:bg-white hover:text-[#4A352F] hover:translate-x-1 hover:scale-[1.02] hover:shadow-xs
                   transition-all duration-200
                 "
               >
@@ -156,7 +156,7 @@ export default function Navbar() {
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
-                  text-center bg-[#FFDDDD] hover:bg-white
+                  text-center bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                   text-[#4A352F] font-poppins font-semibold py-2.5 rounded-full text-xs shadow-xs hover:shadow-md
                   transition-all duration-200 active:scale-95
                 "
