@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ArrowLeft, Phone, MapPin, Send, 
-  Baby, Clock, ShieldCheck, Sparkles 
+  Baby, Clock, ShieldCheck 
 } from 'lucide-react';
 import { createWhatsAppUrl, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
@@ -99,10 +99,6 @@ export default function BookingPage() {
 
         {/* Minimal Header */}
         <div className="text-center max-w-xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-muted-sage/15 text-muted-sage-dark text-xs font-semibold uppercase tracking-wider mb-2">
-            <Sparkles className="w-3 h-3" />
-            <span>Indore Home Visits</span>
-          </div>
           <h1 className="font-huglove text-4xl sm:text-5xl lg:text-6xl tracking-wide">
             <span className="text-warm-charcoal">Book a </span>
             <span className="text-soft-terracotta">Baby Massage</span>

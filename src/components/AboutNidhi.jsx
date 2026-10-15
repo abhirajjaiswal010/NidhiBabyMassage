@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Heart, Sparkles, MapPin } from 'lucide-react';
+import { MessageCircle, Heart, MapPin } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export default function AboutNidhi() {
@@ -45,10 +45,6 @@ export default function AboutNidhi() {
 
             {/* Right: Crisp Bio */}
             <div className="md:col-span-7 space-y-3.5 text-center md:text-left">
-              <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-muted-sage-dark font-semibold">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Meet Nidhi</span>
-              </span>
 
               <h2 className="font-huglove text-4xl sm:text-5xl tracking-wide">
                 <span className="text-warm-charcoal">Hello, I’m </span>

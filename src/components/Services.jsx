@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { babyMassageDetails } from '../data/servicesData';
 
 export default function Services() {
@@ -11,10 +11,6 @@ export default function Services() {
         
         {/* Section Heading */}
         <div className="text-center max-w-xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted-sage/15 text-muted-sage-dark text-xs font-semibold uppercase tracking-wider mb-2.5">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Dedicated Service</span>
-          </div>
           <h2 className="font-huglove text-4xl sm:text-5xl lg:text-6xl tracking-wide">
             <span className="text-warm-charcoal">Gentle </span>
             <span className="text-soft-terracotta">Baby Massage</span>

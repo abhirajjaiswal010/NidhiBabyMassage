@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowDown, MapPin, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -26,11 +26,6 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-5 text-center lg:text-left"
           >
-            {/* Eyebrow Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted-sage/15 text-muted-sage-dark border border-muted-sage/25 text-xs font-semibold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-muted-sage-dark" />
-              <span>Gentle Care • Indore, MP</span>
-            </div>
 
             {/* Main Heading in Huglove with Color Combination */}
             <h1 className="font-huglove text-5xl sm:text-6xl lg:text-7xl tracking-wide leading-[1.25]">

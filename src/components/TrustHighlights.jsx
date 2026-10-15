@@ -1,5 +1,4 @@
-import React from 'react';
-import { HeartHandshake, Smile, MapPin, Sparkles } from 'lucide-react';
+import { HeartHandshake, Smile, MapPin, ShieldCheck } from 'lucide-react';
 
 export default function TrustHighlights() {
   const highlights = [
@@ -9,7 +8,7 @@ export default function TrustHighlights() {
       description: 'Care tailored strictly to baby’s comfort & daily cues.',
     },
     {
-      icon: Sparkles,
+      icon: ShieldCheck,
       title: 'Zero Forced Pressure',
       description: 'No harsh pressure or crying. Calm, rhythmic touch.',
     },
