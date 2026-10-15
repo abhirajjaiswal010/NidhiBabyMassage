@@ -167,18 +167,18 @@ export default function Hero() {
       {/* 7. Signature 5 Cards - Fully Visible at Bottom, All Corners Rounded, Identical Size & Positions */}
       <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 lg:pb-16 w-full flex items-end justify-center -space-x-10 sm:-space-x-16 md:-space-x-20 lg:-space-x-24 px-4 relative">
         
-        {/* Card 1: Far Left Card (Smallest End Card) */}
+        {/* Card 1: Far Left Card (Identical Size & Position, Fully Visible at Bottom) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-lg z-10
-            w-32 sm:w-42 md:w-48 lg:w-54 xl:w-58
-            h-46 sm:h-56 md:h-66 lg:h-74 xl:h-80
+            shadow-[0_10px_25px_-8px_rgba(74,53,47,0.18)] z-0
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
             -rotate-6 sm:-rotate-8
-            translate-y-12 sm:translate-y-16 md:translate-y-20
+            translate-y-10 sm:translate-y-14
           "
         >
           {/* Replaceable image: Card 1 */}
@@ -187,20 +187,22 @@ export default function Hero() {
             alt="Gentle baby feet soothing massage"
             className="w-full h-full object-cover"
           />
+          {/* Outer End Black Overlay for Focus Falloff */}
+          <div className="absolute inset-0 bg-black/32 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 2: Inner Left Card (Medium Reduced Size) */}
+        {/* Card 2: Inner Left Card (Identical Size & Position, Fully Visible at Bottom) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-xl z-20
-            w-38 sm:w-48 md:w-56 lg:w-62 xl:w-68
-            h-54 sm:h-64 md:h-76 lg:h-84 xl:h-92
+            shadow-[0_16px_35px_-10px_rgba(74,53,47,0.22)] z-10
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
             -rotate-3 sm:-rotate-4
-            translate-y-6 sm:translate-y-8 md:translate-y-10
+            translate-y-5 sm:translate-y-7
           "
         >
           {/* Replaceable image: Card 2 */}
@@ -209,23 +211,25 @@ export default function Hero() {
             alt="Gentle baby foot reflexology and soothing massage"
             className="w-full h-full object-cover"
           />
+          {/* Inner Side Black Overlay for Focus Falloff */}
+          <div className="absolute inset-0 bg-black/18 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 3: Center Focal Card (Largest - Primary Focus with middle.jpg) */}
+        {/* Card 3: Center Card (Focal Point - Maximum Depth Shadow & 100% Brightness) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-2xl z-30
-            w-44 sm:w-56 md:w-64 lg:w-72 xl:w-80
-            h-64 sm:h-76 md:h-88 lg:h-[400px] xl:h-[440px]
+            shadow-[0_25px_60px_-12px_rgba(74,53,47,0.38)] ring-1 ring-white/60 z-20
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-0
             translate-y-0
           "
         >
-          {/* Replaceable image: Card 3 (Center Focal - middle.jpg) */}
+          {/* Replaceable image: Card 3 (Center Focal - middle.jpg with 100% Clarity) */}
           <img
             src="/baby/middle.jpg"
             alt="Swaddled baby resting peacefully in soft plush wrap"
@@ -233,18 +237,18 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 4: Inner Right Card (Medium Reduced Size) */}
+        {/* Card 4: Inner Right Card (Identical Size & Position, Fully Visible at Bottom) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-xl z-20
-            w-38 sm:w-48 md:w-56 lg:w-62 xl:w-68
-            h-54 sm:h-64 md:h-76 lg:h-84 xl:h-92
+            shadow-[0_16px_35px_-10px_rgba(74,53,47,0.22)] z-10
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-3 sm:rotate-4
-            translate-y-6 sm:translate-y-8 md:translate-y-10
+            translate-y-5 sm:translate-y-7
           "
         >
           {/* Replaceable image: Card 4 */}
@@ -253,20 +257,22 @@ export default function Hero() {
             alt="Happy baby enjoying gentle soothing at-home massage"
             className="w-full h-full object-cover"
           />
+          {/* Inner Side Black Overlay for Focus Falloff */}
+          <div className="absolute inset-0 bg-black/18 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 5: Far Right Card (Smallest End Card) */}
+        {/* Card 5: Far Right Card (Identical Size & Position, Fully Visible at Bottom) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-lg z-10
-            w-32 sm:w-42 md:w-48 lg:w-54 xl:w-58
-            h-46 sm:h-56 md:h-66 lg:h-74 xl:h-80
+            shadow-[0_10px_25px_-8px_rgba(74,53,47,0.18)] z-0
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-6 sm:rotate-8
-            translate-y-12 sm:translate-y-16 md:translate-y-20
+            translate-y-10 sm:translate-y-14
           "
         >
           {/* Replaceable image: Card 5 */}
@@ -275,6 +281,8 @@ export default function Hero() {
             alt="Gentle natural baby oils, fresh towels, and plush companion"
             className="w-full h-full object-cover"
           />
+          {/* Outer End Black Overlay for Focus Falloff */}
+          <div className="absolute inset-0 bg-black/32 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
       </div>
