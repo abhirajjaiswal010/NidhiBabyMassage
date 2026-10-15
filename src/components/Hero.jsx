@@ -162,23 +162,46 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 3 Cards - Equal Size, Reduced Corner Curves, Completely Static (No Hover/Animation) */}
-      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-12 lg:-space-x-14 px-4 overflow-hidden relative">
+      {/* 7. Signature 5 Cards - Two on Each Side, Equal Size, Reduced Corner Curves, Static Fan Layout */}
+      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-8 sm:-space-x-12 md:-space-x-16 lg:-space-x-20 px-4 overflow-hidden relative">
         
-        {/* Card 1: Left Card (Equal Size, Reduced Curve, Static Fan Left) */}
+        {/* Card 1: Far Left Card */}
+        <div
+          className="
+            relative
+            rounded-t-2xl sm:rounded-t-3xl rounded-b-none
+            overflow-hidden
+            shadow-lg z-0
+            w-30 sm:w-40 md:w-48 lg:w-54 xl:w-58
+            h-42 sm:h-52 md:h-60 lg:h-68 xl:h-74
+            origin-bottom-center
+            -rotate-10 sm:-rotate-12
+            translate-y-4 sm:translate-y-5
+          "
+        >
+          {/* Replaceable image: Card 1 */}
+          <img
+            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80"
+            alt="Gentle baby feet soothing massage"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 2: Inner Left Card */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-36 sm:w-48 md:w-56 lg:w-64
-            h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
+            w-30 sm:w-40 md:w-48 lg:w-54 xl:w-58
+            h-42 sm:h-52 md:h-60 lg:h-68 xl:h-74
             origin-bottom-center
-            -rotate-6 sm:-rotate-7
-            translate-y-2 sm:translate-y-3
+            -rotate-5 sm:-rotate-6
+            translate-y-2 sm:translate-y-2.5
           "
         >
+          {/* Replaceable image: Card 2 */}
           <img
             src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=800&q=80"
             alt="Gentle soothing baby massage"
@@ -186,19 +209,21 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 2: Center Card (Equal Size, Reduced Curve, Static Center In Front) */}
+        {/* Card 3: Center Card (Prominent In Front) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-2xl z-20
-            w-36 sm:w-48 md:w-56 lg:w-64
-            h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
+            w-30 sm:w-40 md:w-48 lg:w-54 xl:w-58
+            h-42 sm:h-52 md:h-60 lg:h-68 xl:h-74
             origin-bottom-center
-            -translate-y-1 sm:-translate-y-2
+            rotate-0
+            -translate-y-0.5 sm:-translate-y-1
           "
         >
+          {/* Replaceable image: Card 3 (Center) */}
           <img
             src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80"
             alt="Baby resting peacefully during home massage"
@@ -206,22 +231,45 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 3: Right Card (Equal Size, Reduced Curve, Static Fan Right) */}
+        {/* Card 4: Inner Right Card */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-36 sm:w-48 md:w-56 lg:w-64
-            h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
+            w-30 sm:w-40 md:w-48 lg:w-54 xl:w-58
+            h-42 sm:h-52 md:h-60 lg:h-68 xl:h-74
             origin-bottom-center
-            rotate-6 sm:rotate-7
-            translate-y-2 sm:translate-y-3
+            rotate-5 sm:rotate-6
+            translate-y-2 sm:translate-y-2.5
           "
         >
+          {/* Replaceable image: Card 4 */}
           <img
-            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80"
+            src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80"
+            alt="Baby gentle peaceful touch"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Card 5: Far Right Card */}
+        <div
+          className="
+            relative
+            rounded-t-2xl sm:rounded-t-3xl rounded-b-none
+            overflow-hidden
+            shadow-lg z-0
+            w-30 sm:w-40 md:w-48 lg:w-54 xl:w-58
+            h-42 sm:h-52 md:h-60 lg:h-68 xl:h-74
+            origin-bottom-center
+            rotate-10 sm:rotate-12
+            translate-y-4 sm:translate-y-5
+          "
+        >
+          {/* Replaceable image: Card 5 */}
+          <img
+            src="https://images.unsplash.com/photo-1505377059067-e285a7bac49b?auto=format&fit=crop&w=800&q=80"
             alt="Baby resting peacefully in deep sleep"
             className="w-full h-full object-cover"
           />
