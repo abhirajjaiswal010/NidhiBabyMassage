@@ -1,41 +1,47 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import TrustHighlights from './components/TrustHighlights';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import AboutNidhi from './components/AboutNidhi';
-import BookingSteps from './components/BookingSteps';
-import Testimonials from './components/Testimonials';
-import FAQs from './components/FAQs';
-import BookingCTA from './components/BookingCTA';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
+import HomePage from './pages/HomePage';
+import BookingPage from './pages/BookingPage';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/book" element={<BookingPage />} />
+        <Route path="/enquiry" element={<BookingPage />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-warm-ivory text-warm-charcoal font-sans">
-      {/* Top Navigation */}
-      <Navbar />
+    <Router>
+      <div className="min-h-screen flex flex-col bg-warm-ivory text-warm-charcoal font-sans selection:bg-dusty-peach selection:text-warm-charcoal">
+        <ScrollToTop />
+        
+        {/* Top Sticky Navbar */}
+        <Navbar />
 
-      {/* Main Content Sections */}
-      <main className="flex-1">
-        <Hero />
-        <TrustHighlights />
-        <Services />
-        <WhyChooseUs />
-        <AboutNidhi />
-        <BookingSteps />
-        <Testimonials />
-        <FAQs />
-        <BookingCTA />
-      </main>
+        {/* Dynamic Route View with Smooth Page Transition */}
+        <main className="flex-1">
+          <AnimatedRoutes />
+        </main>
 
-      {/* Site Footer */}
-      <Footer />
+        {/* Global Footer */}
+        <Footer />
 
-      {/* Sticky Floating WhatsApp Quick Consultation */}
-      <FloatingWhatsApp />
-    </div>
+        {/* Persistent Floating WhatsApp Quick Button */}
+        <FloatingWhatsApp />
+      </div>
+    </Router>
   );
 }

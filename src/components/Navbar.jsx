@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, MessageCircle, Phone, Calendar } from 'lucide-react';
 import { createWhatsAppUrl, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,12 +17,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'Why Nidhi', href: '#why-us' },
-    { label: 'Meet Nidhi', href: '#about' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'FAQs', href: '#faqs' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Baby Massage', href: '/#services' },
+    { label: 'Why Nidhi', href: '/#why-us' },
+    { label: 'Meet Nidhi', href: '/#about' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'FAQs', href: '/#faqs' },
+    { label: 'Contact', href: '/#contact' },
   ];
 
   return (
@@ -38,8 +40,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Brand Logo & Title */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-terracotta rounded-lg"
           >
             <div className="w-10 h-10 rounded-full bg-dusty-peach/60 flex items-center justify-center text-soft-terracotta border border-soft-terracotta/20 transition-transform group-hover:scale-105">
@@ -53,7 +55,7 @@ export default function Navbar() {
                 Indore • Home Visits
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center space-x-7" aria-label="Main Navigation">
@@ -87,41 +89,36 @@ export default function Navbar() {
               <span>{BUSINESS_PHONE_DISPLAY}</span>
             </a>
 
-            <a
-              href={createWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/book"
               className="
                 inline-flex items-center gap-2
                 bg-soft-terracotta hover:bg-soft-terracotta-hover
                 text-white text-sm font-medium
-                px-4 py-2.5 rounded-full
+                px-5 py-2.5 rounded-full
                 shadow-sm hover:shadow-md
                 transition-all duration-200 active:scale-[0.98]
               "
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Book on WhatsApp</span>
-            </a>
+              <Calendar className="w-4 h-4" />
+              <span>Book a Session</span>
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Action */}
           <div className="flex md:hidden items-center gap-2">
-            <a
-              href={createWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/book"
               className="
                 inline-flex items-center gap-1.5
                 bg-soft-terracotta text-white
                 text-xs font-medium
                 px-3 py-1.5 rounded-full
               "
-              aria-label="Book on WhatsApp"
+              aria-label="Book a Session"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
               <span>Book</span>
-            </a>
+            </Link>
 
             <button
               type="button"
@@ -161,13 +158,25 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-3 border-t border-dusty-peach/30 flex flex-col gap-2.5">
+              <Link
+                to="/book"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="
+                  flex items-center justify-center gap-2
+                  w-full bg-soft-terracotta text-white font-medium
+                  py-2.5 rounded-full text-sm shadow-sm
+                "
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book a Session (Enquiry Form)</span>
+              </Link>
               <a
                 href={createWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
                   flex items-center justify-center gap-2
-                  w-full bg-soft-terracotta text-white font-medium
+                  w-full bg-[#25D366] text-white font-medium
                   py-2.5 rounded-full text-sm shadow-sm
                 "
               >

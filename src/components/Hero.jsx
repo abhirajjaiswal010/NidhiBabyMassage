@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MessageCircle, ArrowDown, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowDown, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Hero() {
@@ -46,10 +47,8 @@ export default function Hero() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-              <a
-                href={createWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/book"
                 className="
                   w-full sm:w-auto inline-flex items-center justify-center gap-2.5
                   bg-soft-terracotta hover:bg-soft-terracotta-hover
@@ -59,9 +58,8 @@ export default function Hero() {
                   transition-all duration-200 active:scale-[0.98]
                 "
               >
-                <MessageCircle className="w-5 h-5" />
                 <span>Book a Session</span>
-              </a>
+              </Link>
 
               <a
                 href="#services"
