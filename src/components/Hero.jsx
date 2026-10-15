@@ -162,145 +162,78 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 3 Long Overlapping Arched Cards (matching reference image) */}
-      <div className="mt-auto w-full flex items-end justify-center -space-x-7 sm:-space-x-12 md:-space-x-14 lg:-space-x-16 px-4 pt-4 overflow-hidden relative">
+      {/* 7. Signature 3 Long Arched Cards - Pure Images, No Color, No Border, Little Tilted */}
+      <div className="mt-auto w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-12 lg:-space-x-14 px-4 pt-4 overflow-hidden relative">
         
-        {/* Card 1: Left Card (Cyan / Sky Blue, Long Arch, Behind Center) */}
+        {/* Card 1: Left Card (Pure Image, Tilted Left) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
           className="
-            group relative bg-[#38BDF8]
+            group relative
             rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
-            border-[2.5px] sm:border-3 border-warm-charcoal border-b-0
+            overflow-hidden
             shadow-xl z-10
             w-40 sm:w-56 md:w-64 lg:w-72
-            h-60 sm:h-72 md:h-80 lg:h-[360px]
-            p-2 sm:p-3 pb-0
-            flex flex-col justify-between
-            hover:-translate-y-2 transition-transform duration-300
+            h-60 sm:h-72 md:h-80 lg:h-[370px]
+            origin-bottom
+            transform -rotate-3 sm:-rotate-4 hover:-rotate-1 hover:-translate-y-2
+            transition-all duration-300
           "
         >
-          {/* Top Arch: Playful Smiling Sun & Confetti Doodles (matching reference) */}
-          <div className="flex items-center justify-center pt-1 sm:pt-2">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-              {/* Confetti dots */}
-              <circle cx="8" cy="14" r="2" fill="#F472B6" />
-              <circle cx="36" cy="12" r="1.5" fill="#C084FC" />
-              <circle cx="10" cy="30" r="1.5" fill="#34D399" />
-              {/* Smiling sun face */}
-              <circle cx="22" cy="22" r="12" fill="#FDE047" stroke="#34342F" strokeWidth="2.2" />
-              <circle cx="18" cy="20" r="1.4" fill="#34342F" />
-              <circle cx="26" cy="20" r="1.4" fill="#34342F" />
-              <path d="M18 24C19.5 26.5 24.5 26.5 26 24" stroke="#34342F" strokeWidth="2" strokeLinecap="round" />
-              <circle cx="15.5" cy="23" r="1.3" fill="#F472B6" />
-              <circle cx="28.5" cy="23" r="1.3" fill="#F472B6" />
-              {/* Sun rays */}
-              <path d="M22 4V7M22 37V40M4 22H7M37 22H40M9 9L11.5 11.5M32.5 32.5L35 35M9 35L11.5 32.5M32.5 11.5L35 9" stroke="#34342F" strokeWidth="2.2" strokeLinecap="round" />
-            </svg>
-          </div>
-
-          {/* Lower Arch: Pure Baby Massage Visual (No Text) */}
-          <div className="relative rounded-t-[2rem] sm:rounded-t-[2.8rem] border-2 border-warm-charcoal border-b-0 overflow-hidden w-full h-[72%] sm:h-[75%] bg-white shadow-inner">
-            <img
-              src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=700&q=80"
-              alt="Gentle soothing baby massage"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=800&q=80"
+            alt="Gentle soothing baby massage"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </motion.div>
 
-        {/* Card 2: Center Card (Blush Pink, Longest Arch, In Front Overlapping) */}
+        {/* Card 2: Center Card (Pure Image, Taller, In Front, Straight) */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="
-            group relative bg-[#F472B6]
+            group relative
             rounded-t-[3.25rem] sm:rounded-t-[4.5rem] lg:rounded-t-[5.5rem] rounded-b-none
-            border-[2.5px] sm:border-3 border-warm-charcoal border-b-0
+            overflow-hidden
             shadow-2xl z-20
             w-46 sm:w-64 md:w-72 lg:w-80
-            h-68 sm:h-84 md:h-92 lg:h-[420px]
-            p-2.5 sm:p-3.5 pb-0
-            flex flex-col justify-between
-            hover:-translate-y-3 transition-transform duration-300
+            h-68 sm:h-84 md:h-92 lg:h-[430px]
+            hover:-translate-y-3
+            transition-all duration-300
           "
         >
-          {/* Top Arch: Cartoon Peace/Gentle Hand & Flowers (matching reference) */}
-          <div className="flex items-center justify-center pt-1.5 sm:pt-2.5">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="w-10 h-10 sm:w-12 sm:h-12">
-              {/* Cartoon hand */}
-              <path d="M19 36V22C19 20.5 20.5 19 22 19C23.5 19 25 20.5 25 22V29M25 22C25 20.5 26.5 19 28 19C29.5 19 31 20.5 31 22V30M31 25C31 23.5 32.5 22.5 34 22.5C35.5 22.5 37 23.5 37 25V33C37 39 33 43 27 43C21 43 17 39 17 33V27C17 25.5 18.5 24 20 24" fill="#FFFFFF" stroke="#34342F" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              {/* Cute flower beside hand */}
-              <circle cx="10" cy="16" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="10" cy="10" r="3" fill="#A7F3D0" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="10" cy="22" r="3" fill="#A7F3D0" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="4" cy="16" r="3" fill="#A7F3D0" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="16" cy="16" r="3" fill="#A7F3D0" stroke="#34342F" strokeWidth="1.8" />
-              {/* Golden sparkles */}
-              <path d="M38 10L39 13L42 14L39 15L38 18L37 15L34 14L37 13L38 10Z" fill="#FDE047" stroke="#34342F" strokeWidth="1.5" />
-            </svg>
-          </div>
-
-          {/* Lower Arch: Pure Loving Care Visual (No Text) */}
-          <div className="relative rounded-t-[2.5rem] sm:rounded-t-[3.4rem] border-2 border-warm-charcoal border-b-0 overflow-hidden w-full h-[74%] sm:h-[78%] bg-white shadow-inner">
-            <img
-              src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80"
-              alt="Baby resting peacefully during home massage"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80"
+            alt="Baby resting peacefully during home massage"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </motion.div>
 
-        {/* Card 3: Right Card (Warm Coral Orange, Long Arch, Behind Center) */}
+        {/* Card 3: Right Card (Pure Image, Tilted Right) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
           className="
-            group relative bg-[#FB923C]
+            group relative
             rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
-            border-[2.5px] sm:border-3 border-warm-charcoal border-b-0
+            overflow-hidden
             shadow-xl z-10
             w-40 sm:w-56 md:w-64 lg:w-72
-            h-60 sm:h-72 md:h-80 lg:h-[360px]
-            p-2 sm:p-3 pb-0
-            flex flex-col justify-between
-            hover:-translate-y-2 transition-transform duration-300
+            h-60 sm:h-72 md:h-80 lg:h-[370px]
+            origin-bottom
+            transform rotate-3 sm:rotate-4 hover:rotate-1 hover:-translate-y-2
+            transition-all duration-300
           "
         >
-          {/* Top Arch: Cartoon Sunflower & Star Doodles (matching reference) */}
-          <div className="flex items-center justify-center pt-1 sm:pt-2">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-              {/* Petals */}
-              <circle cx="22" cy="11" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="22" cy="33" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="11" cy="22" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="33" cy="22" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="14" cy="14" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="30" cy="30" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="14" cy="30" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              <circle cx="30" cy="14" r="3.5" fill="#FDE047" stroke="#34342F" strokeWidth="1.8" />
-              {/* Face center */}
-              <circle cx="22" cy="22" r="9" fill="#6EE7B7" stroke="#34342F" strokeWidth="2.2" />
-              <circle cx="19" cy="20.5" r="1.3" fill="#34342F" />
-              <circle cx="25" cy="20.5" r="1.3" fill="#34342F" />
-              <path d="M19 24.5C20.5 26.5 23.5 26.5 25 24.5" stroke="#34342F" strokeWidth="1.8" strokeLinecap="round" />
-              {/* Blue Star Doodle */}
-              <path d="M37 6L38.2 9.5L42 10.5L38.2 11.8L37 15L35.8 11.8L32 10.5L35.8 9.5L37 6Z" fill="#38BDF8" stroke="#34342F" strokeWidth="1.5" />
-            </svg>
-          </div>
-
-          {/* Lower Arch: Pure Deep Sleep Visual (No Text) */}
-          <div className="relative rounded-t-[2rem] sm:rounded-t-[2.8rem] border-2 border-warm-charcoal border-b-0 overflow-hidden w-full h-[72%] sm:h-[75%] bg-white shadow-inner">
-            <img
-              src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80"
-              alt="Baby resting peacefully in deep sleep"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80"
+            alt="Baby resting peacefully in deep sleep"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </motion.div>
 
       </div>
