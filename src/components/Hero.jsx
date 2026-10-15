@@ -281,12 +281,6 @@ export default function Hero() {
         </div>
 
       </div>
-
-      {/* Soft blurry bottom gradient merging the cards into the background */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-10 sm:h-14 bg-gradient-to-t from-warm-ivory via-warm-ivory/80 to-transparent pointer-events-none z-30" 
-        aria-hidden="true"
-      />
     </section>
   );
 }
