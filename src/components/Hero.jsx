@@ -140,7 +140,7 @@ export default function Hero() {
               inline-flex items-center justify-center
               bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
               text-[#4A352F] font-poppins font-semibold text-xs sm:text-sm
-              px-6 py-2.5 sm:px-7 sm:py-3 rounded-full border border-[#F2AEBA] shadow-xs hover:shadow-md
+              px-6 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-xs hover:shadow-md
               transition-all duration-200 active:scale-95
             "
           >
@@ -221,7 +221,7 @@ export default function Hero() {
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-[0_25px_60px_-12px_rgba(74,53,47,0.38)] ring-1 ring-white/60 z-20
+            shadow-[0_25px_60px_-12px_rgba(74,53,47,0.38)] z-20
             w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
             h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
             origin-bottom-center
