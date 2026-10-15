@@ -86,7 +86,7 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                bg-[#FFF4DE] hover:bg-[#FFE8C4] hover:shadow-sm
                 text-[#4A352F] text-xs font-semibold
                 px-5 py-2.5 rounded-full shadow-xs
                 transition-all duration-200 active:scale-95
@@ -109,7 +109,7 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95 text-[#4A352F]
+                bg-[#FFF4DE] hover:bg-[#FFE8C4] text-[#4A352F]
                 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-xs
                 transition-all duration-200 active:scale-95
               "
@@ -153,7 +153,7 @@ export default function Navbar() {
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
-                  text-center bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                  text-center bg-[#FFF4DE] hover:bg-[#FFE8C4]
                   text-[#4A352F] font-semibold py-2.5 rounded-full text-xs shadow-xs
                   transition-all duration-200 active:scale-95
                 "
