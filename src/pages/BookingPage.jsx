@@ -276,13 +276,13 @@ export default function BookingPage() {
                   type="submit"
                   className="
                     w-full flex items-center justify-center gap-2
-                    bg-soft-terracotta hover:bg-soft-terracotta-hover
-                    text-white font-medium text-sm
-                    py-3 rounded-full shadow-sm hover:shadow-md
+                    bg-[#FFDDDD] hover:bg-[#FFCED8]
+                    text-[#4A352F] font-semibold text-sm
+                    py-3 rounded-full border border-[#FFCED8] shadow-xs hover:shadow-md
                     transition-all duration-200 active:scale-[0.98]
                   "
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-[#D96B82]" />
                   <span>Send Enquiry via WhatsApp</span>
                 </button>
               </div>

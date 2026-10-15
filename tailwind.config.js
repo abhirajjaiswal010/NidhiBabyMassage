@@ -22,17 +22,13 @@ export default {
           light: '#FFF4DE',
           dark: '#FFCED8',
         },
+        'warm-charcoal': '#4A352F', // Warm soft cocoa brown (not too dark, matches palette)
+        'muted-brown': '#725B54',   // Gentle readable warm brown
         'soft-terracotta': {
-          DEFAULT: '#C45B72', // Rich berry-rose matching #FFCED8
-          hover: '#A6455B',
+          DEFAULT: '#D96B82',       // Rose matching #FFCED8
+          hover: '#C2556C',
           light: '#FFCED8',
         },
-        'blush-pink': {
-          DEFAULT: '#FFCED8',
-          light: '#FFDDDD',
-        },
-        'warm-charcoal': '#1F1B1A', // Darker main text color
-        'muted-brown': '#4E4440',   // Darker readable secondary text
       },
       fontFamily: {
         huglove: ['Huglove', '"DM Serif Display"', 'cursive', 'sans-serif'],

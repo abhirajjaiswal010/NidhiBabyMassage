@@ -66,9 +66,9 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-soft-terracotta hover:bg-soft-terracotta-hover
-                text-white text-xs font-semibold
-                px-5 py-2.5 rounded-full shadow-xs
+                bg-[#FFDDDD] hover:bg-[#FFCED8]
+                text-[#4A352F] text-xs font-semibold
+                px-5 py-2.5 rounded-full border border-[#FFCED8] shadow-xs
                 transition-all duration-150 active:scale-95
               "
             >
@@ -81,8 +81,8 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-soft-terracotta text-white
-                text-xs font-medium px-3.5 py-1.5 rounded-full
+                bg-[#FFDDDD] hover:bg-[#FFCED8] text-[#4A352F]
+                text-xs font-semibold px-3.5 py-1.5 rounded-full border border-[#FFCED8]
               "
             >
               Book
@@ -119,7 +119,7 @@ export default function Navbar() {
               <Link
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-center bg-soft-terracotta text-white font-medium py-2 rounded-full text-xs"
+                className="text-center bg-[#FFDDDD] hover:bg-[#FFCED8] text-[#4A352F] font-semibold py-2 rounded-full text-xs border border-[#FFCED8]"
               >
                 Book Session
               </Link>
