@@ -7,25 +7,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        'warm-ivory': '#FFF9F2',
+        'warm-ivory': '#FFF4DE', // User primary warm cream background
+        'palette-cream': '#FFF4DE',
+        'palette-apricot': '#FFE8C4',
+        'palette-blush': '#FFDDDD',
+        'palette-rose': '#FFCED8',
         'muted-sage': {
-          DEFAULT: '#9EAD96',
-          light: '#B7C3B0',
-          dark: '#7F9077',
+          DEFAULT: '#889C82',
+          light: '#A3B59D',
+          dark: '#6B7E65',
         },
         'dusty-peach': {
-          DEFAULT: '#F3C8B5',
-          light: '#F8DDD0',
-          dark: '#E4A890',
+          DEFAULT: '#FFE8C4',
+          light: '#FFF4DE',
+          dark: '#FFCED8',
         },
         'soft-terracotta': {
-          DEFAULT: '#B96F58',
-          hover: '#A55F49',
-          light: '#CE8B76',
+          DEFAULT: '#C45B72', // Rich berry-rose matching #FFCED8
+          hover: '#A6455B',
+          light: '#FFCED8',
         },
-        'blush-pink': '#F6E0DF',
-        'warm-charcoal': '#34342F',
-        'muted-brown': '#77736C',
+        'blush-pink': {
+          DEFAULT: '#FFCED8',
+          light: '#FFDDDD',
+        },
+        'warm-charcoal': '#1F1B1A', // Darker main text color
+        'muted-brown': '#4E4440',   // Darker readable secondary text
       },
       fontFamily: {
         huglove: ['Huglove', '"DM Serif Display"', 'cursive', 'sans-serif'],

@@ -25,14 +25,14 @@ export default function TrustHighlights() {
   ];
 
   return (
-    <section className="relative mt-8 sm:mt-12 lg:mt-14 mb-6 sm:mb-8 py-6 sm:py-7 bg-gradient-to-r from-transparent via-white/50 to-transparent">
+    <section className="relative mt-8 sm:mt-12 lg:mt-14 mb-6 sm:mb-8 py-6 sm:py-7 bg-gradient-to-r from-transparent via-white/70 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
               <div key={index} className="flex items-start gap-3 p-1.5">
-                <div className="w-8 h-8 rounded-lg bg-dusty-peach/30 flex items-center justify-center shrink-0 text-soft-terracotta">
+                <div className="w-8 h-8 rounded-lg bg-[#FFCED8]/50 flex items-center justify-center shrink-0 text-soft-terracotta">
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>
