@@ -25,8 +25,22 @@ export default function TrustHighlights() {
   ];
 
   return (
-    <section className="border-y border-dusty-peach/30 bg-white/60 py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative mt-8 sm:mt-12 lg:mt-14 mb-6 sm:mb-8 py-6 sm:py-7 overflow-hidden">
+      {/* Edge blurry background that merges seamlessly into warm-ivory background */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-transparent backdrop-blur-md pointer-events-none"
+        style={{
+          maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 98%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 98%)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Soft blurred edge fades for top & bottom */}
+      <div className="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-warm-ivory to-transparent pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-warm-ivory to-transparent pointer-events-none" aria-hidden="true" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {highlights.map((item, index) => {
             const Icon = item.icon;
