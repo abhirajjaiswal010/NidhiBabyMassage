@@ -6,7 +6,7 @@ import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDe
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-screen lg:h-screen lg:max-h-[960px] flex flex-col justify-between pt-16 sm:pt-20 lg:pt-22 pb-0 bg-warm-ivory">
+    <section className="relative overflow-hidden min-h-screen lg:h-screen lg:max-h-[960px] flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-0 bg-warm-ivory">
       
       {/* 1. Warm Golden Arch & Ambient Sun Glow (matching reference) */}
       <div 
@@ -162,24 +162,24 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 3 Long Arched Cards - Classic Fan Placement */}
-      <div className="mt-auto w-full flex items-end justify-center -space-x-8 sm:-space-x-14 md:-space-x-18 lg:-space-x-22 px-4 pt-4 overflow-hidden relative">
+      {/* 7. Signature 3 Long Arched Cards - Classic Fan Placement (Scaled & Positioned with Clear Gap Below Buttons) */}
+      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-12 lg:-space-x-14 px-4 overflow-hidden relative">
         
-        {/* Card 1: Left Card (Fanned Out Left) */}
+        {/* Card 1: Left Card (Fanned Out Left, Scaled & Down) */}
         <motion.div
-          initial={{ opacity: 0, y: 50, rotate: 0 }}
-          animate={{ opacity: 1, y: 0, rotate: -9 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          initial={{ opacity: 0, y: 30, rotate: 0 }}
+          animate={{ opacity: 1, y: 0, rotate: -8 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="
             group relative
-            rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
+            rounded-t-[2.25rem] sm:rounded-t-[3rem] lg:rounded-t-[3.75rem] rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-38 sm:w-54 md:w-64 lg:w-72
-            h-60 sm:h-72 md:h-80 lg:h-[370px]
+            w-32 sm:w-42 md:w-50 lg:w-58
+            h-40 sm:h-50 md:h-58 lg:h-66 xl:h-72
             origin-bottom-center
-            translate-y-3 sm:translate-y-5 -translate-x-2 sm:-translate-x-4
-            hover:!rotate-0 hover:!-translate-y-3 hover:!translate-x-0 hover:z-30 hover:scale-105 hover:shadow-2xl
+            translate-y-2 sm:translate-y-3
+            hover:!rotate-0 hover:!-translate-y-3 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
@@ -190,21 +190,21 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 2: Center Card (Fanned Center, Tall, Elevated in Front) */}
+        {/* Card 2: Center Card (Fanned Center, Elevated in Front) */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="
             group relative
-            rounded-t-[3.25rem] sm:rounded-t-[4.5rem] lg:rounded-t-[5.5rem] rounded-b-none
+            rounded-t-[2.5rem] sm:rounded-t-[3.5rem] lg:rounded-t-[4.25rem] rounded-b-none
             overflow-hidden
             shadow-2xl z-20
-            w-44 sm:w-62 md:w-72 lg:w-80
-            h-68 sm:h-82 md:h-90 lg:h-[420px]
+            w-36 sm:w-48 md:w-56 lg:w-64
+            h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             -translate-y-1 sm:-translate-y-2
-            hover:!-translate-y-6 hover:z-30 hover:scale-105 hover:shadow-2xl
+            hover:!-translate-y-5 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
@@ -215,21 +215,21 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 3: Right Card (Fanned Out Right) */}
+        {/* Card 3: Right Card (Fanned Out Right, Scaled & Down) */}
         <motion.div
-          initial={{ opacity: 0, y: 50, rotate: 0 }}
-          animate={{ opacity: 1, y: 0, rotate: 9 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          initial={{ opacity: 0, y: 30, rotate: 0 }}
+          animate={{ opacity: 1, y: 0, rotate: 8 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="
             group relative
-            rounded-t-[2.75rem] sm:rounded-t-[3.75rem] lg:rounded-t-[4.5rem] rounded-b-none
+            rounded-t-[2.25rem] sm:rounded-t-[3rem] lg:rounded-t-[3.75rem] rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-38 sm:w-54 md:w-64 lg:w-72
-            h-60 sm:h-72 md:h-80 lg:h-[370px]
+            w-32 sm:w-42 md:w-50 lg:w-58
+            h-40 sm:h-50 md:h-58 lg:h-66 xl:h-72
             origin-bottom-center
-            translate-y-3 sm:translate-y-5 translate-x-2 sm:translate-x-4
-            hover:!rotate-0 hover:!-translate-y-3 hover:!translate-x-0 hover:z-30 hover:scale-105 hover:shadow-2xl
+            translate-y-2 sm:translate-y-3
+            hover:!rotate-0 hover:!-translate-y-3 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
