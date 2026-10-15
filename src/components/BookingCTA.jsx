@@ -38,7 +38,7 @@ export default function BookingCTA() {
                 w-full sm:w-auto inline-flex items-center justify-center
                 bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                 text-[#4A352F] font-semibold text-sm sm:text-base
-                px-7 py-3 rounded-full shadow-xs hover:shadow-md
+                px-7 py-3 rounded-full border border-[#F2AEBA] shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-[0.98]
               "
             >
