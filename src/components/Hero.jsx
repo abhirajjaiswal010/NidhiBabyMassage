@@ -111,20 +111,37 @@ export default function Hero() {
           >
             <span className="text-warm-charcoal">Gentle care </span>
             <br className="hidden sm:inline" />
-            <span className="text-soft-terracotta">for your little one</span>
+            <span className="relative inline-block">
+              <span className="text-soft-terracotta">for your little one</span>
+              {/* Hand-drawn SVG Scribble Underline */}
+              <svg 
+                className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-3.5 sm:h-4.5 text-[#D96B82] overflow-visible pointer-events-none" 
+                viewBox="0 0 280 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path 
+                  d="M3 17C40 7 90 6 140 10C190 14 235 9 277 12M15 21C65 14 135 13 210 16C235 17 255 19 268 20" 
+                  stroke="currentColor" 
+                  strokeWidth="3.2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
           </motion.h1>
 
         </div>
 
-        {/* 5. Subtitle in Poppins */}
+        {/* 5. Concise & Clear Subtitle in Poppins */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-poppins text-xs sm:text-sm md:text-base text-muted-brown max-w-lg mx-auto mt-2 sm:mt-2.5 leading-relaxed font-normal"
+          className="font-poppins text-xs sm:text-sm md:text-base text-muted-brown max-w-md mx-auto mt-2 sm:mt-2.5 leading-relaxed font-normal"
         >
-          Our unhurried at-home baby massage sessions in Indore provide the soothing touch 
-          and calm to help your baby sleep peacefully and stay content.
+          Gentle at-home baby massage in Indore for peaceful sleep and calm comfort.
         </motion.p>
 
         {/* 6. Centered Dual Pill Buttons (matching reference) */}
