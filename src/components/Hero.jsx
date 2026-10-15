@@ -162,24 +162,24 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 3 Long Arched Cards - Classic Fan Placement (Scaled & Positioned with Clear Gap Below Buttons) */}
-      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-12 lg:-space-x-14 px-4 overflow-hidden relative">
+      {/* 7. Signature 3 Cards - Fan Placement (Equal Card Sizes, Reduced Corner Curves) */}
+      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-8 sm:-space-x-12 md:-space-x-14 lg:-space-x-16 px-4 overflow-hidden relative">
         
-        {/* Card 1: Left Card (Fanned Out Left, Scaled & Down) */}
+        {/* Card 1: Left Card (Fanned Out Left) */}
         <motion.div
           initial={{ opacity: 0, y: 30, rotate: 0 }}
           animate={{ opacity: 1, y: 0, rotate: -8 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="
             group relative
-            rounded-t-[2.25rem] sm:rounded-t-[3rem] lg:rounded-t-[3.75rem] rounded-b-none
+            rounded-t-xl sm:rounded-t-2xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
             w-32 sm:w-42 md:w-50 lg:w-58
             h-40 sm:h-50 md:h-58 lg:h-66 xl:h-72
             origin-bottom-center
             translate-y-2 sm:translate-y-3
-            hover:!rotate-0 hover:!-translate-y-3 hover:z-30 hover:scale-105 hover:shadow-2xl
+            hover:!rotate-0 hover:!-translate-y-4 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
@@ -190,21 +190,21 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 2: Center Card (Fanned Center, Elevated in Front) */}
+        {/* Card 2: Center Card (Equal Size to First Card, In Front) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="
             group relative
-            rounded-t-[2.5rem] sm:rounded-t-[3.5rem] lg:rounded-t-[4.25rem] rounded-b-none
+            rounded-t-xl sm:rounded-t-2xl rounded-b-none
             overflow-hidden
             shadow-2xl z-20
-            w-36 sm:w-48 md:w-56 lg:w-64
-            h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
+            w-32 sm:w-42 md:w-50 lg:w-58
+            h-40 sm:h-50 md:h-58 lg:h-66 xl:h-72
             origin-bottom-center
             -translate-y-1 sm:-translate-y-2
-            hover:!-translate-y-5 hover:z-30 hover:scale-105 hover:shadow-2xl
+            hover:!-translate-y-4 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
@@ -215,21 +215,21 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Card 3: Right Card (Fanned Out Right, Scaled & Down) */}
+        {/* Card 3: Right Card (Equal Size to First Card, Fanned Out Right) */}
         <motion.div
           initial={{ opacity: 0, y: 30, rotate: 0 }}
           animate={{ opacity: 1, y: 0, rotate: 8 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="
             group relative
-            rounded-t-[2.25rem] sm:rounded-t-[3rem] lg:rounded-t-[3.75rem] rounded-b-none
+            rounded-t-xl sm:rounded-t-2xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
             w-32 sm:w-42 md:w-50 lg:w-58
             h-40 sm:h-50 md:h-58 lg:h-66 xl:h-72
             origin-bottom-center
             translate-y-2 sm:translate-y-3
-            hover:!rotate-0 hover:!-translate-y-3 hover:z-30 hover:scale-105 hover:shadow-2xl
+            hover:!rotate-0 hover:!-translate-y-4 hover:z-30 hover:scale-105 hover:shadow-2xl
             transition-all duration-300 cursor-pointer
           "
         >
