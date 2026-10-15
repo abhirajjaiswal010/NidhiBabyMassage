@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'warm-ivory': '#FFF4DE', // User primary warm cream background
-        'palette-cream': '#FFF4DE',
+        'warm-ivory': '#FFFBF4', // Lightened warm cream background
+        'palette-cream': '#FFFBF4',
         'palette-apricot': '#FFE8C4',
         'palette-blush': '#FFDDDD',
         'palette-rose': '#FFCED8',
@@ -19,7 +19,7 @@ export default {
         },
         'dusty-peach': {
           DEFAULT: '#FFE8C4',
-          light: '#FFF4DE',
+          light: '#FFFBF4',
           dark: '#FFCED8',
         },
         'warm-charcoal': '#4A352F', // Warm soft cocoa brown (not too dark, matches palette)

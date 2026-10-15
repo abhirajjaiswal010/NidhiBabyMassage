@@ -26,10 +26,10 @@ export default function Navbar() {
   return (
     <header
       className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-200
+        fixed top-0 left-0 right-0 z-50 transition-all duration-200 backdrop-blur-md
         ${isScrolled 
-          ? 'bg-warm-ivory/95 backdrop-blur-md shadow-xs py-3 border-b border-dusty-peach/30' 
-          : 'bg-transparent py-5'
+          ? 'bg-warm-ivory/95 shadow-xs py-3 border-b border-[#FFCED8]/40' 
+          : 'bg-warm-ivory/80 py-4 border-b border-[#FFCED8]/20 shadow-2xs'
         }
       `}
     >
@@ -103,7 +103,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-warm-ivory border-b border-dusty-peach/30 px-6 py-5 shadow-md">
+        <div className="md:hidden bg-warm-ivory/95 backdrop-blur-md border-b border-[#FFCED8]/30 px-6 py-5 shadow-md">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a

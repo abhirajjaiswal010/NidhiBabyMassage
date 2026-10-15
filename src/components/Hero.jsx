@@ -6,7 +6,7 @@ import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDe
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/35 via-[#FFDDDD]/25 via-[#FFF4DE] to-[#FFE8C4]/30">
+    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/18 via-[#FFDDDD]/12 via-[#FFFBF4] to-[#FFE8C4]/15">
       
       {/* 1. Warm Golden Arch & Ambient Sun Glow (matching new palette) */}
       <div 
