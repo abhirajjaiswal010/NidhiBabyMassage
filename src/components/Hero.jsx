@@ -53,17 +53,17 @@ export default function Hero() {
             <div className="flex -space-x-1.5 overflow-hidden">
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
+                src="/baby/middle.jpg"
+                alt="Indore baby"
+              />
+              <img
+                className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
                 src="/baby/baby%20(2).jpg"
                 alt="Indore baby"
               />
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
                 src="/baby/baby%20(3).jpg"
-                alt="Indore baby"
-              />
-              <img
-                className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
-                src="/baby/baby%20(1).jpg"
                 alt="Indore baby"
               />
             </div>
@@ -206,7 +206,7 @@ export default function Hero() {
           {/* Replaceable image: Card 2 */}
           <img
             src="/baby/baby%20(2).jpg"
-            alt="Newborn baby sleeping peacefully in soft swaddle"
+            alt="Gentle baby foot reflexology and soothing massage"
             className="w-full h-full object-cover"
           />
         </div>
@@ -225,10 +225,10 @@ export default function Hero() {
             translate-y-0
           "
         >
-          {/* Replaceable image: Card 3 (Center Focal) */}
+          {/* Replaceable image: Card 3 (Center Focal - middle.jpg) */}
           <img
-            src="/baby/baby%20(3).jpg"
-            alt="Happy baby enjoying gentle soothing at-home massage"
+            src="/baby/middle.jpg"
+            alt="Swaddled baby resting peacefully in soft plush wrap"
             className="w-full h-full object-cover"
           />
         </div>
@@ -249,8 +249,8 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 4 */}
           <img
-            src="/baby/baby%20(4).jpg"
-            alt="Gentle natural baby oils, fresh towels, and plush companion"
+            src="/baby/baby%20(3).jpg"
+            alt="Happy baby enjoying gentle soothing at-home massage"
             className="w-full h-full object-cover"
           />
         </div>
@@ -271,8 +271,8 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 5 */}
           <img
-            src="/baby/baby%20(2).jpg"
-            alt="Peacefully resting baby"
+            src="/baby/baby%20(4).jpg"
+            alt="Gentle natural baby oils, fresh towels, and plush companion"
             className="w-full h-full object-cover"
           />
         </div>
