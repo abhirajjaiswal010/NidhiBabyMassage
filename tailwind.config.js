@@ -29,8 +29,9 @@ export default {
       },
       fontFamily: {
         huglove: ['Huglove', '"DM Serif Display"', 'cursive', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
         serif: ['"DM Serif Display"', 'Lora', 'Georgia', 'serif'],
-        sans: ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',

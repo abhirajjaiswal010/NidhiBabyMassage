@@ -41,7 +41,7 @@ export default function Testimonials() {
 
               <div className="mt-6 pt-5 border-t border-dusty-peach/30 flex items-center justify-between">
                 <div>
-                  <h4 className="font-serif font-semibold text-warm-charcoal text-base">
+                  <h4 className="font-poppins font-semibold text-warm-charcoal text-sm sm:text-base">
                     {item.parent}
                   </h4>
                   <p className="text-xs text-muted-brown mt-0.5">

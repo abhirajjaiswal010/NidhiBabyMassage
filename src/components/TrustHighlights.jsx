@@ -36,7 +36,7 @@ export default function TrustHighlights() {
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-sm sm:text-base font-semibold text-warm-charcoal">
+                  <h3 className="font-poppins text-sm sm:text-base font-semibold text-warm-charcoal">
                     {item.title}
                   </h3>
                   <p className="text-xs text-muted-brown mt-0.5 leading-tight">

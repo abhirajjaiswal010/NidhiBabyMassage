@@ -60,7 +60,7 @@ export default function Services() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="font-serif text-xl text-warm-charcoal mb-1.5">
+                  <h3 className="font-poppins font-semibold text-lg sm:text-xl text-warm-charcoal mb-1.5">
                     {pillar.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">

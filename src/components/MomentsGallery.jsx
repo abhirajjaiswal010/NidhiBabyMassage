@@ -104,7 +104,7 @@ export default function MomentsGallery() {
 
               {/* Bottom Caption Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-10 text-white">
-                <h3 className="font-serif text-lg sm:text-xl font-medium leading-snug">
+                <h3 className="font-poppins text-base sm:text-lg font-semibold leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-xs text-white/80 mt-1 leading-relaxed line-clamp-2">

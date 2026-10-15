@@ -57,7 +57,7 @@ export default function BookingSteps() {
               </div>
 
               <div>
-                <h3 className="font-serif text-lg text-warm-charcoal mb-1.5">
+                <h3 className="font-poppins text-base sm:text-lg font-semibold text-warm-charcoal mb-1.5">
                   {step.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">

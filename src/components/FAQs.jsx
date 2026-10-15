@@ -49,7 +49,7 @@ export default function FAQs() {
                   "
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg text-warm-charcoal font-medium">
+                  <span className="font-poppins text-base sm:text-lg text-warm-charcoal font-medium">
                     {faq.question}
                   </span>
                   <div className={`

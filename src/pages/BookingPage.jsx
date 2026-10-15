@@ -294,7 +294,7 @@ export default function BookingPage() {
           <div className="lg:col-span-5 space-y-4">
             
             <div className="bg-white/80 rounded-3xl p-5 border border-dusty-peach/30 space-y-2.5">
-              <h3 className="font-serif text-base font-semibold text-warm-charcoal">
+              <h3 className="font-poppins text-base font-semibold text-warm-charcoal">
                 How It Works
               </h3>
               <ul className="space-y-2 text-xs text-muted-brown">

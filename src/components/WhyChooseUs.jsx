@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
                     <div className="w-8 h-8 rounded-lg bg-dusty-peach/30 flex items-center justify-center text-soft-terracotta mb-2">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-serif text-base text-warm-charcoal font-medium">
+                    <h3 className="font-poppins text-base text-warm-charcoal font-semibold">
                       {pt.title}
                     </h3>
                     <p className="text-xs text-muted-brown leading-relaxed">
