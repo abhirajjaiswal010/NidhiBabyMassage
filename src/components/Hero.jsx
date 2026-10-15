@@ -6,7 +6,7 @@ import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDe
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
+    <section id="hero" className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-20 sm:pt-24 lg:pt-28 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
       
       {/* 1. Radiant Ambient Glow merging Navbar down into Hero */}
       <div 
