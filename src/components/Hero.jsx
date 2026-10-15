@@ -176,7 +176,8 @@ export default function Hero() {
             h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             -rotate-6 sm:-rotate-8
-            translate-y-8 sm:translate-y-12 md:translate-y-14
+            translate-y-10 sm:translate-y-14
+            -mb-4 sm:-mb-6
           "
         >
           {/* Replaceable image: Card 1 */}
@@ -198,7 +199,8 @@ export default function Hero() {
             h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             -rotate-3 sm:-rotate-4
-            translate-y-4 sm:translate-y-6 md:translate-y-7
+            translate-y-5 sm:translate-y-7
+            -mb-4 sm:-mb-6
           "
         >
           {/* Replaceable image: Card 2 */}
@@ -209,7 +211,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 3: Center Card (Identical Size, Highest Position In Front) */}
+        {/* Card 3: Center Card (Identical Size, Highest Position In Front, Seamless Bottom Flush) */}
         <div
           className="
             relative
@@ -220,7 +222,8 @@ export default function Hero() {
             h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             rotate-0
-            translate-y-0 sm:-translate-y-2
+            translate-y-0
+            -mb-4 sm:-mb-6
           "
         >
           {/* Replaceable image: Card 3 (Center) */}
@@ -242,7 +245,8 @@ export default function Hero() {
             h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             rotate-3 sm:rotate-4
-            translate-y-4 sm:translate-y-6 md:translate-y-7
+            translate-y-5 sm:translate-y-7
+            -mb-4 sm:-mb-6
           "
         >
           {/* Replaceable image: Card 4 */}
@@ -264,7 +268,8 @@ export default function Hero() {
             h-46 sm:h-58 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             rotate-6 sm:rotate-8
-            translate-y-8 sm:translate-y-12 md:translate-y-14
+            translate-y-10 sm:translate-y-14
+            -mb-4 sm:-mb-6
           "
         >
           {/* Replaceable image: Card 5 */}
