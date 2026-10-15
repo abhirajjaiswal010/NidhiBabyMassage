@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function Navbar() {
@@ -48,28 +48,48 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Minimal Desktop Nav Links */}
-          <nav className="hidden md:flex items-center space-x-8" aria-label="Main Navigation">
+          {/* Smooth Pop-Out Interactive Desktop Nav Links */}
+          <nav className="hidden md:flex items-center space-x-1" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-warm-charcoal/80 hover:text-soft-terracotta transition-colors"
+                className="
+                  text-sm font-medium text-warm-charcoal/80
+                  px-3.5 py-1.5 rounded-full
+                  transition-all duration-300 ease-out
+                  hover:text-[#4A352F] hover:bg-[#FFCED8]/75 hover:scale-105 hover:shadow-xs
+                  active:scale-95
+                "
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Action CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Action CTA + Direct Phone Number */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
+              className="
+                inline-flex items-center gap-1.5 text-xs font-semibold
+                text-[#4A352F] bg-[#FFE8C4]/60 hover:bg-[#F5CE96] hover:brightness-95
+                px-3.5 py-2 rounded-full
+                transition-all duration-200 active:scale-95
+              "
+              aria-label={`Call Nidhi at ${BUSINESS_PHONE_DISPLAY}`}
+            >
+              <Phone className="w-3.5 h-3.5 text-[#D96B82]" />
+              <span>{BUSINESS_PHONE_DISPLAY}</span>
+            </a>
+
             <Link
               to="/book"
               className="
-                bg-[#FFDDDD] hover:bg-[#FFCED8]
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                 text-[#4A352F] text-xs font-semibold
-                px-5 py-2.5 rounded-full border border-[#FFCED8] shadow-xs
-                transition-all duration-150 active:scale-95
+                px-5 py-2.5 rounded-full shadow-xs
+                transition-all duration-200 active:scale-95
               "
             >
               Book Session
@@ -77,12 +97,21 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Action */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-1.5">
+            <a
+              href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
+              className="p-1.5 text-[#D96B82] hover:text-[#4A352F] transition-colors"
+              aria-label={`Call ${BUSINESS_PHONE_DISPLAY}`}
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+
             <Link
               to="/book"
               className="
-                bg-[#FFDDDD] hover:bg-[#FFCED8] text-[#4A352F]
-                text-xs font-semibold px-3.5 py-1.5 rounded-full border border-[#FFCED8]
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95 text-[#4A352F]
+                text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-xs
+                transition-all duration-200 active:scale-95
               "
             >
               Book
@@ -104,13 +133,17 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-warm-ivory/60 backdrop-blur-xl px-6 py-5 shadow-lg">
-          <nav className="flex flex-col space-y-3">
+          <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-sm font-medium text-warm-charcoal py-1 hover:text-soft-terracotta"
+                className="
+                  text-sm font-medium text-warm-charcoal px-3 py-2 rounded-xl
+                  hover:bg-[#FFCED8]/75 hover:text-[#4A352F] hover:translate-x-1 hover:scale-[1.02]
+                  transition-all duration-200
+                "
               >
                 {link.label}
               </a>
@@ -119,15 +152,25 @@ export default function Navbar() {
               <Link
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-center bg-[#FFDDDD] hover:bg-[#FFCED8] text-[#4A352F] font-semibold py-2 rounded-full text-xs border border-[#FFCED8]"
+                className="
+                  text-center bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                  text-[#4A352F] font-semibold py-2.5 rounded-full text-xs shadow-xs
+                  transition-all duration-200 active:scale-95
+                "
               >
                 Book Session
               </Link>
               <a
                 href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
-                className="text-center text-xs text-muted-brown py-1"
+                className="
+                  inline-flex items-center justify-center gap-2
+                  bg-[#FFE8C4]/60 hover:bg-[#F5CE96] hover:brightness-95
+                  text-[#4A352F] font-semibold py-2 rounded-full text-xs
+                  transition-all duration-200
+                "
               >
-                Call: {BUSINESS_PHONE_DISPLAY}
+                <Phone className="w-3.5 h-3.5 text-[#D96B82]" />
+                <span>Call: {BUSINESS_PHONE_DISPLAY}</span>
               </a>
             </div>
           </nav>

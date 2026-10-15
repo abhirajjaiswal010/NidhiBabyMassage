@@ -276,9 +276,9 @@ export default function BookingPage() {
                   type="submit"
                   className="
                     w-full flex items-center justify-center gap-2
-                    bg-[#FFDDDD] hover:bg-[#FFCED8]
+                    bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                     text-[#4A352F] font-semibold text-sm
-                    py-3 rounded-full border border-[#FFCED8] shadow-xs hover:shadow-md
+                    py-3 rounded-full shadow-xs hover:shadow-md
                     transition-all duration-200 active:scale-[0.98]
                   "
                 >

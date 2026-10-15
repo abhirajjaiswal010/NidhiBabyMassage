@@ -35,15 +35,14 @@ export default function BookingCTA() {
             <Link
               to="/book"
               className="
-                w-full sm:w-auto inline-flex items-center justify-center gap-2
-                bg-[#FFDDDD] hover:bg-[#FFCED8]
+                w-full sm:w-auto inline-flex items-center justify-center
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
                 text-[#4A352F] font-semibold text-sm sm:text-base
-                px-7 py-3 rounded-full border border-[#FFCED8] shadow-xs hover:shadow-md
+                px-7 py-3 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-[0.98]
               "
             >
               <span>Book a Session</span>
-              <ArrowRight className="w-4 h-4 text-[#D96B82]" />
             </Link>
 
             <a
@@ -52,10 +51,10 @@ export default function BookingCTA() {
               rel="noopener noreferrer"
               className="
                 w-full sm:w-auto inline-flex items-center justify-center gap-2
-                bg-[#FFE8C4] hover:bg-[#FFDDDD]
+                bg-[#FFE8C4] hover:bg-[#F5CE96] hover:brightness-95
                 text-[#4A352F] font-semibold text-sm sm:text-base
-                px-6 py-3 rounded-full border border-[#FFE8C4] shadow-xs hover:shadow-sm
-                transition-all duration-300 ease-out active:scale-95
+                px-6 py-3 rounded-full shadow-xs hover:shadow-sm
+                transition-all duration-200 active:scale-95
               "
             >
               <MessageCircle className="w-4 h-4 text-[#D96B82]" />

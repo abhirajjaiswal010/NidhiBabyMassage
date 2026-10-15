@@ -64,11 +64,11 @@ export default function AboutNidhi() {
                 <Link
                   to="/book"
                   className="
-                    inline-flex items-center gap-1.5
-                    bg-soft-terracotta hover:bg-soft-terracotta-hover
-                    text-white text-xs font-semibold
+                    inline-flex items-center justify-center
+                    bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                    text-[#4A352F] text-xs font-semibold
                     px-5 py-2.5 rounded-full shadow-xs
-                    transition-all duration-300 ease-out active:scale-95
+                    transition-all duration-200 active:scale-95
                   "
                 >
                   <span>Book with Nidhi</span>
@@ -80,13 +80,13 @@ export default function AboutNidhi() {
                   rel="noopener noreferrer"
                   className="
                     inline-flex items-center gap-1.5
-                    bg-warm-ivory hover:bg-dusty-peach/30
-                    text-warm-charcoal text-xs font-semibold
-                    px-4 py-2.5 rounded-full border border-dusty-peach/60
-                    transition-all duration-300 ease-out active:scale-95
+                    bg-[#FFE8C4] hover:bg-[#F5CE96] hover:brightness-95
+                    text-[#4A352F] text-xs font-semibold
+                    px-4 py-2.5 rounded-full shadow-xs
+                    transition-all duration-200 active:scale-95
                   "
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-soft-terracotta" />
+                  <MessageCircle className="w-3.5 h-3.5 text-[#D96B82]" />
                   <span>WhatsApp</span>
                 </a>
               </div>

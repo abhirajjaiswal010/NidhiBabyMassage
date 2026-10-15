@@ -120,15 +120,14 @@ export default function MomentsGallery() {
           <Link
             to="/book"
             className="
-              inline-flex items-center gap-2
-              bg-soft-terracotta hover:bg-soft-terracotta-hover
-              text-white text-xs sm:text-sm font-semibold
-              px-7 py-3 rounded-full shadow-sm hover:shadow-md
+              inline-flex items-center justify-center
+              bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+              text-[#4A352F] text-xs sm:text-sm font-semibold
+              px-7 py-3 rounded-full shadow-xs hover:shadow-md
               transition-all duration-200 active:scale-95
             "
           >
             <span>Book a Session for Your Baby</span>
-            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 

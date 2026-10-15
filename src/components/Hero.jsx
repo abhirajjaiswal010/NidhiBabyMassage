@@ -134,29 +134,28 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mt-4 sm:mt-5"
         >
-          {/* Primary Button: #FFDDDD, hover #FFCED8 */}
+          {/* Primary Button: #FFDDDD, hover darker #F2AEBA */}
           <Link
             to="/book"
             className="
-              inline-flex items-center gap-2
-              bg-[#FFDDDD] hover:bg-[#FFCED8]
+              inline-flex items-center justify-center
+              bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
               text-[#4A352F] font-poppins font-semibold text-xs sm:text-sm
-              px-6 py-2.5 sm:px-7 sm:py-3 rounded-full border border-[#FFCED8] shadow-xs hover:shadow-md
+              px-6 py-2.5 sm:px-7 sm:py-3 rounded-full shadow-xs hover:shadow-md
               transition-all duration-200 active:scale-95
             "
           >
             <span>Book a Session</span>
-            <span className="text-[#D96B82]">✦</span>
           </Link>
 
-          {/* Secondary Button: #FFE8C4, hover #FFDDDD */}
+          {/* Secondary Button: #FFE8C4, hover darker #F5CE96 */}
           <a
             href="#services"
             className="
-              inline-flex items-center gap-1.5
-              bg-[#FFE8C4]/70 hover:bg-[#FFDDDD]
+              inline-flex items-center justify-center
+              bg-[#FFE8C4] hover:bg-[#F5CE96] hover:brightness-95
               text-[#4A352F] font-poppins font-semibold text-xs sm:text-sm
-              px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-[#FFE8C4] shadow-xs hover:shadow-sm
+              px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-xs hover:shadow-sm
               transition-all duration-200 active:scale-95
             "
           >

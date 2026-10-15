@@ -73,16 +73,13 @@ export default function Services() {
                 <Link
                   to="/book"
                   className="
-                    w-full flex items-center justify-center gap-1.5
-                    bg-warm-ivory hover:bg-soft-terracotta
-                    text-warm-charcoal hover:text-white
-                    text-xs font-semibold py-2.5 rounded-full
-                    border border-dusty-peach/60 hover:border-transparent
-                    transition-all duration-200
+                    w-full flex items-center justify-center
+                    bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                    text-[#4A352F] text-xs font-semibold py-2.5 rounded-full shadow-xs
+                    transition-all duration-200 active:scale-95
                   "
                 >
                   <span>Book for this stage</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </motion.article>
