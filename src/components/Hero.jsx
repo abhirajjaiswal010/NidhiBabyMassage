@@ -8,9 +8,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/18 via-[#FFDDDD]/12 via-[#FFFBF4] to-[#FFE8C4]/15">
       
-      {/* 1. Warm Golden Arch & Ambient Sun Glow (matching new palette) */}
+      {/* 1. Radiant Ambient Glow merging Navbar down into Hero */}
       <div 
-        className="absolute -top-28 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] h-[340px] sm:w-[950px] sm:h-[440px] bg-gradient-to-b from-[#FFCED8]/60 via-[#FFDDDD]/40 to-transparent rounded-b-full pointer-events-none -z-10 blur-xl"
+        className="absolute -top-10 sm:-top-14 left-1/2 -translate-x-1/2 w-[760px] h-[360px] sm:w-[1050px] sm:h-[460px] bg-gradient-to-b from-[#FFCED8]/70 via-[#FFDDDD]/45 via-[#FFE8C4]/25 to-transparent rounded-b-full pointer-events-none -z-10 blur-2xl"
         aria-hidden="true"
       />
 

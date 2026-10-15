@@ -26,10 +26,10 @@ export default function Navbar() {
   return (
     <header
       className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-200 backdrop-blur-md
+        fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-none outline-none
         ${isScrolled 
-          ? 'bg-warm-ivory/95 shadow-xs py-3 border-b border-[#FFCED8]/40' 
-          : 'bg-warm-ivory/80 py-4 border-b border-[#FFCED8]/20 shadow-2xs'
+          ? 'bg-warm-ivory/70 backdrop-blur-md shadow-xs py-3' 
+          : 'bg-gradient-to-b from-[#FFCED8]/40 via-[#FFDDDD]/20 to-transparent backdrop-blur-xs py-4 sm:py-5'
         }
       `}
     >
@@ -103,7 +103,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-warm-ivory/95 backdrop-blur-md border-b border-[#FFCED8]/30 px-6 py-5 shadow-md">
+        <div className="md:hidden bg-warm-ivory/95 backdrop-blur-md px-6 py-5 shadow-lg">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
@@ -115,7 +115,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-3 border-t border-dusty-peach/30 flex flex-col gap-2">
+            <div className="pt-3 flex flex-col gap-2">
               <Link
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
