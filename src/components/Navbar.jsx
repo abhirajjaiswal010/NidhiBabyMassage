@@ -86,13 +86,14 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-[#FEF3E2] hover:bg-[#FFE8C4] hover:shadow-sm
-                text-[#D96B82] hover:text-[#C2556C] text-xs font-semibold
-                px-5 py-2.5 rounded-full shadow-xs
+                inline-flex items-center justify-center
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                text-[#4A352F] font-poppins font-semibold text-xs
+                px-5 py-2.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
               "
             >
-              Book Session
+              Book a Session
             </Link>
           </div>
 
@@ -109,8 +110,10 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-[#FEF3E2] hover:bg-[#FFE8C4] text-[#D96B82] hover:text-[#C2556C]
-                text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-xs
+                inline-flex items-center justify-center
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                text-[#4A352F] font-poppins font-semibold text-xs
+                px-3.5 py-1.5 rounded-full shadow-xs hover:shadow-md
                 transition-all duration-200 active:scale-95
               "
             >
@@ -153,12 +156,12 @@ export default function Navbar() {
                 to="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
-                  text-center bg-[#FEF3E2] hover:bg-[#FFE8C4]
-                  text-[#D96B82] hover:text-[#C2556C] font-semibold py-2.5 rounded-full text-xs shadow-xs
+                  text-center bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                  text-[#4A352F] font-poppins font-semibold py-2.5 rounded-full text-xs shadow-xs hover:shadow-md
                   transition-all duration-200 active:scale-95
                 "
               >
-                Book Session
+                Book a Session
               </Link>
               <a
                 href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
