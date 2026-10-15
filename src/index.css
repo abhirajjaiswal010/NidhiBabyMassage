@@ -1,11 +1,4 @@
-@font-face {
-  font-family: 'Huglove';
-  src: url('/fonts/Huglove.ttf') format('truetype'),
-       url('/fonts/Huglove.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import './fonts.css';
 
 @tailwind base;
 @tailwind components;
