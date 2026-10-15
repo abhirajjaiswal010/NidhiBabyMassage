@@ -167,18 +167,18 @@ export default function Hero() {
       {/* 7. Signature 5 Cards - Fully Visible at Bottom, All Corners Rounded, Identical Size & Positions */}
       <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 lg:pb-16 w-full flex items-end justify-center -space-x-10 sm:-space-x-16 md:-space-x-20 lg:-space-x-24 px-4 relative">
         
-        {/* Card 1: Far Left Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 1: Far Left Card (Smallest End Card) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-lg z-0
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-lg z-10
+            w-32 sm:w-42 md:w-48 lg:w-54 xl:w-58
+            h-46 sm:h-56 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             -rotate-6 sm:-rotate-8
-            translate-y-10 sm:translate-y-14
+            translate-y-12 sm:translate-y-16 md:translate-y-20
           "
         >
           {/* Replaceable image: Card 1 */}
@@ -189,18 +189,18 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 2: Inner Left Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 2: Inner Left Card (Medium Reduced Size) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-xl z-10
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-xl z-20
+            w-38 sm:w-48 md:w-56 lg:w-62 xl:w-68
+            h-54 sm:h-64 md:h-76 lg:h-84 xl:h-92
             origin-bottom-center
             -rotate-3 sm:-rotate-4
-            translate-y-5 sm:translate-y-7
+            translate-y-6 sm:translate-y-8 md:translate-y-10
           "
         >
           {/* Replaceable image: Card 2 */}
@@ -211,15 +211,15 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 3: Center Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 3: Center Focal Card (Largest - Primary Focus with middle.jpg) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-2xl z-20
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-2xl z-30
+            w-44 sm:w-56 md:w-64 lg:w-72 xl:w-80
+            h-64 sm:h-76 md:h-88 lg:h-[400px] xl:h-[440px]
             origin-bottom-center
             rotate-0
             translate-y-0
@@ -233,18 +233,18 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 4: Inner Right Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 4: Inner Right Card (Medium Reduced Size) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-xl z-10
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-xl z-20
+            w-38 sm:w-48 md:w-56 lg:w-62 xl:w-68
+            h-54 sm:h-64 md:h-76 lg:h-84 xl:h-92
             origin-bottom-center
             rotate-3 sm:rotate-4
-            translate-y-5 sm:translate-y-7
+            translate-y-6 sm:translate-y-8 md:translate-y-10
           "
         >
           {/* Replaceable image: Card 4 */}
@@ -255,18 +255,18 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 5: Far Right Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 5: Far Right Card (Smallest End Card) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-lg z-0
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-lg z-10
+            w-32 sm:w-42 md:w-48 lg:w-54 xl:w-58
+            h-46 sm:h-56 md:h-66 lg:h-74 xl:h-80
             origin-bottom-center
             rotate-6 sm:rotate-8
-            translate-y-10 sm:translate-y-14
+            translate-y-12 sm:translate-y-16 md:translate-y-20
           "
         >
           {/* Replaceable image: Card 5 */}
