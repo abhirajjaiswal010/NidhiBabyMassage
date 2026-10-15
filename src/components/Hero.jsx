@@ -162,20 +162,20 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 5 Cards - Slightly Larger Size, Spread Out Fan, Middle Highest, Stepped Down Position */}
-      <div className="mt-auto pt-4 sm:pt-6 md:pt-8 pb-0 w-full flex items-end justify-center -space-x-6 sm:-space-x-10 md:-space-x-13 lg:-space-x-16 px-4 overflow-hidden relative">
+      {/* 7. Signature 5 Cards - Identical Card Size, Middle Highest, Stepped Down Position on Both Sides */}
+      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-0 w-full flex items-end justify-center -space-x-10 sm:-space-x-16 md:-space-x-20 lg:-space-x-24 px-4 overflow-hidden relative">
         
-        {/* Card 1: Far Left Card (Spread Out, Stepped Down Most) */}
+        {/* Card 1: Far Left Card (Identical Size, Stepped Down Most) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-lg z-0
-            w-40 sm:w-52 md:w-62 lg:w-70 xl:w-72
-            h-50 sm:h-62 md:h-70 lg:h-78 xl:h-84
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-50 sm:h-62 md:h-72 lg:h-80 xl:h-86
             origin-bottom-center
-            -rotate-8 sm:-rotate-10
+            -rotate-6 sm:-rotate-8
             translate-y-10 sm:translate-y-14
             -mb-4 sm:-mb-6
           "
@@ -188,17 +188,17 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 2: Inner Left Card (Spread Out, Stepped Down Mid) */}
+        {/* Card 2: Inner Left Card (Identical Size, Stepped Down Mid) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-40 sm:w-52 md:w-62 lg:w-70 xl:w-72
-            h-50 sm:h-62 md:h-70 lg:h-78 xl:h-84
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-50 sm:h-62 md:h-72 lg:h-80 xl:h-86
             origin-bottom-center
-            -rotate-4 sm:-rotate-5
+            -rotate-3 sm:-rotate-4
             translate-y-5 sm:translate-y-7
             -mb-4 sm:-mb-6
           "
@@ -211,15 +211,15 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 3: Center Card (Highest Position, Seamless Bottom Flush) */}
+        {/* Card 3: Center Card (Identical Size, Highest Position In Front, Seamless Bottom Flush) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-2xl z-20
-            w-40 sm:w-52 md:w-62 lg:w-70 xl:w-72
-            h-50 sm:h-62 md:h-70 lg:h-78 xl:h-84
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-50 sm:h-62 md:h-72 lg:h-80 xl:h-86
             origin-bottom-center
             rotate-0
             translate-y-0
@@ -234,17 +234,17 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 4: Inner Right Card (Spread Out, Stepped Down Mid) */}
+        {/* Card 4: Inner Right Card (Identical Size, Stepped Down Mid) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-xl z-10
-            w-40 sm:w-52 md:w-62 lg:w-70 xl:w-72
-            h-50 sm:h-62 md:h-70 lg:h-78 xl:h-84
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-50 sm:h-62 md:h-72 lg:h-80 xl:h-86
             origin-bottom-center
-            rotate-4 sm:rotate-5
+            rotate-3 sm:rotate-4
             translate-y-5 sm:translate-y-7
             -mb-4 sm:-mb-6
           "
@@ -257,17 +257,17 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 5: Far Right Card (Spread Out, Stepped Down Most) */}
+        {/* Card 5: Far Right Card (Identical Size, Stepped Down Most) */}
         <div
           className="
             relative
             rounded-t-2xl sm:rounded-t-3xl rounded-b-none
             overflow-hidden
             shadow-lg z-0
-            w-40 sm:w-52 md:w-62 lg:w-70 xl:w-72
-            h-50 sm:h-62 md:h-70 lg:h-78 xl:h-84
+            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
+            h-50 sm:h-62 md:h-72 lg:h-80 xl:h-86
             origin-bottom-center
-            rotate-8 sm:rotate-10
+            rotate-6 sm:rotate-8
             translate-y-10 sm:translate-y-14
             -mb-4 sm:-mb-6
           "
