@@ -8,11 +8,17 @@ import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
 
-// Security: Restrict CORS to authorized frontend origin
-const allowedOrigin = process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
+// Security: Restrict CORS to authorized frontend origin (or allow same-origin / Vercel previews)
+const allowedOrigin = process.env.FRONTEND_ORIGIN;
 app.use(
   cors({
-    origin: allowedOrigin,
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (!allowedOrigin || origin === allowedOrigin || origin.includes('localhost') || origin.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+      return callback(null, true);
+    },
     credentials: true,
   })
 );

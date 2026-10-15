@@ -10,7 +10,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
-const API_BASE = import.meta.env?.VITE_API_URL || 'http://localhost:5000';
+const API_BASE = import.meta.env?.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:5000');
 
 // Inactivity timeout: 15 minutes of idle time automatically locks the session
 const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000;

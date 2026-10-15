@@ -25,7 +25,7 @@ export async function sendAutomaticBookingNotification(bookingData) {
 
   // 1. Send directly to your PostgreSQL Backend API
   try {
-    const apiUrl = import.meta.env?.VITE_API_URL || 'http://localhost:5000';
+    const apiUrl = import.meta.env?.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:5000');
     const apiResponse = await fetch(`${apiUrl}/api/enquiries`, {
       method: 'POST',
       headers: {
