@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Calendar } from 'lucide-react';
 import { BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
@@ -24,20 +25,26 @@ export default function Navbar() {
   ];
 
   return (
-    <header
+    <motion.header
+      initial={false}
+      animate={{
+        y: isScrolled ? 10 : 0,
+      }}
+      transition={{ type: "spring", stiffness: 220, damping: 26 }}
       className={`
-        fixed left-0 right-0 z-50 transition-all duration-500 ease-out flex flex-col items-center pointer-events-none
-        ${isScrolled 
-          ? 'top-2.5 sm:top-3.5 px-3 sm:px-6' 
-          : 'top-0 px-3 sm:px-6 md:px-8'
-        }
+        fixed left-0 right-0 z-50 flex flex-col items-center pointer-events-none transition-all duration-500
+        ${isScrolled ? 'px-3 sm:px-6' : 'px-3 sm:px-6 md:px-8'}
       `}
     >
-      <div
+      <motion.div
+        layout
+        transition={{
+          layout: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+        }}
         className={`
-          w-full pointer-events-auto transition-all duration-500 ease-out border-none outline-none
+          w-full pointer-events-auto border-none outline-none transition-colors duration-500 ease-out
           ${isScrolled 
-            ? 'max-w-5xl bg-warm-ivory/45 backdrop-blur-xl shadow-md rounded-full py-2 px-4 sm:px-6' 
+            ? 'max-w-5xl bg-warm-ivory/50 backdrop-blur-xl shadow-md rounded-full py-2 px-4 sm:px-6' 
             : 'max-w-7xl bg-gradient-to-b from-[#FFCED8]/60 via-[#FFDDDD]/35 via-[#FFE8C4]/15 to-transparent backdrop-blur-md rounded-2xl sm:rounded-3xl py-3.5 sm:py-4 px-4 sm:px-8'
           }
         `}
@@ -47,7 +54,7 @@ export default function Navbar() {
           {/* Minimal Brand Logo */}
           <Link
             to="/"
-            className="group focus:outline-none"
+            className="group focus:outline-none shrink-0"
             aria-label="Nidhi's Baby Massage Home"
           >
             <span className="font-huglove text-2xl sm:text-3xl tracking-wide block leading-none">
@@ -77,76 +84,138 @@ export default function Navbar() {
 
           {/* Action CTA + Direct Phone Number */}
           <div className="hidden md:flex items-center gap-2.5">
-            <a
+            <motion.a
+              layout
+              transition={{ layout: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } }}
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
               className={`
-                bg-white hover:bg-white/90 shadow-xs rounded-full
-                transition-all duration-300 active:scale-95 flex items-center justify-center
+                bg-white hover:bg-white/95 shadow-xs rounded-full overflow-hidden
+                active:scale-95 flex items-center justify-center shrink-0
                 ${isScrolled 
-                  ? 'p-2.5 hover:scale-105' 
-                  : 'px-3.5 py-2 gap-1.5 text-xs font-semibold text-[#4A352F]'
+                  ? 'h-9 w-9 p-0 hover:scale-105 transition-transform duration-200' 
+                  : 'h-9 px-3.5 gap-1.5 text-xs font-semibold text-[#4A352F]'
                 }
               `}
               title={`Call ${BUSINESS_PHONE_DISPLAY}`}
               aria-label={`Call Nidhi at ${BUSINESS_PHONE_DISPLAY}`}
             >
-              <Phone className="w-3.5 h-3.5 text-[#D96B82]" />
-              {!isScrolled && <span>{BUSINESS_PHONE_DISPLAY}</span>}
-            </a>
+              <Phone className="w-3.5 h-3.5 text-[#D96B82] shrink-0" />
+              <AnimatePresence initial={false}>
+                {!isScrolled && (
+                  <motion.span
+                    initial={{ opacity: 0, width: 0 }}
+                    animate={{ opacity: 1, width: 'auto' }}
+                    exit={{ opacity: 0, width: 0 }}
+                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    className="whitespace-nowrap overflow-hidden text-xs"
+                  >
+                    {BUSINESS_PHONE_DISPLAY}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.a>
 
-            <Link
-              to="/book"
-              className={`
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
-                text-[#4A352F] rounded-full shadow-xs hover:shadow-md
-                transition-all duration-300 active:scale-95 flex items-center justify-center
-                ${isScrolled 
-                  ? 'p-2.5 hover:scale-105' 
-                  : 'px-5 py-2.5 font-poppins font-semibold text-xs'
-                }
-              `}
-              title="Book a Session"
-              aria-label="Book a Session"
+            <motion.div
+              layout
+              transition={{ layout: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } }}
             >
-              {isScrolled ? (
-                <Calendar className="w-4 h-4 text-[#4A352F]" />
-              ) : (
-                <span>Book a Session</span>
-              )}
-            </Link>
+              <Link
+                to="/book"
+                className={`
+                  bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
+                  text-[#4A352F] rounded-full shadow-xs hover:shadow-md
+                  active:scale-95 flex items-center justify-center shrink-0 overflow-hidden
+                  transition-colors duration-200
+                  ${isScrolled 
+                    ? 'h-9 w-9 p-0 hover:scale-105 transition-transform duration-200' 
+                    : 'h-9 px-5 font-poppins font-semibold text-xs'
+                  }
+                `}
+                title="Book a Session"
+                aria-label="Book a Session"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {isScrolled ? (
+                    <motion.span
+                      key="calendar-icon"
+                      initial={{ opacity: 0, scale: 0.6 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.6 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex items-center justify-center"
+                    >
+                      <Calendar className="w-4 h-4 text-[#4A352F]" />
+                    </motion.span>
+                  ) : (
+                    <motion.span
+                      key="book-text"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.2 }}
+                      className="whitespace-nowrap"
+                    >
+                      Book a Session
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Action */}
           <div className="flex md:hidden items-center gap-1.5">
-            <a
+            <motion.a
+              layout
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
-              className="p-1.5 bg-white text-[#D96B82] rounded-full shadow-xs hover:bg-white/90 transition-colors"
+              className="h-8 w-8 flex items-center justify-center bg-white text-[#D96B82] rounded-full shadow-xs hover:bg-white/90 active:scale-95 transition-all"
               title={`Call ${BUSINESS_PHONE_DISPLAY}`}
               aria-label={`Call ${BUSINESS_PHONE_DISPLAY}`}
             >
-              <Phone className="w-4 h-4" />
-            </a>
+              <Phone className="w-3.5 h-3.5" />
+            </motion.a>
 
-            <Link
-              to="/book"
-              className={`
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95 text-[#4A352F]
-                rounded-full shadow-xs hover:shadow-md transition-all duration-300 active:scale-95
-                flex items-center justify-center
-                ${isScrolled 
-                  ? 'p-1.5 hover:scale-105' 
-                  : 'px-3.5 py-1.5 font-poppins font-semibold text-xs'
-                }
-              `}
-              title="Book a Session"
-              aria-label="Book a Session"
+            <motion.div
+              layout
+              transition={{ layout: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } }}
             >
-              {isScrolled ? (
-                <Calendar className="w-4 h-4 text-[#4A352F]" />
-              ) : (
-                <span>Book</span>
-              )}
-            </Link>
+              <Link
+                to="/book"
+                className={`
+                  bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95 text-[#4A352F]
+                  rounded-full shadow-xs hover:shadow-md active:scale-95
+                  flex items-center justify-center overflow-hidden transition-colors duration-200
+                  ${isScrolled ? 'h-8 w-8 p-0' : 'h-8 px-3.5 font-poppins font-semibold text-xs'}
+                `}
+                title="Book a Session"
+                aria-label="Book a Session"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {isScrolled ? (
+                    <motion.span
+                      key="m-calendar"
+                      initial={{ opacity: 0, scale: 0.6 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.6 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Calendar className="w-3.5 h-3.5 text-[#4A352F]" />
+                    </motion.span>
+                  ) : (
+                    <motion.span
+                      key="m-book"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.2 }}
+                      className="whitespace-nowrap"
+                    >
+                      Book
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </Link>
+            </motion.div>
 
             <button
               type="button"
@@ -159,7 +228,7 @@ export default function Navbar() {
           </div>
 
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
@@ -207,6 +276,6 @@ export default function Navbar() {
           </nav>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
