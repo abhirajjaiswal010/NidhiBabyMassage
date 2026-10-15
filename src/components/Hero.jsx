@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowDown, MapPin, ShieldCheck, Heart } from 'lucide-react';
@@ -11,8 +11,30 @@ import {
 } from './common/SvgDecorations';
 
 export default function Hero() {
+  // Multiple curated images representing authentic baby massage care
+  const heroImages = [
+    {
+      id: 'main',
+      src: 'https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80',
+      alt: 'Gentle baby massage in the comfort of home in Indore',
+      tag: 'Gentle Massage',
+    },
+    {
+      id: 'feet',
+      src: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80',
+      alt: 'Tender baby feet reflexology and soothing touch',
+      tag: 'Tiny Soles',
+    },
+    {
+      id: 'sleep',
+      src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=600&q=80',
+      alt: 'Newborn peacefully sleeping after soothing massage',
+      tag: 'Deep Sleep',
+    },
+  ];
+
   return (
-    <section className="relative overflow-hidden pt-28 pb-12 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24">
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28">
       
       {/* Background Soft Organic Radial Blobs */}
       <div 
@@ -34,7 +56,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Column: Headline & Actions */}
           <motion.div
@@ -57,7 +79,7 @@ export default function Hero() {
               Unhurried, at-home baby massage in Indore. Tailored strictly to your baby’s comfort, sleep, and feeding rhythm.
             </p>
 
-            {/* Action Buttons with Smooth Interaction */}
+            {/* Action Buttons with Smooth Tactile Interaction */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
               <Link
                 to="/book"
@@ -101,15 +123,15 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Visual with Smooth Floating Image & Baby SVGs */}
+          {/* Right Column: Multi-Image Collage with Moving Baby SVGs */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md">
+            <div className="relative w-full max-w-xs sm:max-w-sm my-6 sm:my-8">
               
-              {/* Floating Sleeping Moon SVG (Background) */}
+              {/* Floating Sleeping Moon SVG (Background Top Right) */}
               <motion.div
                 animate={{ y: [0, -8, 0], rotate: [0, 4, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                className="absolute -top-10 right-4 z-0 opacity-80"
+                className="absolute -top-12 right-0 sm:-right-4 z-0 opacity-75 pointer-events-none"
                 aria-hidden="true"
               >
                 <SleepingMoonSvg className="w-14 h-14" />
@@ -117,30 +139,16 @@ export default function Hero() {
 
               {/* Floating Baby Rattle SVG (Top Left) */}
               <motion.div
-                animate={{ y: [0, -10, 0], rotate: [-8, 8, -8] }}
+                animate={{ y: [0, -9, 0], rotate: [-8, 8, -8] }}
                 transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
                 className="
-                  absolute -top-5 -left-5 sm:-left-6 z-20
-                  bg-white/95 backdrop-blur-sm p-2.5 rounded-2xl
+                  absolute -top-6 -left-4 sm:-left-6 z-30
+                  bg-white/95 backdrop-blur-sm p-2 rounded-2xl
                   shadow-md border border-dusty-peach/40
                 "
                 aria-label="Baby rattle icon"
               >
                 <BabyRattleSvg className="w-7 h-7 sm:w-8 sm:h-8" />
-              </motion.div>
-
-              {/* Floating Baby Pacifier SVG (Top Right) */}
-              <motion.div
-                animate={{ y: [0, 8, 0], rotate: [6, -6, 6] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
-                className="
-                  absolute -top-4 -right-3 sm:-right-5 z-20
-                  bg-white/95 backdrop-blur-sm p-2.5 rounded-2xl
-                  shadow-md border border-dusty-peach/40
-                "
-                aria-label="Baby pacifier icon"
-              >
-                <BabyPacifierSvg className="w-7 h-7 sm:w-8 sm:h-8" />
               </motion.div>
 
               {/* Soft Peach Organic Backdrop Shape */}
@@ -149,43 +157,80 @@ export default function Hero() {
                 aria-hidden="true"
               />
 
-              {/* Hero Image with Smooth Organic Floating Motion */}
+              {/* 1. Main Hero Image (Central & Moving Smoothly) */}
               <motion.div
-                animate={{ y: [0, -8, 0] }}
+                animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
-                className="relative rounded-[2rem] overflow-hidden shadow-lg border-4 border-white aspect-[4/5] bg-dusty-peach/20"
+                className="relative rounded-[2rem] overflow-hidden shadow-lg border-4 border-white aspect-[4/5] bg-dusty-peach/20 z-10"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80"
-                  alt="Gentle baby massage in the comfort of home in Indore"
+                  src={heroImages[0].src}
+                  alt={heroImages[0].alt}
                   className="w-full h-full object-cover object-center"
                   loading="eager"
                 />
               </motion.div>
 
-              {/* Floating Baby-Led Reassurance Card with Footprint SVG (Bottom) */}
+              {/* 2. Secondary Floating Image (Top Right - Peaceful Sleep) */}
               <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.8 }}
+                animate={{ y: [0, 8, 0], rotate: [2, -2, 2] }}
+                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.4 }}
                 className="
-                  absolute -bottom-4 -left-3 sm:-left-5 z-20
-                  bg-white/95 backdrop-blur-sm
-                  py-2 px-3.5 rounded-2xl
-                  shadow-md border border-dusty-peach/40
-                  flex items-center gap-2.5
+                  absolute -top-8 -right-6 sm:-right-10 z-20
+                  w-28 h-28 sm:w-36 sm:h-36 rounded-2xl sm:rounded-3xl
+                  overflow-hidden shadow-xl border-3 border-white
+                  bg-white group
                 "
               >
-                <div className="w-7 h-7 rounded-full bg-dusty-peach/40 flex items-center justify-center text-soft-terracotta shrink-0">
-                  <BabyFootprintSvg className="w-4 h-4 text-soft-terracotta" />
+                <img
+                  src={heroImages[2].src}
+                  alt={heroImages[2].alt}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-charcoal/60 via-transparent to-transparent flex items-end p-2 sm:p-2.5">
+                  <span className="text-[10px] sm:text-xs text-white font-medium drop-shadow-xs">
+                    Peaceful Sleep
+                  </span>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold text-warm-charcoal">
-                    100% Baby-Led Care
-                  </p>
-                  <p className="text-[11px] text-muted-brown">
-                    Tailored to baby's rhythm
-                  </p>
+              </motion.div>
+
+              {/* 3. Third Floating Image (Bottom Left - Tiny Feet Touch) */}
+              <motion.div
+                animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
+                transition={{ repeat: Infinity, duration: 5.2, ease: "easeInOut", delay: 0.8 }}
+                className="
+                  absolute -bottom-8 -left-6 sm:-left-10 z-20
+                  w-28 h-28 sm:w-36 sm:h-36 rounded-2xl sm:rounded-3xl
+                  overflow-hidden shadow-xl border-3 border-white
+                  bg-white group
+                "
+              >
+                <img
+                  src={heroImages[1].src}
+                  alt={heroImages[1].alt}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-charcoal/60 via-transparent to-transparent flex items-end p-2 sm:p-2.5">
+                  <span className="text-[10px] sm:text-xs text-white font-medium drop-shadow-xs">
+                    Gentle Touch
+                  </span>
                 </div>
+              </motion.div>
+
+              {/* Floating Baby Pacifier SVG (Bottom Right) */}
+              <motion.div
+                animate={{ y: [0, 7, 0], rotate: [5, -5, 5] }}
+                transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.6 }}
+                className="
+                  absolute -bottom-5 right-2 sm:right-4 z-30
+                  bg-white/95 backdrop-blur-sm p-2 rounded-2xl
+                  shadow-md border border-dusty-peach/40
+                "
+                aria-label="Baby pacifier icon"
+              >
+                <BabyPacifierSvg className="w-7 h-7 sm:w-8 sm:h-8" />
               </motion.div>
 
             </div>
