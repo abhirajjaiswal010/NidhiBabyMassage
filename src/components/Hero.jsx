@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, ShieldCheck } from 'lucide-react';
+import { ArrowDown, MapPin, ShieldCheck, Heart } from 'lucide-react';
+import { SoftLeafSvg, TenderHeartSvg, WaveDivider } from './common/SvgDecorations';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28">
-      {/* Background Soft Organic Blobs */}
+    <section className="relative overflow-hidden pt-28 pb-10 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20">
+      
+      {/* Background Soft Organic Blobs & SVGs */}
       <div 
         className="absolute top-12 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-dusty-peach/20 rounded-full blur-3xl pointer-events-none -z-10"
         aria-hidden="true"
@@ -16,7 +18,15 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Floating Gentle SVG leaves */}
+      <div className="absolute top-28 left-8 sm:left-16 opacity-30 pointer-events-none -z-10 hidden sm:block">
+        <SoftLeafSvg className="w-10 h-10 text-muted-sage rotate-12" />
+      </div>
+      <div className="absolute bottom-20 left-1/3 opacity-20 pointer-events-none -z-10 hidden lg:block">
+        <TenderHeartSvg className="w-8 h-8 text-soft-terracotta" />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Column: Headline & Actions */}
@@ -41,7 +51,7 @@ export default function Hero() {
               Unhurried, at-home baby massage in Indore. Tailored strictly to your baby’s comfort, sleep, and feeding rhythm.
             </p>
 
-            {/* Action Buttons */}
+            {/* Action Buttons with Smooth Interaction */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
               <Link
                 to="/book"
@@ -49,8 +59,8 @@ export default function Hero() {
                   w-full sm:w-auto inline-flex items-center justify-center
                   bg-soft-terracotta hover:bg-soft-terracotta-hover
                   text-white font-medium text-base
-                  px-7 py-3 rounded-full shadow-sm hover:shadow-md
-                  transition-all duration-200 active:scale-[0.98]
+                  px-8 py-3.5 rounded-full shadow-sm hover:shadow-md
+                  transition-all duration-300 ease-out active:scale-95
                 "
               >
                 <span>Book a Session</span>
@@ -62,16 +72,17 @@ export default function Hero() {
                   w-full sm:w-auto inline-flex items-center justify-center gap-1.5
                   bg-white/80 hover:bg-white
                   text-warm-charcoal font-medium text-base
-                  px-6 py-3 rounded-full border border-dusty-peach/60
-                  transition-all duration-200
+                  px-7 py-3.5 rounded-full border border-dusty-peach/60
+                  hover:border-soft-terracotta/40 shadow-xs hover:shadow-sm
+                  transition-all duration-300 ease-out active:scale-95
                 "
               >
-                <span>Learn More</span>
+                <span>Explore Massage</span>
                 <ArrowDown className="w-4 h-4 text-muted-brown" />
               </a>
             </div>
 
-            {/* Location Pill */}
+            {/* Location & Safety Pill */}
             <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-muted-brown">
               <span className="inline-flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-soft-terracotta" />
@@ -79,7 +90,7 @@ export default function Hero() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-muted-sage" />
-                Sanitized & Baby-Safe
+                Sanitized & Pediatric-Safe
               </span>
             </div>
           </motion.div>
@@ -97,6 +108,7 @@ export default function Hero() {
                 aria-hidden="true"
               />
 
+              {/* Photo Frame */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-md border-4 border-white aspect-[4/5] bg-dusty-peach/20">
                 <img
                   src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80"
@@ -110,12 +122,12 @@ export default function Hero() {
               <div className="
                 absolute -bottom-3 -left-3 sm:-left-5
                 bg-white/95 backdrop-blur-sm
-                py-2 px-3.5 rounded-2xl
+                py-2.5 px-4 rounded-2xl
                 shadow-md border border-dusty-peach/40
                 flex items-center gap-2.5
               ">
-                <div className="w-7 h-7 rounded-full bg-muted-sage/20 flex items-center justify-center text-muted-sage-dark">
-                  <ShieldCheck className="w-4 h-4" />
+                <div className="w-7 h-7 rounded-full bg-dusty-peach/50 flex items-center justify-center text-soft-terracotta">
+                  <Heart className="w-4 h-4 fill-soft-terracotta" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-warm-charcoal">

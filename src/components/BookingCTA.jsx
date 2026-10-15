@@ -55,7 +55,7 @@ export default function BookingCTA() {
                 bg-warm-ivory hover:bg-dusty-peach/30
                 text-warm-charcoal font-medium text-sm sm:text-base
                 px-6 py-3 rounded-full border border-dusty-peach/70
-                transition-all duration-200
+                transition-all duration-300 ease-out active:scale-95
               "
             >
               <MessageCircle className="w-4 h-4 text-soft-terracotta" />

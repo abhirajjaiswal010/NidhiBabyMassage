@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import TrustHighlights from '../components/TrustHighlights';
 import Services from '../components/Services';
+import MomentsGallery from '../components/MomentsGallery';
 import WhyChooseUs from '../components/WhyChooseUs';
 import AboutNidhi from '../components/AboutNidhi';
 import BookingSteps from '../components/BookingSteps';
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Hero />
       <TrustHighlights />
       <Services />
+      <MomentsGallery />
       <WhyChooseUs />
       <AboutNidhi />
       <BookingSteps />

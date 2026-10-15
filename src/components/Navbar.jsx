@@ -17,6 +17,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Massage', href: '/#services' },
+    { label: 'Moments', href: '/#gallery' },
     { label: 'Why Us', href: '/#why-us' },
     { label: 'About', href: '/#about' },
     { label: 'FAQs', href: '/#faqs' },

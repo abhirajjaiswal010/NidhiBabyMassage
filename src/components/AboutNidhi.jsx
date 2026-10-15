@@ -68,7 +68,7 @@ export default function AboutNidhi() {
                     bg-soft-terracotta hover:bg-soft-terracotta-hover
                     text-white text-xs font-semibold
                     px-5 py-2.5 rounded-full shadow-xs
-                    transition-all duration-200
+                    transition-all duration-300 ease-out active:scale-95
                   "
                 >
                   <span>Book with Nidhi</span>
@@ -83,7 +83,7 @@ export default function AboutNidhi() {
                     bg-warm-ivory hover:bg-dusty-peach/30
                     text-warm-charcoal text-xs font-semibold
                     px-4 py-2.5 rounded-full border border-dusty-peach/60
-                    transition-all duration-200
+                    transition-all duration-300 ease-out active:scale-95
                   "
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-soft-terracotta" />
