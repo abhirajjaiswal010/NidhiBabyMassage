@@ -6,11 +6,15 @@ import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDe
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/18 via-[#FFDDDD]/12 via-[#FFFBF4] to-[#FFE8C4]/15">
+    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
       
       {/* 1. Radiant Ambient Glow merging Navbar down into Hero */}
       <div 
-        className="absolute -top-10 sm:-top-14 left-1/2 -translate-x-1/2 w-[760px] h-[360px] sm:w-[1050px] sm:h-[460px] bg-gradient-to-b from-[#FFCED8]/70 via-[#FFDDDD]/45 via-[#FFE8C4]/25 to-transparent rounded-b-full pointer-events-none -z-10 blur-2xl"
+        className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-[850px] h-[450px] sm:w-[1250px] sm:h-[580px] bg-gradient-to-b from-[#FFCED8] via-[#FFDDDD]/85 via-[#FFE8C4]/50 to-transparent rounded-b-full pointer-events-none -z-10 blur-3xl opacity-90"
+        aria-hidden="true"
+      />
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[300px] sm:w-[780px] sm:h-[380px] bg-gradient-to-b from-[#FFCED8] via-[#FFDDDD]/70 to-transparent rounded-full pointer-events-none -z-10 blur-2xl opacity-75"
         aria-hidden="true"
       />
 

@@ -28,8 +28,8 @@ export default function Navbar() {
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-none outline-none
         ${isScrolled 
-          ? 'bg-warm-ivory/70 backdrop-blur-md shadow-xs py-3' 
-          : 'bg-gradient-to-b from-[#FFCED8]/40 via-[#FFDDDD]/20 to-transparent backdrop-blur-xs py-4 sm:py-5'
+          ? 'bg-warm-ivory/80 backdrop-blur-md shadow-xs py-3' 
+          : 'bg-gradient-to-b from-[#FFCED8] via-[#FFDDDD]/75 via-[#FFE8C4]/35 to-transparent backdrop-blur-xs py-4 sm:py-5'
         }
       `}
     >
