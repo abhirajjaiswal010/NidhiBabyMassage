@@ -73,7 +73,7 @@ export default function Navbar() {
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
               className="
                 inline-flex items-center gap-1.5 text-xs font-semibold
-                text-[#4A352F] bg-[#FFE8C4]/60 hover:bg-[#F5CE96] hover:brightness-95
+                text-[#4A352F] bg-white hover:bg-white/90 shadow-xs
                 px-3.5 py-2 rounded-full
                 transition-all duration-200 active:scale-95
               "
@@ -87,7 +87,7 @@ export default function Navbar() {
               to="/book"
               className="
                 bg-[#FEF3E2] hover:bg-[#FFE8C4] hover:shadow-sm
-                text-[#4A352F] text-xs font-semibold
+                text-[#D96B82] hover:text-[#C2556C] text-xs font-semibold
                 px-5 py-2.5 rounded-full shadow-xs
                 transition-all duration-200 active:scale-95
               "
@@ -100,7 +100,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-1.5">
             <a
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
-              className="p-1.5 text-[#D96B82] hover:text-[#4A352F] transition-colors"
+              className="p-1.5 bg-white text-[#D96B82] rounded-full shadow-xs hover:bg-white/90 transition-colors"
               aria-label={`Call ${BUSINESS_PHONE_DISPLAY}`}
             >
               <Phone className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function Navbar() {
             <Link
               to="/book"
               className="
-                bg-[#FEF3E2] hover:bg-[#FFE8C4] text-[#4A352F]
+                bg-[#FEF3E2] hover:bg-[#FFE8C4] text-[#D96B82] hover:text-[#C2556C]
                 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-xs
                 transition-all duration-200 active:scale-95
               "
@@ -154,7 +154,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="
                   text-center bg-[#FEF3E2] hover:bg-[#FFE8C4]
-                  text-[#4A352F] font-semibold py-2.5 rounded-full text-xs shadow-xs
+                  text-[#D96B82] hover:text-[#C2556C] font-semibold py-2.5 rounded-full text-xs shadow-xs
                   transition-all duration-200 active:scale-95
                 "
               >
@@ -164,7 +164,7 @@ export default function Navbar() {
                 href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
                 className="
                   inline-flex items-center justify-center gap-2
-                  bg-[#FFE8C4]/60 hover:bg-[#F5CE96] hover:brightness-95
+                  bg-white hover:bg-white/90 shadow-xs
                   text-[#4A352F] font-semibold py-2 rounded-full text-xs
                   transition-all duration-200
                 "
