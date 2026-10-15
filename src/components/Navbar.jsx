@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Calendar } from 'lucide-react';
 import { BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function Navbar() {
@@ -76,32 +76,43 @@ export default function Navbar() {
           </nav>
 
           {/* Action CTA + Direct Phone Number */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
             <a
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
-              className="
-                inline-flex items-center gap-1.5 text-xs font-semibold
-                text-[#4A352F] bg-white hover:bg-white/90 shadow-xs
-                px-3.5 py-2 rounded-full
-                transition-all duration-200 active:scale-95
-              "
+              className={`
+                bg-white hover:bg-white/90 shadow-xs rounded-full
+                transition-all duration-300 active:scale-95 flex items-center justify-center
+                ${isScrolled 
+                  ? 'p-2.5 hover:scale-105' 
+                  : 'px-3.5 py-2 gap-1.5 text-xs font-semibold text-[#4A352F]'
+                }
+              `}
+              title={`Call ${BUSINESS_PHONE_DISPLAY}`}
               aria-label={`Call Nidhi at ${BUSINESS_PHONE_DISPLAY}`}
             >
               <Phone className="w-3.5 h-3.5 text-[#D96B82]" />
-              <span>{BUSINESS_PHONE_DISPLAY}</span>
+              {!isScrolled && <span>{BUSINESS_PHONE_DISPLAY}</span>}
             </a>
 
             <Link
               to="/book"
-              className="
-                inline-flex items-center justify-center
+              className={`
                 bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
-                text-[#4A352F] font-poppins font-semibold text-xs
-                px-5 py-2.5 rounded-full shadow-xs hover:shadow-md
-                transition-all duration-200 active:scale-95
-              "
+                text-[#4A352F] rounded-full shadow-xs hover:shadow-md
+                transition-all duration-300 active:scale-95 flex items-center justify-center
+                ${isScrolled 
+                  ? 'p-2.5 hover:scale-105' 
+                  : 'px-5 py-2.5 font-poppins font-semibold text-xs'
+                }
+              `}
+              title="Book a Session"
+              aria-label="Book a Session"
             >
-              Book a Session
+              {isScrolled ? (
+                <Calendar className="w-4 h-4 text-[#4A352F]" />
+              ) : (
+                <span>Book a Session</span>
+              )}
             </Link>
           </div>
 
@@ -110,6 +121,7 @@ export default function Navbar() {
             <a
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
               className="p-1.5 bg-white text-[#D96B82] rounded-full shadow-xs hover:bg-white/90 transition-colors"
+              title={`Call ${BUSINESS_PHONE_DISPLAY}`}
               aria-label={`Call ${BUSINESS_PHONE_DISPLAY}`}
             >
               <Phone className="w-4 h-4" />
@@ -117,15 +129,23 @@ export default function Navbar() {
 
             <Link
               to="/book"
-              className="
-                inline-flex items-center justify-center
-                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
-                text-[#4A352F] font-poppins font-semibold text-xs
-                px-3.5 py-1.5 rounded-full shadow-xs hover:shadow-md
-                transition-all duration-200 active:scale-95
-              "
+              className={`
+                bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95 text-[#4A352F]
+                rounded-full shadow-xs hover:shadow-md transition-all duration-300 active:scale-95
+                flex items-center justify-center
+                ${isScrolled 
+                  ? 'p-1.5 hover:scale-105' 
+                  : 'px-3.5 py-1.5 font-poppins font-semibold text-xs'
+                }
+              `}
+              title="Book a Session"
+              aria-label="Book a Session"
             >
-              Book
+              {isScrolled ? (
+                <Calendar className="w-4 h-4 text-[#4A352F]" />
+              ) : (
+                <span>Book</span>
+              )}
             </Link>
 
             <button
