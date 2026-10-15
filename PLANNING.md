@@ -271,7 +271,7 @@ Embedded in `index.html` to help Google index Nidhi as a verified local service 
     "Super Corridor", "Annapurna", "Mahalaxmi Nagar", "Rau", "Indore"
   ],
   "priceRange": "$$",
-  "telephone": "+91-XXXXXXXXXX",
+  "telephone": "+917987109645",
   "url": "https://nidhisbabymassage.com"
 }
 ```
@@ -339,7 +339,7 @@ flowchart LR
 
 ## 10. Checklist for Business Parameters (Input from Nidhi)
 
-- [ ] **Exact WhatsApp Contact Number:** To wire up one-click chat triggers.
+- [x] **Exact WhatsApp Contact Number:** Verified as `+91 79871 09645` (linked to direct chat and call triggers).
 - [ ] **Indore Operational Localities:** Confirm whether all Indore areas are served or specific hubs (e.g., Vijay Nagar, Old Palasia, etc.).
 - [ ] **Home Visit Details:** Confirm if services are exclusively home visits or also include a studio/clinic location.
 - [ ] **Real Photography:** Collect high-resolution genuine photos of Nidhi and real baby massage sessions (stock photos used as temporary placeholders).

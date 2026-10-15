@@ -1,6 +1,6 @@
 // WhatsApp utility for seamless one-click enquiries in Indore
-export const BUSINESS_PHONE = '919876543210'; // Replace with Nidhi's verified number
-export const BUSINESS_PHONE_DISPLAY = '+91 98765 43210';
+export const BUSINESS_PHONE = '917987109645';
+export const BUSINESS_PHONE_DISPLAY = '+91 79871 09645';
 export const BUSINESS_LOCATION = 'Indore, Madhya Pradesh';
 
 export const createWhatsAppUrl = (customMessage = '') => {
