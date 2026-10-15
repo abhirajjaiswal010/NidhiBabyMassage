@@ -46,3 +46,49 @@ export function BabyFootprintSvg({ className = 'w-6 h-6 text-dusty-peach-dark/40
     </svg>
   );
 }
+
+// Cute, gentle Baby Rattle SVG
+export function BabyRattleSvg({ className = 'w-10 h-10' }) {
+  return (
+    <svg className={className} viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="24" cy="18" r="12" fill="#F3C8B5" stroke="#B96F58" strokeWidth="2.5" />
+      <path d="M18 18C18 15 20.5 12.5 23.5 12.5" stroke="#B96F58" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="24" cy="18" r="4" fill="#9EAD96" />
+      <rect x="22" y="30" width="4" height="10" rx="2" fill="#B96F58" />
+      <circle cx="24" cy="42" r="3.5" fill="#FFF9F2" stroke="#B96F58" strokeWidth="2" />
+    </svg>
+  );
+}
+
+// Cute, tender Baby Pacifier / Soother SVG
+export function BabyPacifierSvg({ className = 'w-10 h-10' }) {
+  return (
+    <svg className={className} viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <ellipse cx="24" cy="22" rx="14" ry="9" fill="#F8DDD0" stroke="#B96F58" strokeWidth="2.5" />
+      <circle cx="24" cy="22" r="4.5" fill="#9EAD96" />
+      <path d="M24 13C24 9.5 22 7 24 7C26 7 24 9.5 24 13Z" fill="#F3C8B5" />
+      <path d="M19 28C19 33 29 33 29 28" stroke="#B96F58" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// Gentle Sleeping Moon & Baby Star SVG
+export function SleepingMoonSvg({ className = 'w-10 h-10' }) {
+  return (
+    <svg className={className} viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path
+        d="M28 8C19 8 12 15 12 24C12 33 19 40 28 40C32.5 40 36.5 38 39.5 35C31 35 25 28 25 19.5C25 14.5 27.5 10 31.5 8C30.3 8 29.2 8 28 8Z"
+        fill="#F3C8B5"
+        stroke="#B96F58"
+        strokeWidth="2"
+      />
+      {/* Sleeping closed eye */}
+      <path d="M19 23C20.5 25 23.5 25 25 23" stroke="#77736C" strokeWidth="2" strokeLinecap="round" />
+      {/* Little baby star */}
+      <path
+        d="M36 14L37 17L40 17.5L37.5 19.5L38.5 22.5L36 21L33.5 22.5L34.5 19.5L32 17.5L35 17L36 14Z"
+        fill="#9EAD96"
+      />
+    </svg>
+  );
+}

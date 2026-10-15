@@ -2,13 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowDown, MapPin, ShieldCheck, Heart } from 'lucide-react';
-import { SoftLeafSvg, TenderHeartSvg, WaveDivider } from './common/SvgDecorations';
+import { 
+  SoftLeafSvg, 
+  BabyRattleSvg, 
+  BabyPacifierSvg, 
+  SleepingMoonSvg, 
+  BabyFootprintSvg 
+} from './common/SvgDecorations';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-10 md:pt-36 md:pb-16 lg:pt-40 lg:pb-20">
+    <section className="relative overflow-hidden pt-28 pb-12 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24">
       
-      {/* Background Soft Organic Blobs & SVGs */}
+      {/* Background Soft Organic Radial Blobs */}
       <div 
         className="absolute top-12 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-dusty-peach/20 rounded-full blur-3xl pointer-events-none -z-10"
         aria-hidden="true"
@@ -18,13 +24,14 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Floating Gentle SVG leaves */}
-      <div className="absolute top-28 left-8 sm:left-16 opacity-30 pointer-events-none -z-10 hidden sm:block">
-        <SoftLeafSvg className="w-10 h-10 text-muted-sage rotate-12" />
-      </div>
-      <div className="absolute bottom-20 left-1/3 opacity-20 pointer-events-none -z-10 hidden lg:block">
-        <TenderHeartSvg className="w-8 h-8 text-soft-terracotta" />
-      </div>
+      {/* Floating Gentle Background Leaf SVG */}
+      <motion.div 
+        animate={{ y: [0, -8, 0], rotate: [8, 16, 8] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+        className="absolute top-28 left-8 sm:left-14 opacity-25 pointer-events-none -z-10 hidden sm:block"
+      >
+        <SoftLeafSvg className="w-12 h-12 text-muted-sage" />
+      </motion.div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
@@ -36,7 +43,6 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-5 text-center lg:text-left"
           >
-
             {/* Main Heading in Huglove with Color Combination */}
             <h1 className="font-huglove text-5xl sm:text-6xl lg:text-7xl tracking-wide leading-[1.25]">
               <span className="text-soft-terracotta">Gentle </span>
@@ -82,7 +88,7 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Location & Safety Pill */}
+            {/* Location & Safety Notes */}
             <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-muted-brown">
               <span className="inline-flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-soft-terracotta" />
@@ -95,51 +101,95 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="lg:col-span-5 relative flex justify-center lg:justify-end"
-          >
+          {/* Right Column: Hero Visual with Smooth Floating Image & Baby SVGs */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-sm sm:max-w-md">
+              
+              {/* Floating Sleeping Moon SVG (Background) */}
+              <motion.div
+                animate={{ y: [0, -8, 0], rotate: [0, 4, 0] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                className="absolute -top-10 right-4 z-0 opacity-80"
+                aria-hidden="true"
+              >
+                <SleepingMoonSvg className="w-14 h-14" />
+              </motion.div>
+
+              {/* Floating Baby Rattle SVG (Top Left) */}
+              <motion.div
+                animate={{ y: [0, -10, 0], rotate: [-8, 8, -8] }}
+                transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+                className="
+                  absolute -top-5 -left-5 sm:-left-6 z-20
+                  bg-white/95 backdrop-blur-sm p-2.5 rounded-2xl
+                  shadow-md border border-dusty-peach/40
+                "
+                aria-label="Baby rattle icon"
+              >
+                <BabyRattleSvg className="w-7 h-7 sm:w-8 sm:h-8" />
+              </motion.div>
+
+              {/* Floating Baby Pacifier SVG (Top Right) */}
+              <motion.div
+                animate={{ y: [0, 8, 0], rotate: [6, -6, 6] }}
+                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
+                className="
+                  absolute -top-4 -right-3 sm:-right-5 z-20
+                  bg-white/95 backdrop-blur-sm p-2.5 rounded-2xl
+                  shadow-md border border-dusty-peach/40
+                "
+                aria-label="Baby pacifier icon"
+              >
+                <BabyPacifierSvg className="w-7 h-7 sm:w-8 sm:h-8" />
+              </motion.div>
+
+              {/* Soft Peach Organic Backdrop Shape */}
               <div 
-                className="absolute -inset-3 bg-gradient-to-tr from-dusty-peach/30 to-muted-sage/20 rounded-[2.5rem] transform -rotate-1"
+                className="absolute -inset-3 bg-gradient-to-tr from-dusty-peach/35 via-blush-pink/25 to-muted-sage/20 rounded-[2.5rem] transform -rotate-1"
                 aria-hidden="true"
               />
 
-              {/* Photo Frame */}
-              <div className="relative rounded-[2rem] overflow-hidden shadow-md border-4 border-white aspect-[4/5] bg-dusty-peach/20">
+              {/* Hero Image with Smooth Organic Floating Motion */}
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
+                className="relative rounded-[2rem] overflow-hidden shadow-lg border-4 border-white aspect-[4/5] bg-dusty-peach/20"
+              >
                 <img
                   src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80"
-                  alt="Gentle newborn baby massage session in Indore"
+                  alt="Gentle baby massage in the comfort of home in Indore"
                   className="w-full h-full object-cover object-center"
                   loading="eager"
                 />
-              </div>
+              </motion.div>
 
-              {/* Floating Reassurance Badge */}
-              <div className="
-                absolute -bottom-3 -left-3 sm:-left-5
-                bg-white/95 backdrop-blur-sm
-                py-2.5 px-4 rounded-2xl
-                shadow-md border border-dusty-peach/40
-                flex items-center gap-2.5
-              ">
-                <div className="w-7 h-7 rounded-full bg-dusty-peach/50 flex items-center justify-center text-soft-terracotta">
-                  <Heart className="w-4 h-4 fill-soft-terracotta" />
+              {/* Floating Baby-Led Reassurance Card with Footprint SVG (Bottom) */}
+              <motion.div
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.8 }}
+                className="
+                  absolute -bottom-4 -left-3 sm:-left-5 z-20
+                  bg-white/95 backdrop-blur-sm
+                  py-2 px-3.5 rounded-2xl
+                  shadow-md border border-dusty-peach/40
+                  flex items-center gap-2.5
+                "
+              >
+                <div className="w-7 h-7 rounded-full bg-dusty-peach/40 flex items-center justify-center text-soft-terracotta shrink-0">
+                  <BabyFootprintSvg className="w-4 h-4 text-soft-terracotta" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-warm-charcoal">
-                    Baby-Led Touch
+                    100% Baby-Led Care
                   </p>
                   <p className="text-[11px] text-muted-brown">
-                    Zero harsh pressure
+                    Tailored to baby's rhythm
                   </p>
                 </div>
-              </div>
+              </motion.div>
+
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>
