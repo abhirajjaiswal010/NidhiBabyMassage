@@ -53,18 +53,18 @@ export default function Hero() {
             <div className="flex -space-x-1.5 overflow-hidden">
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
-                src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=120&q=80"
-                alt="Indore parent"
+                src="/baby/baby%20(2).jpg"
+                alt="Indore baby"
               />
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
-                src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=120&q=80"
-                alt="Indore parent"
+                src="/baby/baby%20(3).jpg"
+                alt="Indore baby"
               />
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
-                src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=120&q=80"
-                alt="Indore parent"
+                src="/baby/baby%20(1).jpg"
+                alt="Indore baby"
               />
             </div>
             <span className="text-[11px] sm:text-xs font-semibold text-warm-charcoal">
@@ -183,7 +183,7 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 1 */}
           <img
-            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80"
+            src="/baby/baby%20(1).jpg"
             alt="Gentle baby feet soothing massage"
             className="w-full h-full object-cover"
           />
@@ -205,8 +205,8 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 2 */}
           <img
-            src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=800&q=80"
-            alt="Gentle soothing baby massage"
+            src="/baby/baby%20(2).jpg"
+            alt="Newborn baby sleeping peacefully in soft swaddle"
             className="w-full h-full object-cover"
           />
         </div>
@@ -225,10 +225,10 @@ export default function Hero() {
             translate-y-0
           "
         >
-          {/* Replaceable image: Card 3 (Center) */}
+          {/* Replaceable image: Card 3 (Center Focal) */}
           <img
-            src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80"
-            alt="Baby resting peacefully during home massage"
+            src="/baby/baby%20(3).jpg"
+            alt="Happy baby enjoying gentle soothing at-home massage"
             className="w-full h-full object-cover"
           />
         </div>
@@ -249,8 +249,8 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 4 */}
           <img
-            src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80"
-            alt="Baby gentle peaceful touch"
+            src="/baby/baby%20(4).jpg"
+            alt="Gentle natural baby oils, fresh towels, and plush companion"
             className="w-full h-full object-cover"
           />
         </div>
@@ -271,8 +271,8 @@ export default function Hero() {
         >
           {/* Replaceable image: Card 5 */}
           <img
-            src="https://images.unsplash.com/photo-1505377059067-e285a7bac49b?auto=format&fit=crop&w=800&q=80"
-            alt="Baby resting peacefully in deep sleep"
+            src="/baby/baby%20(2).jpg"
+            alt="Peacefully resting baby"
             className="w-full h-full object-cover"
           />
         </div>
