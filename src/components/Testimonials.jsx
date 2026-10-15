@@ -3,15 +3,20 @@ import { Quote, Heart } from 'lucide-react';
 import { testimonialsData } from '../data/testimonialsData';
 
 export default function Testimonials() {
+  const currentYear = new Date().getFullYear();
+  const yearsOfCare = currentYear - 2016;
+
   return (
-    <section className="py-20 md:py-28 bg-white/70 border-y border-dusty-peach/30">
+    <section className="hidden md:block py-20 md:py-28 bg-white/70 border-y border-dusty-peach/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
+        {/* Section Heading with 2016 to Till Stat in Numbers */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-2">
-            Real Experiences
-          </span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFE8C4]/80 text-[#3A2822] text-xs font-semibold mb-3 shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-soft-terracotta" />
+            <span>2016 – {currentYear} • {yearsOfCare}+ Years of Trusted Care</span>
+          </div>
+
           <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal">
             Kind words from families.
           </h2>
@@ -26,7 +31,7 @@ export default function Testimonials() {
             <div
               key={idx}
               className="
-                bg-warm-ivory/80 rounded-3xl p-7 sm:p-8
+                bg-warm-ivory/80 rounded-2xl sm:rounded-3xl p-5 sm:p-8
                 border border-dusty-peach/30 shadow-xs
                 flex flex-col justify-between
                 hover:-translate-y-1 transition-transform duration-200

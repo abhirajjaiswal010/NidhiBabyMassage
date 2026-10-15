@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sensitive Credential & Secret Markdown Files (NEVER SHARE TO GITHUB)
+CREDENTIALS.md
+credentials.md
+*CREDENTIALS*.md
+*credentials*.md
+*SECRET*.md
+*secret*.md
+*.pem
+*.key

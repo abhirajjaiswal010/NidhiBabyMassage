@@ -1,3 +1,8 @@
+# Dependencies
+node_modules
+dist
+dist-ssr
+
 # Logs
 logs
 *.log
@@ -7,16 +12,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Environment & Local Secrets
 *.local
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
 
-# Editor directories and files
+# Sensitive Credential & Secret Markdown Files (NEVER SHARE TO GITHUB)
+CREDENTIALS.md
+credentials.md
+*CREDENTIALS*.md
+*credentials*.md
+*SECRET*.md
+*secret*.md
+*.pem
+*.key
+
+# Temporary archives
+*.zip
+*.tar.gz
+*.rar
+
+# Editor & OS files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

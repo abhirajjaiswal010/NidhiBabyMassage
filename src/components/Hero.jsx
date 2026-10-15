@@ -6,7 +6,7 @@ import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDe
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-clip min-h-screen flex flex-col justify-between pt-14 sm:pt-16 lg:pt-18 pb-2 sm:pb-4 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
+    <section className="relative overflow-x-clip pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
       
       {/* 1. Radiant Ambient Glow merging Navbar down into Hero */}
       <div 
@@ -34,22 +34,22 @@ export default function Hero() {
       />
 
       {/* Main Top Content Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative flex-1 flex flex-col justify-center pt-2 sm:pt-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative pt-2 sm:pt-3">
         
         {/* 3. Centered Social Proof Pill with Hand-Drawn Sunbeam Rays */}
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="inline-flex flex-col items-center mb-2 sm:mb-3"
+          className="inline-flex flex-col items-center mb-10 sm:mb-5 "
         >
           {/* Hand-drawn rays SVG */}
-          <svg width="24" height="12" viewBox="0 0 28 14" fill="none" className="mb-0.5 text-warm-charcoal/70" aria-hidden="true">
+          <svg width="24" height="12" viewBox="0 0 28 14" fill="none" className="mb-1 text-warm-charcoal/70" aria-hidden="true">
             <path d="M14 1V5M6 4L9 8M22 4L19 8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
           </svg>
 
           {/* Avatar stack + Social text */}
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/95 backdrop-blur-sm border border-[#FFCED8]/60 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-2.5 py-2 sm:px-3.5 sm:py-1 rounded-full bg-white/95 backdrop-blur-sm border border-[#FFCED8]/60 shadow-xs">
             <div className="flex -space-x-1.5 overflow-hidden">
               <img
                 className="inline-block h-5 w-5 sm:h-5.5 sm:w-5.5 rounded-full ring-2 ring-white object-cover"
@@ -74,7 +74,7 @@ export default function Hero() {
         </motion.div>
 
         {/* 4. Main Heading with Playful Hand-Drawn Doodles (Left & Right) */}
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl mx-auto py-3 sm:py-2">
           
           {/* Doodle 1: Sparkle / Star on the left */}
           <motion.div 
@@ -107,10 +107,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-huglove text-3xl sm:text-5xl lg:text-6xl tracking-wide leading-[1.12] text-warm-charcoal px-2"
+            className="font-huglove text-5xl sm:text-5xl lg:text-6xl tracking-wide leading-[1.14] text-warm-charcoal px-2"
           >
             <span className="text-warm-charcoal">Gentle care </span>
-            <br className="hidden sm:inline" />
+            <br/>
             <span className="text-soft-terracotta">for your little one</span>
           </motion.h1>
 
@@ -121,7 +121,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-poppins text-xs sm:text-sm md:text-base text-muted-brown max-w-md mx-auto mt-2 sm:mt-2.5 leading-relaxed font-normal"
+          className="font-poppins text-sm sm:text-sm md:text-base text-muted-brown max-w-md mx-auto mt-3 sm:mt-4 md:mt-4.5 leading-relaxed font-normal"
         >
           Gentle, soothing at-home baby massages in Indore for peaceful sleep and happy growth.
         </motion.p>
@@ -131,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mt-4 sm:mt-5"
+          className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mt-5 sm:mt-6 md:mt-7"
         >
           {/* Primary Button: #FFDDDD, hover darker #F2AEBA */}
           <Link
@@ -164,21 +164,21 @@ export default function Hero() {
 
       </div>
 
-      {/* 7. Signature 5 Cards - Fully Visible at Bottom, All Corners Rounded, Identical Size & Positions */}
-      <div className="mt-auto pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 lg:pb-16 w-full flex items-end justify-center -space-x-10 sm:-space-x-16 md:-space-x-20 lg:-space-x-24 px-4 relative">
+      {/* 7. Signature Cards - 3 reduced-size cards on small screens, 5 cards on tablet/desktop */}
+      <div className="mt-7 sm:mt-10 md:mt-12 pt-2 sm:pt-3 pb-4 sm:pb-6 w-full flex items-end justify-center -space-x-5 xs:-space-x-7 sm:-space-x-14 md:-space-x-20 lg:-space-x-24 px-3 sm:px-4 relative overflow-x-clip">
         
-        {/* Card 1: Far Left Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 1: Far Left Card (Hidden on small mobile, visible on sm and up) */}
         <div
           className="
-            relative
+            hidden sm:block relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
             shadow-[0_10px_25px_-8px_rgba(74,53,47,0.18)] z-0
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            w-28 xs:w-32 sm:w-44 md:w-56 lg:w-68 xl:w-72
+            h-40 xs:h-44 sm:h-60 md:h-74 lg:h-88 xl:h-96
             origin-bottom-center
             -rotate-6 sm:-rotate-8
-            translate-y-10 sm:translate-y-14
+            translate-y-4 sm:translate-y-7
           "
         >
           {/* Replaceable image: Card 1 */}
@@ -191,18 +191,18 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/32 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 2: Inner Left Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 2: Inner Left Card (Visible on ALL screens, scaled down on mobile) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-[0_16px_35px_-10px_rgba(74,53,47,0.22)] z-10
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-[0_12px_28px_-8px_rgba(74,53,47,0.22)] z-10
+            w-28 xs:w-32 sm:w-44 md:w-56 lg:w-68 xl:w-72
+            h-40 xs:h-44 sm:h-60 md:h-74 lg:h-88 xl:h-96
             origin-bottom-center
             -rotate-3 sm:-rotate-4
-            translate-y-5 sm:translate-y-7
+            translate-y-2 sm:translate-y-3.5
           "
         >
           {/* Replaceable image: Card 2 */}
@@ -215,15 +215,15 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/18 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 3: Center Card (Focal Point - Maximum Depth Shadow & 100% Brightness) */}
+        {/* Card 3: Center Card (Focal Point - Maximum Depth Shadow & 100% Brightness on ALL screens) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-[0_25px_60px_-12px_rgba(74,53,47,0.38)] z-20
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-[0_20px_45px_-10px_rgba(74,53,47,0.38)] z-20
+            w-28 xs:w-32 sm:w-44 md:w-56 lg:w-68 xl:w-72
+            h-40 xs:h-44 sm:h-60 md:h-74 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-0
             translate-y-0
@@ -237,18 +237,18 @@ export default function Hero() {
           />
         </div>
 
-        {/* Card 4: Inner Right Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 4: Inner Right Card (Visible on ALL screens, scaled down on mobile) */}
         <div
           className="
             relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
-            shadow-[0_16px_35px_-10px_rgba(74,53,47,0.22)] z-10
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            shadow-[0_12px_28px_-8px_rgba(74,53,47,0.22)] z-10
+            w-28 xs:w-32 sm:w-44 md:w-56 lg:w-68 xl:w-72
+            h-40 xs:h-44 sm:h-60 md:h-74 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-3 sm:rotate-4
-            translate-y-5 sm:translate-y-7
+            translate-y-2 sm:translate-y-3.5
           "
         >
           {/* Replaceable image: Card 4 */}
@@ -261,18 +261,18 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/18 pointer-events-none rounded-2xl sm:rounded-3xl" />
         </div>
 
-        {/* Card 5: Far Right Card (Identical Size & Position, Fully Visible at Bottom) */}
+        {/* Card 5: Far Right Card (Hidden on small mobile, visible on sm and up) */}
         <div
           className="
-            relative
+            hidden sm:block relative
             rounded-2xl sm:rounded-3xl
             overflow-hidden
             shadow-[0_10px_25px_-8px_rgba(74,53,47,0.18)] z-0
-            w-40 sm:w-52 md:w-60 lg:w-68 xl:w-72
-            h-56 sm:h-68 md:h-78 lg:h-88 xl:h-96
+            w-28 xs:w-32 sm:w-44 md:w-56 lg:w-68 xl:w-72
+            h-40 xs:h-44 sm:h-60 md:h-74 lg:h-88 xl:h-96
             origin-bottom-center
             rotate-6 sm:rotate-8
-            translate-y-10 sm:translate-y-14
+            translate-y-4 sm:translate-y-7
           "
         >
           {/* Replaceable image: Card 5 */}

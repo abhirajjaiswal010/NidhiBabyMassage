@@ -11,7 +11,7 @@ export default function FAQs() {
   };
 
   return (
-    <section id="faqs" className="py-20 md:py-28 bg-warm-ivory">
+    <section id="faqs" className="hidden md:block py-20 md:py-28 bg-warm-ivory">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -43,21 +43,21 @@ export default function FAQs() {
                   type="button"
                   onClick={() => toggleAccordion(index)}
                   className="
-                    w-full px-6 py-5 text-left
-                    flex items-center justify-between gap-4
+                    w-full px-4 py-3.5 sm:px-6 sm:py-5 text-left
+                    flex items-center justify-between gap-3 sm:gap-4
                     focus:outline-none focus-visible:ring-2 focus-visible:ring-soft-terracotta
                   "
                   aria-expanded={isOpen}
                 >
-                  <span className="font-poppins text-base sm:text-lg text-warm-charcoal font-medium">
+                  <span className="font-poppins text-sm sm:text-lg text-warm-charcoal font-medium">
                     {faq.question}
                   </span>
                   <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center shrink-0
+                    w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0
                     transition-transform duration-200
                     ${isOpen ? 'bg-dusty-peach/50 rotate-180 text-soft-terracotta' : 'bg-warm-ivory text-muted-brown'}
                   `}>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                 </button>
 
@@ -69,7 +69,7 @@ export default function FAQs() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-5 pt-1 text-sm text-muted-brown leading-relaxed border-t border-dusty-peach/20">
+                      <div className="px-4 pb-4 pt-1 sm:px-6 sm:pb-5 sm:pt-1 text-xs sm:text-sm text-muted-brown leading-relaxed border-t border-dusty-peach/20">
                         {faq.answer}
                       </div>
                     </motion.div>

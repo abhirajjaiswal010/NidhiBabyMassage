@@ -7,8 +7,6 @@ import MomentsGallery from '../components/MomentsGallery';
 import WhyChooseUs from '../components/WhyChooseUs';
 import AboutNidhi from '../components/AboutNidhi';
 import BookingSteps from '../components/BookingSteps';
-import Testimonials from '../components/Testimonials';
-import FAQs from '../components/FAQs';
 import BookingCTA from '../components/BookingCTA';
 
 export default function HomePage() {
@@ -27,8 +25,6 @@ export default function HomePage() {
       <WhyChooseUs />
       <AboutNidhi />
       <BookingSteps />
-      <Testimonials />
-      <FAQs />
       <BookingCTA />
     </motion.div>
   );

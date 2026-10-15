@@ -18,10 +18,10 @@ export default function BookingCTA() {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/95 rounded-4xl p-8 sm:p-12 border border-dusty-peach/40 shadow-xs text-center space-y-5">
+        <div className="bg-white/95 rounded-3xl sm:rounded-4xl p-5 sm:p-12 border border-dusty-peach/40 shadow-xs text-center space-y-4 sm:space-y-5">
           
 
-          <h2 className="font-huglove text-4xl sm:text-5xl lg:text-6xl text-warm-charcoal leading-tight max-w-xl mx-auto tracking-wide">
+          <h2 className="font-huglove text-3xl sm:text-5xl lg:text-6xl text-warm-charcoal leading-tight max-w-xl mx-auto tracking-wide">
             <span className="text-warm-charcoal">Let’s make time for </span>
             <span className="text-soft-terracotta">gentle care.</span>
           </h2>

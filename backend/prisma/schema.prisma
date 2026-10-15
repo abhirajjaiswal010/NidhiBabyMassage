@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EnquiryStatus {
+  NEW
+  CONTACTED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model Enquiry {
+  id                String        @id @default(uuid()) @db.Uuid
+  parentName        String        @map("parent_name") @db.VarChar(100)
+  phone             String        @db.VarChar(20)
+  babyAgeGroup      String        @map("baby_age_group") @db.VarChar(50)
+  preferredDate     DateTime      @map("preferred_date") @db.Date
+  unitNo            String        @map("unit_no") @db.VarChar(100)
+  society           String        @db.VarChar(150)
+  locality          String        @db.VarChar(150)
+  address           String?       @db.Text
+  additionalMessage String?       @map("additional_message") @db.Text
+  status            EnquiryStatus @default(NEW)
+  internalNotes     String?       @map("internal_notes") @db.Text
+  createdAt         DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt         DateTime      @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("enquiries")
+}
+
+model Admin {
+  id           String   @id @default(uuid()) @db.Uuid
+  email        String   @unique @db.VarChar(255)
+  passwordHash String   @map("password_hash") @db.Text
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@map("admins")
+}

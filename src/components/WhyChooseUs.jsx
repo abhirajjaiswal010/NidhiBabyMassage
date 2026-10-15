@@ -7,103 +7,84 @@ export default function WhyChooseUs() {
     {
       icon: Baby,
       title: 'Baby-Led, Never Forced',
-      description: 'Zero harsh force or pushing through tears. We respect baby’s cues.',
+      bgStyle: 'bg-[#FFDDDD]/80 backdrop-blur-md text-[#3A2822]',
     },
     {
       icon: ShieldCheck,
       title: 'Strict Hygiene',
-      description: 'Sanitized hands, clean towels, and gentle natural baby oils.',
+      bgStyle: 'bg-[#FFE8C4]/80 backdrop-blur-md text-[#3A2822]',
     },
     {
       icon: Heart,
       title: 'Comfort of Your Home',
-      description: 'Unhurried doorstep visits across Indore. Zero travel stress.',
+      bgStyle: 'bg-[#FFE8C4]/80 backdrop-blur-md text-[#3A2822]',
     },
     {
       icon: Clock,
       title: 'Calm, Respectful Pace',
-      description: 'We pause whenever baby needs feeding, burping, or soothing.',
+      bgStyle: 'bg-[#FFCED8]/80 backdrop-blur-md text-[#3A2822]',
     },
   ];
 
   return (
-    <section id="why-us" className="py-16 md:py-24 bg-white/70 border-y border-dusty-peach/30">
+    <section id="why-us" className="py-14 md:py-20 bg-warm-ivory/50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
-          {/* Left Column: Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -16 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 relative"
-          >
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div 
-                className="absolute -inset-3 bg-gradient-to-br from-muted-sage/20 to-dusty-peach/30 rounded-3xl transform rotate-1"
-                aria-hidden="true"
-              />
-              <div className="relative rounded-2xl overflow-hidden shadow-md aspect-[4/5] bg-dusty-peach/10">
-                <img
-                  src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80"
-                  alt="Gentle touch and comfort for newborn in Indore"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+        {/* Main Head Above the Image (Centered) */}
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <h2 className="font-huglove text-3xl sm:text-5xl lg:text-6xl text-warm-charcoal leading-tight tracking-wide">
+            <span className="block text-warm-charcoal">Nurturing touch,</span>
+            <span className="block text-soft-terracotta mt-1 sm:mt-1.5">always baby-first.</span>
+          </h2>
+        </div>
 
-              <div className="absolute -bottom-4 -right-3 bg-white py-2.5 px-3.5 rounded-2xl shadow-md border border-dusty-peach/40">
-                <p className="font-serif text-xs font-semibold text-warm-charcoal">
-                  Gentle hands, happy baby.
-                </p>
-              </div>
-            </div>
-          </motion.div>
+        {/* Centerpiece Image (Previous Size: aspect-[4/5] max-w-md / max-w-lg) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55 }}
+          className="relative mx-auto max-w-md sm:max-w-lg rounded-3xl overflow-hidden aspect-[4/5] bg-dusty-peach/15 shadow-md group"
+        >
+          {/* Main Background Image */}
+          <img
+            src="/baby/baby5.jpeg"
+            alt="Nurturing gentle baby massage touch in Indore"
+            className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+            loading="lazy"
+          />
 
-          {/* Right Column: Editorial Points */}
-          <motion.div
-            initial={{ opacity: 0, x: 16 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-6"
-          >
-            <div>
-              <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-1.5">
-                Our Approach
-              </span>
-              <h2 className="font-huglove text-4xl sm:text-5xl text-warm-charcoal leading-snug tracking-wide">
-                <span className="text-warm-charcoal">Nurturing touch, </span>
-                <span className="text-soft-terracotta">always baby-first.</span>
-              </h2>
-              <p className="mt-2 text-sm text-muted-brown leading-relaxed">
-                We avoid outdated, aggressive massage traditions. Every session is gentle, unhurried, and calming.
-              </p>
-            </div>
+          {/* Smooth bottom vignette overlay for text clarity */}
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black/60 via-black/25 to-transparent pointer-events-none" aria-hidden="true" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+          {/* All Points at Below Within the Image with UI Color BG Blur Transparent Effect */}
+          <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 md:p-5 z-10 flex flex-col gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {points.map((pt, idx) => {
                 const Icon = pt.icon;
                 return (
-                  <div key={idx} className="space-y-1">
-                    <div className="w-8 h-8 rounded-lg bg-dusty-peach/30 flex items-center justify-center text-soft-terracotta mb-2">
-                      <Icon className="w-4 h-4" />
+                  <div
+                    key={idx}
+                    className={`
+                      ${pt.bgStyle} shadow-xs
+                      px-2.5 sm:px-3 py-2 rounded-2xl
+                      flex items-center gap-2
+                      hover:scale-[1.02] transition-transform duration-200
+                    `}
+                  >
+                    <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center flex-shrink-0 text-current">
+                      <Icon className="w-3.5 h-3.5 stroke-[2.2]" />
                     </div>
-                    <h3 className="font-poppins text-base text-warm-charcoal font-semibold">
+                    <span className="text-[11px] sm:text-xs font-semibold leading-tight line-clamp-1">
                       {pt.title}
-                    </h3>
-                    <p className="text-xs text-muted-brown leading-relaxed">
-                      {pt.description}
-                    </p>
+                    </span>
                   </div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

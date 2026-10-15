@@ -5,43 +5,36 @@ export default function TrustHighlights() {
     {
       icon: Smile,
       title: 'Baby-Led Care',
-      description: 'Care tailored strictly to baby’s comfort & daily cues.',
     },
     {
       icon: ShieldCheck,
       title: 'Zero Forced Pressure',
-      description: 'No harsh pressure or crying. Calm, rhythmic touch.',
     },
     {
       icon: MapPin,
       title: 'Indore Home Visits',
-      description: 'Hygienic visits at your doorstep in Indore.',
     },
     {
       icon: HeartHandshake,
       title: 'Unhurried Pace',
-      description: 'We pause anytime for nursing, cuddles, or rest.',
     },
   ];
 
   return (
-    <section className="relative mt-8 sm:mt-12 lg:mt-14 mb-6 sm:mb-8 py-6 sm:py-7 bg-gradient-to-r from-transparent via-white/70 to-transparent">
+    <section className="relative mt-4 sm:mt-6 mb-5 sm:mb-7 py-5 sm:py-6 bg-gradient-to-r from-transparent via-white/70 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div key={index} className="flex items-start gap-3 p-1.5">
-                <div className="w-8 h-8 rounded-lg bg-[#FFCED8]/50 flex items-center justify-center shrink-0 text-soft-terracotta">
-                  <Icon className="w-4 h-4" />
+              <div key={index} className="flex items-center gap-2.5 sm:gap-3.5 p-1.5 sm:p-2">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#FFCED8]/60 flex items-center justify-center shrink-0 text-soft-terracotta shadow-2xs">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
                 </div>
                 <div>
-                  <h3 className="font-poppins text-sm sm:text-base font-semibold text-warm-charcoal">
+                  <h3 className="font-poppins text-xs sm:text-sm md:text-base font-semibold text-warm-charcoal leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-muted-brown mt-0.5 leading-tight">
-                    {item.description}
-                  </p>
                 </div>
               </div>
             );

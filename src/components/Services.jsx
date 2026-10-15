@@ -1,89 +1,181 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { babyMassageDetails } from '../data/servicesData';
 
 export default function Services() {
+  const cards = [
+    // Column 1: Top (Tall), Bottom (Short)
+    {
+      id: 'milestone-1',
+      focus: 'Newborns & Infants',
+      badgeStyle: 'bg-[#FFDDDD]/80 backdrop-blur-md text-[#3A2822] shadow-xs',
+      image: '/baby/baby%20(1).jpg',
+      alt: 'Gentle soothing newborn baby massage',
+    },
+    {
+      id: 'milestone-2',
+      focus: 'Colic & Gas Relief',
+      badgeStyle: 'bg-[#FFE8C4]/80 backdrop-blur-md text-[#3A2822] shadow-xs',
+      image: '/baby/baby%20(2).jpg',
+      alt: 'Gentle baby tummy comfort and relaxation',
+    },
+    // Column 2: Top (Short), Bottom (Tall)
+    {
+      id: 'milestone-3',
+      focus: 'Calm & Deep Sleep',
+      badgeStyle: 'bg-[#FFE8C4]/80 backdrop-blur-md text-[#3A2822] shadow-xs',
+      image: '/baby/middle.jpg',
+      alt: 'Swaddled peaceful baby massage rest',
+    },
+    {
+      id: 'milestone-4',
+      focus: '3 to 12 Months',
+      badgeStyle: 'bg-[#FFCED8]/80 backdrop-blur-md text-[#3A2822] shadow-xs',
+      image: '/baby/baby%20(3).jpg',
+      alt: 'Baby flexibility and motor growth session',
+    },
+  ];
+
   return (
-    <section id="services" className="py-16 md:py-24 relative">
+    <section id="services" className="py-12 md:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-xl mx-auto mb-12">
-          <h2 className="font-huglove text-4xl sm:text-5xl lg:text-6xl tracking-wide">
+        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+          <h2 className="font-huglove text-3xl sm:text-5xl lg:text-6xl tracking-wide">
             <span className="text-warm-charcoal">Gentle </span>
             <span className="text-soft-terracotta">Baby Massage</span>
           </h2>
-          <p className="mt-2.5 text-muted-brown text-sm sm:text-base leading-relaxed">
+          <p className="mt-2 text-muted-brown text-xs sm:text-sm md:text-base leading-relaxed">
             Unhurried at-home visits across Indore, adapted to each developmental milestone.
           </p>
         </div>
 
-        {/* 3 Milestone Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {babyMassageDetails.pillars.map((pillar, index) => (
-            <motion.article
-              key={pillar.id}
+        {/* Interlocking 2-Column Mosaic Cards (Matching Reference Diagram) */}
+        <div className="max-w-2xl sm:max-w-3xl mx-auto grid grid-cols-2 gap-3 sm:gap-4 md:gap-5">
+          
+          {/* Left Column: [Tall Card] over [Short Card] */}
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+            {/* 1. Left Tall Card */}
+            <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4 }}
               className="
-                group bg-white rounded-3xl overflow-hidden
-                border border-dusty-peach/30 shadow-xs hover:shadow-md
-                transition-all duration-300 ease-out
-                hover:-translate-y-1 flex flex-col justify-between
+                group relative rounded-2xl sm:rounded-3xl overflow-hidden
+                aspect-[3/3.8] sm:aspect-[3/3.6]
+                shadow-xs hover:shadow-lg
+                transition-all duration-300 ease-out hover:-translate-y-1 bg-dusty-peach/20
               "
             >
-              <div>
-                <div className="relative h-48 w-full overflow-hidden bg-dusty-peach/20">
-                  <img
-                    src={pillar.image}
-                    alt={pillar.alt}
-                    className="
-                      w-full h-full object-cover object-center
-                      transition-transform duration-500 ease-out
-                      group-hover:scale-105
-                    "
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="
-                      inline-block bg-white/95 backdrop-blur-xs
-                      text-warm-charcoal text-xs font-semibold
-                      px-3 py-1 rounded-full shadow-xs
-                    ">
-                      {pillar.focus}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="font-poppins font-semibold text-lg sm:text-xl text-warm-charcoal mb-1.5">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
+              <img
+                src={cards[0].image}
+                alt={cards[0].alt}
+                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              {/* Subtle bottom vignette */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" aria-hidden="true" />
+              {/* Frosted Blur Badge at Below within Card */}
+              <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 z-10">
+                <span className={`inline-block text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full ${cards[0].badgeStyle}`}>
+                  {cards[0].focus}
+                </span>
               </div>
+            </motion.div>
 
-              <div className="px-6 pb-6 pt-0">
-                <Link
-                  to="/book"
-                  className="
-                    w-full flex items-center justify-center
-                    bg-[#FFDDDD] hover:bg-[#F2AEBA] hover:brightness-95
-                    text-[#4A352F] text-xs font-semibold py-2.5 rounded-full shadow-xs
-                    transition-all duration-200 active:scale-95
-                  "
-                >
-                  <span>Book for this stage</span>
-                </Link>
+            {/* 2. Left Short Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="
+                group relative rounded-2xl sm:rounded-3xl overflow-hidden
+                aspect-[4/2.5] sm:aspect-[4/2.4]
+                shadow-xs hover:shadow-lg
+                transition-all duration-300 ease-out hover:-translate-y-1 bg-dusty-peach/20
+              "
+            >
+              <img
+                src={cards[1].image}
+                alt={cards[1].alt}
+                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              {/* Subtle bottom vignette */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" aria-hidden="true" />
+              {/* Frosted Blur Badge at Below within Card */}
+              <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 z-10">
+                <span className={`inline-block text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full ${cards[1].badgeStyle}`}>
+                  {cards[1].focus}
+                </span>
               </div>
-            </motion.article>
-          ))}
+            </motion.div>
+          </div>
+
+          {/* Right Column: [Short Card] over [Tall Card] */}
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+            {/* 3. Right Short Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+              className="
+                group relative rounded-2xl sm:rounded-3xl overflow-hidden
+                aspect-[4/2.5] sm:aspect-[4/2.4]
+                shadow-xs hover:shadow-lg
+                transition-all duration-300 ease-out hover:-translate-y-1 bg-dusty-peach/20
+              "
+            >
+              <img
+                src={cards[2].image}
+                alt={cards[2].alt}
+                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              {/* Subtle bottom vignette */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" aria-hidden="true" />
+              {/* Frosted Blur Badge at Below within Card */}
+              <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 z-10">
+                <span className={`inline-block text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full ${cards[2].badgeStyle}`}>
+                  {cards[2].focus}
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 4. Right Tall Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="
+                group relative rounded-2xl sm:rounded-3xl overflow-hidden
+                aspect-[3/3.8] sm:aspect-[3/3.6]
+                shadow-xs hover:shadow-lg
+                transition-all duration-300 ease-out hover:-translate-y-1 bg-dusty-peach/20
+              "
+            >
+              <img
+                src={cards[3].image}
+                alt={cards[3].alt}
+                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              {/* Subtle bottom vignette */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" aria-hidden="true" />
+              {/* Frosted Blur Badge at Below within Card */}
+              <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 z-10">
+                <span className={`inline-block text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full ${cards[3].badgeStyle}`}>
+                  {cards[3].focus}
+                </span>
+              </div>
+            </motion.div>
+          </div>
+
         </div>
 
       </div>

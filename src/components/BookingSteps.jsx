@@ -21,7 +21,7 @@ export default function BookingSteps() {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-warm-ivory">
+    <section id="how-it-works" className="hidden md:block py-16 md:py-24 bg-warm-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

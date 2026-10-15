@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Heart, MapPin } from 'lucide-react';
-import { createWhatsAppUrl } from '../utils/whatsapp';
+import { MessageCircle, Heart, MapPin, Phone } from 'lucide-react';
+import { createWhatsAppUrl, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function AboutNidhi() {
   return (
     <section id="about" className="py-16 md:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-dusty-peach/30 shadow-xs relative">
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-5 sm:p-10 lg:p-12 border border-dusty-peach/30 shadow-xs relative">
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
             
             {/* Left: Nidhi's Photo */}
             <motion.div
@@ -23,44 +23,42 @@ export default function AboutNidhi() {
             >
               <div className="relative">
                 <div 
-                  className="w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-dusty-peach/30 absolute -top-2 -left-2 -z-10"
+                  className="w-40 h-40 sm:w-56 sm:h-56 rounded-full bg-dusty-peach/30 absolute -top-2 -left-2 -z-10"
                   aria-hidden="true"
                 />
                 
-                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white shadow-md bg-warm-ivory">
+                <div className="w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white shadow-md bg-white p-3 sm:p-5 flex items-center justify-center">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-                    alt="Nidhi - Baby Massage in Indore"
-                    className="w-full h-full object-cover object-top"
-                    loading="lazy"
+                    src="/logo.png"
+                    alt="Nidhi's Baby Massage Logo"
+                    className="w-full h-full object-contain drop-shadow-2xs"
                   />
                 </div>
 
-                <div className="absolute bottom-1 right-1 bg-white px-3 py-1 rounded-full shadow-xs border border-dusty-peach/40 flex items-center gap-1.5 text-xs font-medium text-warm-charcoal">
-                  <MapPin className="w-3.5 h-3.5 text-soft-terracotta" />
-                  <span>Indore, MP</span>
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xs border border-dusty-peach/40 flex items-center gap-1.5 text-[11px] font-semibold text-warm-charcoal whitespace-nowrap">
+                  <MapPin className="w-3.5 h-3.5 text-soft-terracotta shrink-0" />
+                  <span>Indore, MP • {new Date().getFullYear() - 2016}+ Yrs Exp (Since 2016)</span>
                 </div>
               </div>
             </motion.div>
 
             {/* Right: Crisp Bio */}
-            <div className="md:col-span-7 space-y-3.5 text-center md:text-left">
+            <div className="md:col-span-7 space-y-3 sm:space-y-3.5 text-center md:text-left">
 
-              <h2 className="font-huglove text-4xl sm:text-5xl tracking-wide">
+              <h2 className="font-huglove text-3xl sm:text-5xl tracking-wide">
                 <span className="text-warm-charcoal">Hello, I’m </span>
                 <span className="text-soft-terracotta">Nidhi.</span>
               </h2>
 
-              <p className="text-sm text-muted-brown leading-relaxed">
-                I specialize in gentle, at-home baby massage for newborns and young infants in Indore. 
-                My focus is entirely on your baby's comfort, healthy relaxation, and peaceful rest.
+              <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">
+                With over <strong className="text-warm-charcoal font-semibold">{new Date().getFullYear() - 2016}+ years of dedicated experience</strong> (caring for newborns since 2016), I provide gentle, at-home baby massage across <strong className="text-warm-charcoal font-semibold">Indore, MP</strong>.
               </p>
 
-              <p className="text-sm text-muted-brown leading-relaxed">
-                I never rush sessions or use harsh pressure. If your baby needs feeding, burping, or cuddles, we pause immediately.
+              <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">
+                My focus is entirely on your baby's comfort, healthy motor growth, and peaceful rest. I never rush sessions or use harsh pressure—every stroke is gentle, unhurried, and baby-led.
               </p>
 
-              <div className="pt-3 flex flex-wrap items-center justify-center md:justify-start gap-3">
+              <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-3">
                 <Link
                   to="/book"
                   className="
@@ -75,11 +73,26 @@ export default function AboutNidhi() {
                 </Link>
 
                 <a
+                  href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
+                  className="
+                    inline-flex items-center justify-center gap-1.5
+                    bg-white hover:bg-stone-50 border border-[#FFCED8]
+                    text-[#4A352F] text-xs font-semibold
+                    px-4 py-2.5 rounded-full shadow-2xs
+                    transition-all duration-200 active:scale-95
+                  "
+                  title="Phone Call (Telecommunication)"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#D96B82]" />
+                  <span>Call: {BUSINESS_PHONE_DISPLAY}</span>
+                </a>
+
+                <a
                   href={createWhatsAppUrl("Hello Nidhi, I would like to check your availability for an at-home baby massage in Indore.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    inline-flex items-center gap-1.5
+                    inline-flex items-center justify-center gap-1.5
                     bg-[#FFE8C4] hover:bg-[#F5CE96] hover:brightness-95
                     text-[#4A352F] text-xs font-semibold
                     px-4 py-2.5 rounded-full shadow-xs
