@@ -1,88 +1,71 @@
 import React from 'react';
 import { MessageSquare, CalendarClock, HeartHandshake } from 'lucide-react';
 
-
 export default function BookingSteps() {
   const steps = [
     {
       number: '01',
       title: 'Get in Touch',
-      description:
-        'Drop a quick message on WhatsApp or send an enquiry with your locality in Indore and your baby’s age.',
-      icon: MessageSquare,
+      description: 'Send a quick enquiry with your baby’s age and your locality in Indore.',
     },
     {
       number: '02',
-      title: 'Discuss Baby’s Routine',
-      description:
-        'We coordinate around your baby’s wake/sleep cycle to find the ideal, calmest time slot for the visit.',
+      title: 'Match Baby’s Routine',
+      description: 'We agree on a calm time window that fits your baby’s nap and feeding schedule.',
     },
     {
       number: '03',
-      title: 'Relaxed Home Visit',
-      description:
-        'Nidhi visits your Indore home with complete hygiene readiness for an unhurried, gentle, comforting session.',
-      icon: HeartHandshake,
+      title: 'Gentle Home Visit',
+      description: 'Nidhi arrives at your home for an unhurried, hygienic, baby-led session.',
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-warm-ivory">
+    <section id="how-it-works" className="py-16 md:py-24 bg-warm-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-xl mx-auto mb-12">
           <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-2">
-            Simple & Transparent
+            Simple Process
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal">
-            How booking a session works.
+            How booking works
           </h2>
-          <p className="mt-3.5 text-muted-brown text-base leading-relaxed">
-            Planning around a baby shouldn’t be stressful. Here is how we ensure an easy, 
-            supportive experience from the first message.
+          <p className="mt-2 text-muted-brown text-sm sm:text-base leading-relaxed">
+            Planning a session around your baby is easy and flexible.
           </p>
         </div>
 
-        {/* 3-Step Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          
+        {/* 3-Step Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
           {steps.map((step, idx) => (
             <div
               key={idx}
               className="
-                relative bg-white rounded-3xl p-8 border border-dusty-peach/30 shadow-xs
-                hover:shadow-sm transition-shadow duration-200
+                bg-white rounded-3xl p-6 sm:p-7 border border-dusty-peach/30 shadow-xs
                 flex flex-col justify-between
               "
             >
-              {/* Step Number Stamp */}
-              <div className="flex items-center justify-between mb-6">
-                <span className="font-serif text-4xl text-dusty-peach-dark/80 font-bold">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-serif text-3xl text-dusty-peach-dark font-bold">
                   {step.number}
                 </span>
-                <span className="text-xs uppercase tracking-wider text-muted-sage-dark font-semibold px-2.5 py-1 bg-muted-sage/15 rounded-full">
+                <span className="text-[11px] uppercase tracking-wider text-muted-sage-dark font-semibold px-2.5 py-0.5 bg-muted-sage/15 rounded-full">
                   Step {idx + 1}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-serif text-xl text-warm-charcoal mb-2.5">
+                <h3 className="font-serif text-lg text-warm-charcoal mb-1.5">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-brown leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-brown leading-relaxed">
                   {step.description}
                 </p>
               </div>
-
-              <div className="mt-6 pt-4 border-t border-dusty-peach/20 text-xs text-soft-terracotta font-medium">
-                {idx === 0 && 'Instant WhatsApp connection'}
-                {idx === 1 && 'Flexible schedule matching'}
-                {idx === 2 && 'Indore doorstep service'}
-              </div>
             </div>
           ))}
-
         </div>
 
       </div>

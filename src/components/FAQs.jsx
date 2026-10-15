@@ -81,10 +81,10 @@ export default function FAQs() {
         </div>
 
         {/* Gentle Pediatric Health Notice */}
-        <div className="mt-10 p-5 rounded-2xl bg-white border border-muted-sage/30 flex items-start gap-3.5">
-          <AlertCircle className="w-5 h-5 text-muted-sage-dark shrink-0 mt-0.5" />
+        <div className="mt-8 p-4 rounded-2xl bg-white border border-muted-sage/30 flex items-center gap-3">
+          <AlertCircle className="w-4 h-4 text-muted-sage-dark shrink-0" />
           <p className="text-xs text-muted-brown leading-relaxed">
-            <strong className="font-semibold text-warm-charcoal">Medical Disclaimer:</strong> Baby massage is a nurturing, non-medical wellness and bonding practice. It is not a diagnostic, therapeutic, or medical treatment for illnesses. Always consult your qualified pediatrician for medical advice regarding your baby’s health.
+            <strong className="font-semibold text-warm-charcoal">Note:</strong> Baby massage is a gentle wellness practice, not a medical treatment. Please consult your pediatrician for health concerns.
           </p>
         </div>
 

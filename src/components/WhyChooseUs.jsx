@@ -7,46 +7,42 @@ export default function WhyChooseUs() {
     {
       icon: Baby,
       title: 'Baby-Led, Never Forced',
-      description:
-        'We never impose rigid pressure or push through tears. If baby needs feeding, soothing, or a break, we pause and follow their cues.',
+      description: 'Zero harsh force or pushing through tears. We respect baby’s cues.',
     },
     {
       icon: ShieldCheck,
-      title: 'Pediatric Safety & Strict Hygiene',
-      description:
-        'Hands are thoroughly sanitized, nails kept smooth and trimmed, and only parent-approved, mild organic baby oils are used.',
+      title: 'Strict Hygiene',
+      description: 'Sanitized hands, clean towels, and gentle natural baby oils.',
     },
     {
       icon: Heart,
-      title: 'Comfort of Your Own Home',
-      description:
-        'Newborns settle best in their familiar surroundings. We come to your doorstep across Indore without disruption to baby\'s space.',
+      title: 'Comfort of Your Home',
+      description: 'Unhurried doorstep visits across Indore. Zero travel stress.',
     },
     {
       icon: Clock,
-      title: 'Unhurried, Respectful Pace',
-      description:
-        'Unlike rushed traditional massagers, every appointment includes buffer time to answer questions and keep the room calm.',
+      title: 'Calm, Respectful Pace',
+      description: 'We pause whenever baby needs feeding, burping, or soothing.',
     },
   ];
 
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-white/70 border-y border-dusty-peach/30">
+    <section id="why-us" className="py-16 md:py-24 bg-white/70 border-y border-dusty-peach/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column: Warm Lifestyle Visual */}
+          {/* Left Column: Image */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-5 relative"
           >
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div 
-                className="absolute -inset-4 bg-gradient-to-br from-muted-sage/20 via-dusty-peach/30 to-blush-pink/30 rounded-3xl transform rotate-1"
+                className="absolute -inset-3 bg-gradient-to-br from-muted-sage/20 to-dusty-peach/30 rounded-3xl transform rotate-1"
                 aria-hidden="true"
               />
               <div className="relative rounded-2xl overflow-hidden shadow-md aspect-[4/5] bg-dusty-peach/10">
@@ -58,49 +54,43 @@ export default function WhyChooseUs() {
                 />
               </div>
 
-              {/* Reassuring floating card */}
-              <div className="absolute -bottom-5 -right-3 sm:-right-5 bg-white p-4 rounded-2xl shadow-lg border border-dusty-peach/40 max-w-[240px]">
-                <p className="font-serif text-sm font-semibold text-warm-charcoal">
-                  "Gentle hands, peaceful baby."
-                </p>
-                <p className="text-[11px] text-muted-brown mt-1">
-                  Respecting Indian traditions while following modern pediatric comfort guidelines.
+              <div className="absolute -bottom-4 -right-3 bg-white py-2.5 px-3.5 rounded-2xl shadow-md border border-dusty-peach/40">
+                <p className="font-serif text-xs font-semibold text-warm-charcoal">
+                  Gentle hands, happy baby.
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Editorial Philosophy & Points */}
+          {/* Right Column: Editorial Points */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6"
           >
             <div>
-              <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-2">
-                Our Philosophy
+              <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-1.5">
+                Our Approach
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal leading-snug">
-                Nurturing touch that puts your baby's comfort first.
+                Nurturing touch that puts your baby first.
               </h2>
-              <p className="mt-3.5 text-base text-muted-brown leading-relaxed">
-                Traditional baby massage is a cherished practice, but too often it has been associated 
-                with excessive pressure or distressed crying. At Nidhi's Baby Massage, our mission is to 
-                restore calm, dignity, and gentle comfort to every visit.
+              <p className="mt-2 text-sm text-muted-brown leading-relaxed">
+                We avoid outdated, aggressive massage traditions. Every session is gentle, unhurried, and calming.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
               {points.map((pt, idx) => {
                 const Icon = pt.icon;
                 return (
-                  <div key={idx} className="space-y-2">
-                    <div className="w-9 h-9 rounded-xl bg-dusty-peach/30 flex items-center justify-center text-soft-terracotta">
-                      <Icon className="w-5 h-5" />
+                  <div key={idx} className="space-y-1">
+                    <div className="w-8 h-8 rounded-lg bg-dusty-peach/30 flex items-center justify-center text-soft-terracotta mb-2">
+                      <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-serif text-lg text-warm-charcoal font-medium">
+                    <h3 className="font-serif text-base text-warm-charcoal font-medium">
                       {pt.title}
                     </h3>
                     <p className="text-xs text-muted-brown leading-relaxed">

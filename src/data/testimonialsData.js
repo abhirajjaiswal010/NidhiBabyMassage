@@ -1,23 +1,23 @@
 export const testimonialsData = [
   {
     quote:
-      "Nidhi was exceptionally patient with our 2-month-old daughter. She never rushed through the session and stopped immediately when our baby needed to nurse. Her hygiene practices gave us complete peace of mind.",
+      "Nidhi was so gentle and unhurried with our 2-month-old daughter. She paused immediately when baby needed nursing. Complete peace of mind.",
     parent: "Pooja & Ankit S.",
     area: "Vijay Nagar, Indore",
-    babyAge: "Baby girl, 2 months",
+    babyAge: "2 months",
   },
   {
     quote:
-      "Unlike traditional aggressive malish that made our elder son cry years ago, Nidhi’s touch was so gentle and rhythmic. Our baby was calm and visibly relaxed afterwards. Highly recommend her home visits in Indore.",
+      "Unlike traditional rough malish that made our baby cry, Nidhi’s touch was calm and rhythmic. Our baby was completely relaxed and rested peacefully.",
     parent: "Dr. Megha R.",
     area: "Palasia, Indore",
-    babyAge: "Baby boy, 3 months",
+    babyAge: "3 months",
   },
   {
     quote:
-      "As first-time parents living in a nuclear setup in Indore, we were nervous about how to hold and massage our newborn. Nidhi patiently demonstrated strokes we could do ourselves every evening.",
+      "As new parents in Indore, we were nervous about infant massage. Nidhi’s hygienic, warm approach made our baby feel so safe and comfortable.",
     parent: "Shreya & Mohit K.",
     area: "Bicholi Mardana, Indore",
-    babyAge: "Newborn, 6 weeks",
+    babyAge: "6 weeks",
   },
 ];
