@@ -25,8 +25,9 @@ export default function BookingCTA() {
             <span>Indore At-Home Sessions</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal leading-tight max-w-xl mx-auto">
-            Let’s make time for gentle care.
+          <h2 className="font-huglove text-4xl sm:text-5xl lg:text-6xl text-warm-charcoal leading-tight max-w-xl mx-auto tracking-wide">
+            <span className="text-warm-charcoal">Let’s make time for </span>
+            <span className="text-soft-terracotta">gentle care.</span>
           </h2>
 
           <p className="text-sm sm:text-base text-muted-brown max-w-md mx-auto leading-relaxed">

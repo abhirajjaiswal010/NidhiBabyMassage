@@ -103,8 +103,9 @@ export default function BookingPage() {
             <Sparkles className="w-3 h-3" />
             <span>Indore Home Visits</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl text-warm-charcoal">
-            Book a Baby Massage
+          <h1 className="font-huglove text-4xl sm:text-5xl lg:text-6xl tracking-wide">
+            <span className="text-warm-charcoal">Book a </span>
+            <span className="text-soft-terracotta">Baby Massage</span>
           </h1>
           <p className="mt-2 text-xs sm:text-sm text-muted-brown">
             Fill in your details below to connect directly on WhatsApp.

@@ -50,8 +50,9 @@ export default function AboutNidhi() {
                 <span>Meet Nidhi</span>
               </span>
 
-              <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal">
-                Hello, I’m Nidhi.
+              <h2 className="font-huglove text-4xl sm:text-5xl tracking-wide">
+                <span className="text-warm-charcoal">Hello, I’m </span>
+                <span className="text-soft-terracotta">Nidhi.</span>
               </h2>
 
               <p className="text-sm text-muted-brown leading-relaxed">

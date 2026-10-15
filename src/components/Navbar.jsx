@@ -48,8 +48,9 @@ export default function Navbar() {
               <span className="font-serif font-bold text-lg">N</span>
             </div>
             <div>
-              <span className="font-serif text-lg sm:text-xl font-medium tracking-tight text-warm-charcoal block leading-tight">
-                Nidhi's Baby Massage
+              <span className="font-huglove text-2xl sm:text-3xl tracking-wide block leading-tight">
+                <span className="text-warm-charcoal">Nidhi's </span>
+                <span className="text-soft-terracotta">Baby Massage</span>
               </span>
               <span className="text-[11px] uppercase tracking-wider text-muted-brown font-medium block">
                 Indore • Home Visits

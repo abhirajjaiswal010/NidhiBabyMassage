@@ -15,8 +15,9 @@ export default function Services() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Dedicated Service</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal">
-            Gentle Baby Massage
+          <h2 className="font-huglove text-4xl sm:text-5xl lg:text-6xl tracking-wide">
+            <span className="text-warm-charcoal">Gentle </span>
+            <span className="text-soft-terracotta">Baby Massage</span>
           </h2>
           <p className="mt-2.5 text-muted-brown text-sm sm:text-base leading-relaxed">
             Unhurried at-home visits across Indore, adapted to each developmental milestone.

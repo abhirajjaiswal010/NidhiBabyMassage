@@ -32,10 +32,13 @@ export default function Hero() {
               <span>Gentle Care • Indore, MP</span>
             </div>
 
-            {/* Editorial Main Heading */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-warm-charcoal leading-[1.15]">
-              Gentle care for <br className="hidden sm:inline" />
-              <span className="italic font-normal text-soft-terracotta">your little one.</span>
+            {/* Main Heading in Huglove with Color Combination */}
+            <h1 className="font-huglove text-5xl sm:text-6xl lg:text-7xl tracking-wide leading-[1.25]">
+              <span className="text-soft-terracotta">Gentle </span>
+              <span className="text-warm-charcoal">care </span>
+              <br className="hidden sm:inline" />
+              <span className="text-muted-sage-dark">for your </span>
+              <span className="text-soft-terracotta">little one.</span>
             </h1>
 
             {/* Light, Crisp Subtitle */}

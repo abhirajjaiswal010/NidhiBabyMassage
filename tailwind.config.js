@@ -28,6 +28,7 @@ export default {
         'muted-brown': '#77736C',
       },
       fontFamily: {
+        huglove: ['Huglove', '"DM Serif Display"', 'cursive', 'sans-serif'],
         serif: ['"DM Serif Display"', 'Lora', 'Georgia', 'serif'],
         sans: ['"DM Sans"', 'Inter', 'system-ui', 'sans-serif'],
       },

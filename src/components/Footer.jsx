@@ -17,8 +17,9 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-full bg-soft-terracotta flex items-center justify-center text-white font-serif font-bold text-lg">
                 N
               </div>
-              <span className="font-serif text-2xl text-white font-medium tracking-tight">
-                Nidhi's Baby Massage
+              <span className="font-huglove text-2xl sm:text-3xl text-white font-medium tracking-wide">
+                <span>Nidhi's </span>
+                <span className="text-dusty-peach">Baby Massage</span>
               </span>
             </div>
             

@@ -74,8 +74,9 @@ export default function WhyChooseUs() {
               <span className="text-xs uppercase tracking-widest text-muted-sage-dark font-semibold block mb-1.5">
                 Our Approach
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl text-warm-charcoal leading-snug">
-                Nurturing touch that puts your baby first.
+              <h2 className="font-huglove text-4xl sm:text-5xl text-warm-charcoal leading-snug tracking-wide">
+                <span className="text-warm-charcoal">Nurturing touch, </span>
+                <span className="text-soft-terracotta">always baby-first.</span>
               </h2>
               <p className="mt-2 text-sm text-muted-brown leading-relaxed">
                 We avoid outdated, aggressive massage traditions. Every session is gentle, unhurried, and calming.
