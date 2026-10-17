@@ -16,11 +16,11 @@ lerna-debug.log*
 *.local
 .env
 .env.*
-!.env.example
+.env.example
 *.env
 backend/.env
 backend/.env.*
-!backend/.env.example
+backend/.env.example
 
 # Local Markdown & Documentation Folder (NEVER PUSH TO GITHUB)
 md/
