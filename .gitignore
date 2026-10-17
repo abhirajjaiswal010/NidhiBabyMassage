@@ -12,16 +12,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Environment & Local Secrets
+# Environment & Local Secrets (NEVER PUSH TO GITHUB)
 *.local
 .env
 .env.*
 !.env.example
+*.env
 backend/.env
 backend/.env.*
 !backend/.env.example
 
-# Sensitive Credential & Secret Markdown Files (NEVER SHARE TO GITHUB)
+# Local Markdown & Documentation Folder (NEVER PUSH TO GITHUB)
+md/
+*.md
 CREDENTIALS.md
 credentials.md
 *CREDENTIALS*.md
