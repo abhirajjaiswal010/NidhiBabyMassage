@@ -34,7 +34,7 @@ export async function notifyNewEnquiry(enquiry) {
     `*Address:* ${fullAddress || 'Indore'}\n` +
     (enquiry.additionalMessage ? `*Special Note:* "${enquiry.additionalMessage}"\n` : '') +
     `──────────────────────────\n` +
-    `👉 *Quick Action*: Tap to call or chat with ${enquiry.parentName} at https://wa.me/91${enquiry.phone.replace(/\D/g, '')}`;
+    `👉 *Quick Action*: Tap to call or chat with ${enquiry.parentName} at https://api.whatsapp.com/send?phone=91${enquiry.phone.replace(/\D/g, '')}`;
 
   let dispatched = false;
 

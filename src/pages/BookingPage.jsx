@@ -320,7 +320,7 @@ export default function BookingPage() {
       `\n──────────────────────────\n` +
       `Please let me know your available session timings in Indore. Thank you!`;
 
-    return `https://wa.me/${BUSINESS_PHONE}?text=${encodeURIComponent(text)}`;
+    return `https://api.whatsapp.com/send?phone=${BUSINESS_PHONE}&text=${encodeURIComponent(text)}`;
   };
 
   return (

@@ -468,7 +468,7 @@ export default function AdminPage() {
         `Looking forward to meeting your baby!`;
     }
 
-    return `https://wa.me/${phoneWithCountry}?text=${encodeURIComponent(msg)}`;
+    return `https://api.whatsapp.com/send?phone=${phoneWithCountry}&text=${encodeURIComponent(msg)}`;
   };
 
   // 10. Copy Client Details to Clipboard
