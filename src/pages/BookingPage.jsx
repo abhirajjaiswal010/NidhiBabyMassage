@@ -307,8 +307,7 @@ export default function BookingPage() {
       : formData.preferredDate;
 
     const text = 
-      `🌸 *NIDHI'S BABY MASSAGE — BOOKING ENQUIRY* 🌸\n` +
-      `──────────────────────────\n\n` +
+      `🌸 *NIDHI'S BABY MASSAGE — BOOKING ENQUIRY* 🌸\n\n` +
       `Hello Nidhi, I have submitted a booking enquiry on your website and would like to confirm your availability.\n\n` +
       `*Ref ID:* *#${activeRef}*\n` +
       `*Parent Name:* *${formData.parentName}*\n` +
@@ -317,8 +316,7 @@ export default function BookingPage() {
       `*Preferred Date:* *${formattedDate}*\n` +
       `*Service Address:* *${fullAddress}*\n` +
       (formData.additionalMessage.trim() ? `*Special Notes:* *"${formData.additionalMessage.trim()}"*\n` : '') +
-      `\n──────────────────────────\n` +
-      `Please let me know your available session timings in Indore. Thank you!`;
+      `\nPlease let me know your available session timings in Indore. Thank you!`;
 
     return `https://api.whatsapp.com/send?phone=${BUSINESS_PHONE}&text=${encodeURIComponent(text)}`;
   };

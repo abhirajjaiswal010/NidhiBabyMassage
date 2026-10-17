@@ -24,8 +24,7 @@ export async function notifyNewEnquiry(enquiry) {
   });
 
   const alertText = 
-    `🌸 *NEW BABY MASSAGE ENQUIRY* 🌸\n` +
-    `──────────────────────────\n` +
+    `🌸 *NEW BABY MASSAGE ENQUIRY* 🌸\n\n` +
     `*Ref ID:* #${enquiry.id.slice(0, 8)}\n` +
     `*Parent Name:* ${enquiry.parentName}\n` +
     `*Phone:* +91 ${enquiry.phone}\n` +
@@ -33,8 +32,7 @@ export async function notifyNewEnquiry(enquiry) {
     `*Preferred Date:* ${formattedDate}\n` +
     `*Address:* ${fullAddress || 'Indore'}\n` +
     (enquiry.additionalMessage ? `*Special Note:* "${enquiry.additionalMessage}"\n` : '') +
-    `──────────────────────────\n` +
-    `👉 *Quick Action*: Tap to call or chat with ${enquiry.parentName} at https://api.whatsapp.com/send?phone=91${enquiry.phone.replace(/\D/g, '')}`;
+    `\n👉 *Quick Action*: Tap to call or chat with ${enquiry.parentName} at https://api.whatsapp.com/send?phone=91${enquiry.phone.replace(/\D/g, '')}`;
 
   let dispatched = false;
 
