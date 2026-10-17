@@ -1,7 +1,10 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), 'backend', '.env') });
 import bcrypt from 'bcryptjs';
 import { prisma } from '../src/lib/prisma.js';
-import { getOTPAuthURL, getQRCodeDataURL } from '../src/lib/totp.js';
+import { getOTPAuthURL } from '../src/lib/totp.js';
 
 async function createAdmin() {
   const email = (process.argv[2] || process.env.ADMIN_EMAIL || 'nidhisbabymassage@gmail.com').toLowerCase().trim();

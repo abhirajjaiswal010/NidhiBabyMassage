@@ -5,8 +5,6 @@ import {
   enquiryQuerySchema 
 } from '../validators/enquirySchema.js';
 import { notifyNewEnquiry } from '../services/whatsappService.js';
-import { sendNewEnquiryEmail } from '../services/emailService.js';
-import { sendTelegramNotification } from '../services/telegramService.js';
 
 /**
  * Public Endpoint: Create a new customer enquiry
@@ -55,16 +53,6 @@ export async function createEnquiry(req, res, next) {
     // Fire WhatsApp notification asynchronously in background
     notifyNewEnquiry(newEnquiry).catch((err) => {
       console.error('[WhatsApp Background Error]', err);
-    });
-
-    // Fire Email notification to official owner asynchronously in background
-    sendNewEnquiryEmail(newEnquiry).catch((err) => {
-      console.error('[Email Notification Error]', err);
-    });
-
-    // Fire Telegram notification asynchronously in background
-    sendTelegramNotification(newEnquiry).catch((err) => {
-      console.error('[Telegram Notification Error]', err);
     });
   } catch (error) {
     next(error);

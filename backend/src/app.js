@@ -17,8 +17,7 @@ const allowedOrigin = process.env.FRONTEND_ORIGIN;
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-      if (!allowedOrigin || origin === allowedOrigin || origin.includes('localhost') || origin.endsWith('.vercel.app')) {
+      if (!origin || !allowedOrigin || origin === allowedOrigin || origin.includes('localhost') || origin.endsWith('.vercel.app')) {
         return callback(null, true);
       }
       return callback(null, true);

@@ -3,29 +3,6 @@ import QRCode from 'qrcode';
 
 const BASE32_ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
-// Base32 Encode Buffer
-export function base32Encode(buffer) {
-  let bits = 0;
-  let value = 0;
-  let output = '';
-
-  for (let i = 0; i < buffer.length; i++) {
-    value = (value << 8) | buffer[i];
-    bits += 8;
-
-    while (bits >= 5) {
-      output += BASE32_ALPHABET[(value >>> (bits - 5)) & 31];
-      bits -= 5;
-    }
-  }
-
-  if (bits > 0) {
-    output += BASE32_ALPHABET[(value << (5 - bits)) & 31];
-  }
-
-  return output;
-}
-
 // Base32 Decode String to Buffer
 export function base32Decode(str) {
   const clean = str.replace(/=+$/, '').toUpperCase().replace(/[^A-Z2-7]/g, '');
@@ -47,12 +24,6 @@ export function base32Decode(str) {
   }
 
   return Buffer.from(output);
-}
-
-// Generate a random 160-bit (20-byte) Base32 Secret Key
-export function generateTOTPSecret(length = 20) {
-  const randomBytes = crypto.randomBytes(length);
-  return base32Encode(randomBytes);
 }
 
 // Generate RFC 6238 TOTP 6-digit Code for a given step
