@@ -443,11 +443,14 @@ export default function AdminPage() {
     let msg = '';
     if (templateType === 'CONFIRM_DATE') {
       msg = 
-        `Hello ${enquiry.parentName} ji! 🌸\n\n` +
-        `This is Nidhi from *Nidhi's Baby Massage Indore*.\n\n` +
-        `Thank you for your enquiry (Ref #${enquiry.id.slice(0, 8)}) for baby massage (${enquiry.babyAgeGroup}).\n` +
-        `I would love to confirm your preferred session for *${formattedDate}*.\n\n` +
-        `What time slot would suit your baby's sleep and feeding routine best?`;
+        `Hello ${enquiry.parentName} ji! 🌸💛\n\n` +
+        `Warm greetings from *Nidhi's Baby Massage Indore*!\n\n` +
+        `Thank you so much for reaching out to us for your little one's baby massage (${enquiry.babyAgeGroup}). 🥰\n\n` +
+        `We'd be delighted to make this a gentle, relaxing, and loving experience for your baby.\n\n` +
+        `We're looking forward to arranging your preferred session on *${formattedDate}*. 🌷\n\n` +
+        `With love and care,\n` +
+        `*Nidhi*\n` +
+        `Nidhi's Baby Massage Indore`;
     } else if (templateType === 'TIME_SLOT') {
       msg = 
         `Hello ${enquiry.parentName} ji! 🌸\n\n` +
