@@ -118,7 +118,12 @@ export default function AdminPage({ isLegacyRoute = false }) {
     if (!qrData) {
       setLoadingQR(true);
       try {
-        const res = await fetch(`${API_BASE}/api/auth/2fa-setup`);
+        const res = await fetch(`${API_BASE}/api/auth/2fa-setup`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
         const data = await res.json();
         if (data.success) {
           setQrData(data);
@@ -578,17 +583,7 @@ export default function AdminPage({ isLegacyRoute = false }) {
             </div>
 
             <div>
-              <div className="flex items-center justify-between mb-1">
-                <label className="block font-semibold text-[#2D1E1A]">Google Authenticator Code</label>
-                <button
-                  type="button"
-                  onClick={handleOpen2FAModal}
-                  className="text-[11px] font-bold text-[#D96B82] hover:underline flex items-center gap-1"
-                >
-                  <QrCode className="w-3 h-3" />
-                  <span>Setup QR</span>
-                </button>
-              </div>
+              <label className="block font-semibold text-[#2D1E1A] mb-1">Google Authenticator Code</label>
               <input
                 type="text"
                 required
@@ -618,73 +613,6 @@ export default function AdminPage({ isLegacyRoute = false }) {
             </button>
           </form>
         </div>
-
-        {/* Google Authenticator QR Code Setup Modal */}
-        {show2FAModal && (
-          <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-            <div className="max-w-xs w-full bg-white rounded-3xl p-5 shadow-2xl border border-[#EADFD8] text-center space-y-3.5">
-              <div className="flex items-center justify-between border-b border-stone-100 pb-2">
-                <span className="font-bold text-sm text-[#2D1E1A]">Google Authenticator Setup</span>
-                <button
-                  onClick={() => setShow2FAModal(false)}
-                  className="w-6 h-6 rounded-full bg-stone-100 text-stone-500 hover:text-black flex items-center justify-center text-xs font-bold"
-                >
-                  ✕
-                </button>
-              </div>
-
-              {loadingQR ? (
-                <div className="py-8 space-y-2 text-[#7A635A]">
-                  <RefreshCw className="w-6 h-6 animate-spin mx-auto text-[#D96B82]" />
-                  <p className="text-xs">Generating QR Code...</p>
-                </div>
-              ) : qrData ? (
-                <div className="space-y-3">
-                  <p className="text-xs text-[#7A635A]">
-                    Scan in <strong>Google Authenticator</strong> app on your phone:
-                  </p>
-                  
-                  {qrData.qrCodeDataUrl && (
-                    <img
-                      src={qrData.qrCodeDataUrl}
-                      alt="Google Authenticator QR Code"
-                      className="w-48 h-48 mx-auto rounded-2xl border border-[#EADFD8] p-1.5 bg-white shadow-xs"
-                    />
-                  )}
-
-                  <div className="bg-[#FAF7F2] p-2.5 rounded-xl border border-[#EADFD8] text-left space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-[#8C7469] block">Manual Entry Key:</span>
-                    <div className="flex items-center justify-between gap-1">
-                      <span className="font-mono text-xs font-bold text-[#2D1E1A] break-all select-all">
-                        {qrData.secretKey}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          navigator.clipboard.writeText(qrData.secretKey);
-                          showToast('Secret key copied');
-                        }}
-                        className="text-[11px] font-bold text-[#D96B82] hover:underline shrink-0 ml-1"
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <p className="text-xs text-rose-600">{getBackendConnectionErrorMessage()}</p>
-              )}
-
-              <button
-                type="button"
-                onClick={() => setShow2FAModal(false)}
-                className="w-full bg-[#2D1E1A] text-white text-xs font-bold py-2 rounded-full hover:bg-black transition-all"
-              >
-                Done
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     );
   }
@@ -751,6 +679,16 @@ export default function AdminPage({ isLegacyRoute = false }) {
               className="p-2 rounded-full border border-[#EADFD8] hover:bg-[#FAF7F2] text-[#2D1E1A] transition-all"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin text-[#D96B82]' : ''}`} />
+            </button>
+
+            {/* Google Authenticator 2FA Setup (Only accessible when logged in) */}
+            <button
+              onClick={handleOpen2FAModal}
+              title="View Google Authenticator 2FA QR Code"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-stone-700 bg-stone-50 hover:bg-stone-100 border border-stone-200 px-2.5 sm:px-3 py-1.5 rounded-full transition-all"
+            >
+              <QrCode className="w-3.5 h-3.5 text-[#D96B82]" />
+              <span className="hidden md:inline">2FA Setup</span>
             </button>
 
             {/* Export CSV */}
@@ -1202,6 +1140,73 @@ export default function AdminPage({ isLegacyRoute = false }) {
           </div>
         )}
       </main>
+
+      {/* Google Authenticator QR Code Setup Modal (Authenticated Only) */}
+      {show2FAModal && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="max-w-xs w-full bg-white rounded-3xl p-5 shadow-2xl border border-[#EADFD8] text-center space-y-3.5">
+            <div className="flex items-center justify-between border-b border-stone-100 pb-2">
+              <span className="font-bold text-sm text-[#2D1E1A]">Google Authenticator Setup</span>
+              <button
+                onClick={() => setShow2FAModal(false)}
+                className="w-6 h-6 rounded-full bg-stone-100 text-stone-500 hover:text-black flex items-center justify-center text-xs font-bold"
+              >
+                ✕
+              </button>
+            </div>
+
+            {loadingQR ? (
+              <div className="py-8 space-y-2 text-[#7A635A]">
+                <RefreshCw className="w-6 h-6 animate-spin mx-auto text-[#D96B82]" />
+                <p className="text-xs">Generating QR Code...</p>
+              </div>
+            ) : qrData ? (
+              <div className="space-y-3">
+                <p className="text-xs text-[#7A635A]">
+                  Scan in <strong>Google Authenticator</strong> app on your phone:
+                </p>
+                
+                {qrData.qrCodeDataUrl && (
+                  <img
+                    src={qrData.qrCodeDataUrl}
+                    alt="Google Authenticator QR Code"
+                    className="w-48 h-48 mx-auto rounded-2xl border border-[#EADFD8] p-1.5 bg-white shadow-xs"
+                  />
+                )}
+
+                <div className="bg-[#FAF7F2] p-2.5 rounded-xl border border-[#EADFD8] text-left space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-[#8C7469] block">Manual Entry Key:</span>
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="font-mono text-xs font-bold text-[#2D1E1A] break-all select-all">
+                      {qrData.secretKey}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(qrData.secretKey);
+                        toast.success('Secret key copied');
+                      }}
+                      className="text-[11px] font-bold text-[#D96B82] hover:underline shrink-0 ml-1"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p className="text-xs text-rose-600">{getBackendConnectionErrorMessage()}</p>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setShow2FAModal(false)}
+              className="w-full bg-[#2D1E1A] text-white text-xs font-bold py-2 rounded-full hover:bg-black transition-all"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
