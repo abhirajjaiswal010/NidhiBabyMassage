@@ -7,9 +7,14 @@ import { prisma } from '../src/lib/prisma.js';
 import { getOTPAuthURL } from '../src/lib/totp.js';
 
 async function createAdmin() {
-  const email = (process.argv[2] || process.env.ADMIN_EMAIL || 'nidhisbabymassage@gmail.com').toLowerCase().trim();
-  const password = process.argv[3] || process.env.ADMIN_PASSWORD || 'AdminNidhi@2026';
-  const totpSecret = process.env.ADMIN_TOTP_SECRET || 'WV4ACVGUVMK2QQGG2XGWE2NE43P76OGX';
+  const email = (process.argv[2] || process.env.ADMIN_EMAIL || '').toLowerCase().trim();
+  const password = process.argv[3] || process.env.ADMIN_PASSWORD;
+  const totpSecret = process.env.ADMIN_TOTP_SECRET;
+
+  if (!email || !password || !totpSecret) {
+    console.error('❌ Missing credentials. Ensure ADMIN_EMAIL, ADMIN_PASSWORD, and ADMIN_TOTP_SECRET are set in your local .env file.');
+    process.exit(1);
+  }
 
   console.log(`\n🔐 Setting up Admin Account for: ${email}`);
 
