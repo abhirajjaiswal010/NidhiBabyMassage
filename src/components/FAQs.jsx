@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, AlertCircle } from 'lucide-react';
+import { ChevronDown, AlertCircle } from 'lucide-react';
 import { faqsData } from '../data/faqsData';
 
 export default function FAQs() {

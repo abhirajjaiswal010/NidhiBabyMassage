@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { MessageCircle, Phone, MapPin } from 'lucide-react';
 import { createWhatsAppUrl, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function BookingCTA() {

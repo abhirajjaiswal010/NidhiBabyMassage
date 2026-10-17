@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageSquare, CalendarClock, HeartHandshake } from 'lucide-react';
 
 export default function BookingSteps() {
   const steps = [

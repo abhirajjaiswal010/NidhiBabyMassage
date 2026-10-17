@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Heart, MapPin, Phone } from 'lucide-react';
+import { MessageCircle, MapPin, Phone } from 'lucide-react';
 import { createWhatsAppUrl, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
 
 export default function AboutNidhi() {

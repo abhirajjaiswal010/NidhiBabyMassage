@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 import { 
-  ArrowLeft, Phone, CheckCircle2, Loader2, Home, RotateCcw, Send, Calendar, MapPin, Search, Check, AlertCircle, Copy
+  ArrowLeft, Phone, CheckCircle2, Loader2, Home, RotateCcw, Send, Calendar, MapPin, Search, AlertCircle, Copy
 } from 'lucide-react';
 import { 
   BUSINESS_PHONE,

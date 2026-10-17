@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { 
-  Phone, MessageSquare, Search, RefreshCw, LogOut, CheckCircle2, 
-  Clock, CheckCheck, XCircle, Trash2, Calendar, MapPin, 
+  Phone, MessageSquare, Search, RefreshCw, LogOut, 
+  Clock, CheckCheck, Trash2, Calendar, MapPin, 
   Baby, User, Lock, AlertCircle, Eye, EyeOff, Download, 
-  Sparkles, Filter, ChevronDown, Check, ShieldCheck, ShieldAlert,
-  Copy, ExternalLink, ArrowRight, Shield, AlertTriangle,
-  QrCode, Smartphone, Key
+  Sparkles, Filter, ChevronDown, Check, ShieldCheck, 
+  Copy, Shield, QrCode, Key
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { API_BASE, getBackendConnectionErrorMessage } from '../utils/apiConfig';
 
@@ -76,9 +74,7 @@ const isTokenExpired = (jwtToken) => {
   }
 };
 
-export default function AdminPage({ isLegacyRoute = false }) {
-  const navigate = useNavigate();
-
+export default function AdminPage() {
   // Authentication State
   const [token, setToken] = useState(() => {
     const saved = localStorage.getItem('nidhi_admin_token') || '';

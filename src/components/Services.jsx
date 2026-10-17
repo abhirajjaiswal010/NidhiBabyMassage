@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { babyMassageDetails } from '../data/servicesData';
 
 export default function Services() {
   const cards = [

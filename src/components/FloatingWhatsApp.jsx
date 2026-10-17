@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FloatingWhatsApp() {

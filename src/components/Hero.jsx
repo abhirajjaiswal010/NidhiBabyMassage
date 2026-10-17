@@ -1,25 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Heart, Sparkles, Smile, Sun } from 'lucide-react';
-import { BabyRattleSvg, BabyPacifierSvg, BabyFootprintSvg } from './common/SvgDecorations';
 
 export default function Hero() {
   return (
     <section className="relative overflow-x-clip pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 bg-gradient-to-b from-[#FFCED8]/50 via-[#FFDDDD]/30 via-[#FFFBF4] to-[#FFE8C4]/25">
-      
+
       {/* 1. Radiant Ambient Glow merging Navbar down into Hero */}
-      <div 
+      <div
         className="absolute -top-12 sm:-top-16 left-1/2 -translate-x-1/2 w-[850px] h-[450px] sm:w-[1250px] sm:h-[580px] bg-gradient-to-b from-[#FFCED8] via-[#FFDDDD]/85 via-[#FFE8C4]/50 to-transparent rounded-b-full pointer-events-none -z-10 blur-3xl opacity-90"
         aria-hidden="true"
       />
-      <div 
+      <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[520px] h-[300px] sm:w-[780px] sm:h-[380px] bg-gradient-to-b from-[#FFCED8] via-[#FFDDDD]/70 to-transparent rounded-full pointer-events-none -z-10 blur-2xl opacity-75"
         aria-hidden="true"
       />
 
       {/* 2. Subtle Floor Perspective Grid (matching reference) */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none -z-10 opacity-35"
         style={{
           backgroundImage: `
@@ -35,7 +33,7 @@ export default function Hero() {
 
       {/* Main Top Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative pt-2 sm:pt-3">
-        
+
         {/* 3. Centered Social Proof Pill with Hand-Drawn Sunbeam Rays */}
         <motion.div
           initial={{ opacity: 0, y: -8 }}
@@ -45,7 +43,7 @@ export default function Hero() {
         >
           {/* Hand-drawn rays SVG */}
           <svg width="24" height="12" viewBox="0 0 28 14" fill="none" className="mb-1 text-warm-charcoal/70" aria-hidden="true">
-            <path d="M14 1V5M6 4L9 8M22 4L19 8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
+            <path d="M14 1V5M6 4L9 8M22 4L19 8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
           </svg>
 
           {/* Avatar stack + Social text */}
@@ -75,30 +73,30 @@ export default function Hero() {
 
         {/* 4. Main Heading with Playful Hand-Drawn Doodles (Left & Right) */}
         <div className="relative max-w-3xl mx-auto py-3 sm:py-2">
-          
+
           {/* Doodle 1: Sparkle / Star on the left */}
-          <motion.div 
+          <motion.div
             animate={{ rotate: [-6, 6, -6], scale: [0.95, 1.05, 0.95] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             className="absolute -top-3 -left-3 sm:-left-8 text-warm-charcoal/60 pointer-events-none hidden sm:block"
             aria-hidden="true"
           >
             <svg width="32" height="32" viewBox="0 0 38 38" fill="none">
-              <path d="M19 2L21 15L34 19L21 23L19 36L17 23L4 19L17 15L19 2Z" fill="#FFCED8" stroke="#1F1B1A" strokeWidth="2" strokeLinejoin="round"/>
+              <path d="M19 2L21 15L34 19L21 23L19 36L17 23L4 19L17 15L19 2Z" fill="#FFCED8" stroke="#1F1B1A" strokeWidth="2" strokeLinejoin="round" />
               <circle cx="8" cy="8" r="2" fill="#C45B72" />
               <circle cx="30" cy="30" r="1.5" fill="#FFE8C4" />
             </svg>
           </motion.div>
 
           {/* Doodle 2: Curly Swirl / Loop on the right */}
-          <motion.div 
+          <motion.div
             animate={{ y: [0, -5, 0], rotate: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
             className="absolute -top-2 -right-3 sm:-right-8 text-warm-charcoal/60 pointer-events-none hidden sm:block"
             aria-hidden="true"
           >
             <svg width="30" height="30" viewBox="0 0 36 36" fill="none">
-              <path d="M8 28C8 28 14 34 22 28C30 22 26 12 18 12C10 12 8 20 16 22C24 24 28 16 28 8" stroke="#1F1B1A" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
+              <path d="M8 28C8 28 14 34 22 28C30 22 26 12 18 12C10 12 8 20 16 22C24 24 28 16 28 8" stroke="#1F1B1A" strokeWidth="2.2" strokeLinecap="round" fill="none" />
             </svg>
           </motion.div>
 
@@ -110,7 +108,7 @@ export default function Hero() {
             className="font-huglove text-5xl sm:text-5xl lg:text-6xl tracking-wide leading-[1.14] text-warm-charcoal px-2"
           >
             <span className="text-warm-charcoal">Gentle care </span>
-            <br/>
+            <br />
             <span className="text-soft-terracotta">for your little one</span>
           </motion.h1>
 
@@ -166,7 +164,7 @@ export default function Hero() {
 
       {/* 7. Signature Cards - 3 reduced-size cards on small screens, 5 cards on tablet/desktop */}
       <div className="mt-7 sm:mt-10 md:mt-12 pt-2 sm:pt-3 pb-4 sm:pb-6 w-full flex items-end justify-center -space-x-5 xs:-space-x-7 sm:-space-x-14 md:-space-x-20 lg:-space-x-24 px-3 sm:px-4 relative overflow-x-clip">
-        
+
         {/* Card 1: Far Left Card (Hidden on small mobile, visible on sm and up) */}
         <div
           className="
