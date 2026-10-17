@@ -9,8 +9,7 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-
-const API_BASE = import.meta.env?.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:5000');
+import { API_BASE, getBackendConnectionErrorMessage } from '../utils/apiConfig';
 
 // Inactivity timeout: 15 minutes of idle time automatically locks the session
 const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000;
@@ -245,7 +244,7 @@ export default function AdminPage({ isLegacyRoute = false }) {
         setDashboardError(json.message || 'Unable to load enquiries.');
       }
     } catch {
-      setDashboardError('Could not connect to backend server. Please verify port 5000.');
+      setDashboardError(getBackendConnectionErrorMessage());
     } finally {
       if (!isSilent) setLoading(false);
     }
@@ -306,7 +305,7 @@ export default function AdminPage({ isLegacyRoute = false }) {
         toast.error(err);
       }
     } catch {
-      const err = 'Cannot connect to secure auth server. Ensure backend is running.';
+      const err = getBackendConnectionErrorMessage();
       setLoginError(err);
       toast.error(err);
     } finally {
@@ -673,7 +672,7 @@ export default function AdminPage({ isLegacyRoute = false }) {
                   </div>
                 </div>
               ) : (
-                <p className="text-xs text-rose-600">Failed to load QR code. Ensure port 5000 is running.</p>
+                <p className="text-xs text-rose-600">{getBackendConnectionErrorMessage()}</p>
               )}
 
               <button

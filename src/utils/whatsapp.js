@@ -1,4 +1,5 @@
 // WhatsApp & Booking utilities for Nidhi's Baby Massage Indore
+import { API_BASE } from './apiConfig';
 export const BUSINESS_PHONE = '919343608901';
 export const BUSINESS_PHONE_DISPLAY = '+91 93436 08901';
 export const BUSINESS_LOCATION = 'Indore, Madhya Pradesh';
@@ -25,8 +26,7 @@ export async function sendAutomaticBookingNotification(bookingData) {
 
   // 1. Send directly to your PostgreSQL Backend API
   try {
-    const apiUrl = import.meta.env?.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:5000');
-    const apiResponse = await fetch(`${apiUrl}/api/enquiries`, {
+    const apiResponse = await fetch(`${API_BASE}/api/enquiries`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
